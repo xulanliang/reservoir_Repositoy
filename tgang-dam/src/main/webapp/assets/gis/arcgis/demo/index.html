@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通用GIS框架</title>
+
+    <link rel="stylesheet" href="../../../bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../tree/ztree/css/zTreeStyle/zTreeStyle.css">
+
+    <script src="../../../jquery/jquery-1.9.1.min.js"></script>
+    <script src="../../../bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../../tree/ztree/js/jquery.ztree.all.min.js"></script>
+    <script src="../../../win/layer/layer.js"></script>
+
+    <!--<script src="../../../scroll/nicescroll/jquery.nicescroll.min.js"></script>-->
+    <script src="../../../lodash/lodash.min.js"></script>
+    <script src="../common/echarts-2.2.7.js"></script>
+
+    <script src="../../../../config/gis-env.js"></script>
+
+    <!--<script src="../dseMap.Include.js"></script>-->
+    <script src="../dseMap.Include.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+<div id="btn-ctn" class="btn btn-group" style="position: absolute;left: 380px;z-index: 99; display: inline-block;">
+    <button id="loc" class="btn btn-default">定位</button>
+    <button id="show-data" style="display: none">Line</button>
+    <button id="show-data-r" class="btn btn-default">加点</button>
+    <button id="add-layer" class="btn btn-default">添加图层</button>
+    <button id="dzLine" class="btn btn-default">等值线</button>
+    <button id="dzPolygon" class="btn btn-default">等值面</button>
+    <button id="btn-add" class="btn btn-default">添加组件</button>
+    <button id="btn-del" class="btn btn-default">移除组件</button>
+    <button id="btn-draw" class="btn btn-default">绘制图形</button>
+
+</div>
+<div class="btn btn-group" style="position: absolute;left: 380px;z-index: 99; display: inline-block; top:45px;">
+    <button id="btn-edit" class="btn btn-default">编辑图形</button>
+    <button id="btn-save" class="btn btn-default">保存图形</button>
+    <button id="btn-change" class="btn btn-default">切换图层</button>
+    <button id="btn-clear" class="btn btn-default">取消编辑</button>
+    <button id="btn-sync" class="btn btn-default"> 实时数据</button>
+    <button id="btn-stop" class="btn btn-default">停止更新</button>
+    <button id="btn-test" class="btn btn-default">测试</button>
+</div>
+<!--<div id="search"></div>-->
+
+
+<div id="map">
+
+
+</div>
+
+</body>
+</html>

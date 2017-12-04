@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水工安全GIS</title>
+    <script src=../../../config/requirejs-config.js></script>
+    <script data-main="sgaqgisindex" src=../../../assets/require/require.js></script>
+    <link type="text/css" href="./css/alarm.css" rel="stylesheet" />
+</head>
+
+<body style="overflow: auto;">
+<!--btn-->
+<button id="btn-nav-change" class="btn btn-default u-btn-change">查看工程地图</button>
+<div id="demoCtn" v-cloak>
+    <!--
+    <div>
+        <img src="./images/syt1.png" class="u-syt-txt" alt="noData">
+    </div>
+    -->
+    <div style="position:relative;">
+        <img src="images/syt2.png" class="u-syt-img" alt="noData">
+        <img  src="" class="drop-1 class_3"  proj_cd = "3" :class="{'red': isWarn.warn_3}" @mouseover="mouseOver(this,'3')"/>
+        <img  src="" class="drop-2 class_2"  proj_cd = "2" :class="{'red': isWarn.warn_2}" @mouseover="mouseOver(this,'2')"/>
+        <img  src="" class="drop-3 class_1"  proj_cd = "1" :class="{'red': isWarn.warn_1}" @mouseover="mouseOver(this,'1')"/>
+        <!--<i class="icon-droplet drop-1 class_3" proj_cd = "3" :class="{'red': isWarn.warn_3}" ></i>
+        <i class="icon-droplet drop-2 class_2" proj_cd = "2" :class="{'red': isWarn.warn_2}" @mouseover="mouseOver(this,'2')"></i>
+        <i class="icon-droplet drop-3 class_1" proj_cd = "1" :class="{'red': isWarn.warn_1}" @mouseover="mouseOver(this,'1')"></i>-->
+
+    </div>
+
+
+    <!--表格数据，需要获取数据分析模块的结果进行展示-->
+    <div id="results" v-show="show">
+        <table class="table table-bordered" >
+            <thead>
+            <th></th>
+            <th>东深工程</th>
+            <th>深圳水库</th>
+            <th>雁田水库</th>
+            <th>东改工程</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="td_text">仪器完好率</td>
+                        <td v-for="item in rateData">
+                                {{ (item.USEABLE_STAT / (item.ALL_STAT !== 0 ? item.ALL_STAT : 1) * 100).toFixed(2) }}%
+                            <!--<td >{{ (item.USEABLE_STAT / (item.ALL_STAT !== 0 ? item.ALL_STAT : 1) * 100) }}% </td>-->
+                        </td>
+                </tr>
+                <tr>
+                    <td class="td_text">无故障工作时间</td>
+                    <td v-for="item in workingHours">
+                        <!--<td >{{ (item.WORK_DAYS / item.TIMES !== 0 ?  item.TIMES : 1 ).toFixed(0) }}h </td>-->
+                        {{ (item.WORK_DAYS * item.TIMES ) * 24 }}h
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_text">数据缺失率</td>
+                    <td v-for="item in lostRateData">
+                        {{ (item.LOST_DATA / (item.ALL_DATA !== 0 ? item.ALL_DATA : 1) * 100).toFixed(2) }}%
+                        <!--<td >{{ (item.LOST_DATA / (item.ALL_DATA !== 0 ? item.ALL_DATA : 1) * 100) }}% </td>-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a style="float: right;padding-top: 50px" id="fxwzBtn">防汛物资</a>
+
+    </div>
+</div>
+
+
+<div id="mapCtn" class="map" style="display: none;">
+    <!--显示报警信息-->
+
+    <div id="btn-warn" class="btn-warn">
+        <label class="u-tool-img"
+               style="background: url(./images/legend/bj.png) no-repeat left center;">报警信息
+        </label>
+        <!--<button id="btn-warn" class="btn btn-default u-btn-change" style="top: 48px;">显示报警信息</button>-->
+    </div>
+
+    <!--地图容器-->
+    <div id="map"></div>
+    <!--地图图例-->
+    <div id="mapLegend" class="map-legend" style="display: none;">
+        <table class="table">
+            <tbody>
+            <tr>
+                <td><img src="./images/legend/zc.png" alt="noData"></td>
+                <td>正常</td>
+                <td><img src="./images/legend/bj.png" alt="noData"></td>
+                <td>报警</td>
+            </tr>
+            <!---->
+            <tr>
+                <td><img src="./images/legend/sl.png" alt="noData"></td>
+                <td>渗流</td>
+                <td><img src="./images/legend/sy.png" alt="noData"></td>
+                <td>渗压</td>
+            </tr>
+
+            <tr>
+                <td><img src="./images/legend/ql.png" alt="noData"></td>
+                <td>气流</td>
+                <td><img src="./images/legend/qw.png" alt="noData"></td>
+                <td>气温</td>
+            </tr>
+            <tr>
+                <td><img src="./images/legend/yl.png" alt="noData"></td>
+                <td>雨量</td>
+                <td><img src="./images/legend/sw.png" alt="noData"></td>
+                <td>水位</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--右侧面板-->
+    <div id="ctn-right" style="display: none;">
+
+        <div id="app" style="height: 100%">
+            <template>
+                <el-tabs v-model="activeName" @tab-click="handleClick" style="height: 100%">
+                    <!--深圳水库-->
+                    <el-tab-pane label="深圳水库" name="first" style="height: 100%">
+                        <iframe id="sz" frameborder="none" name="widgetContainer" src=""
+                                width="100%"
+                                height="100%"></iframe>
+                    </el-tab-pane>
+                    <!--雁田水库-->
+                    <el-tab-pane label="雁田水库" name="second" style="height: 100%">
+                        <iframe id="yt" frameborder="none" name="widgetContainer" width="100%"
+                                height="100%"></iframe>
+                    </el-tab-pane>
+                    <!--东改工程-->
+                    <el-tab-pane label="东改工程" name="third" style="height: 100%">
+                        <iframe id="dg" frameborder="none" name="widgetContainer" width="100%"
+                                height="100%"></iframe>
+                    </el-tab-pane>
+
+                </el-tabs>
+            </template>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

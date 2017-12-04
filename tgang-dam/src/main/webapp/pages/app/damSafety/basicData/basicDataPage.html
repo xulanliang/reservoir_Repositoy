@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="stylesheet"  href="../../../../assets/tree/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+    <link rel="stylesheet"  href="../../../../assets/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet"  href="../../../../assets/formValidation/css/formValidation.css" type="text/css" />
+    <link rel="stylesheet"  href="../../../../assets/win/layer/skin/layer.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../assets/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/basicDataPage.css">
+    <script type="text/javascript" src="../../../../assets/seajs/dist/sea_dse.js"></script>
+    <script type="text/javascript" src="../../../../config/seajs-config.js"></script>
+    <script type="text/javascript" src="js/basicDataPage.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="content-wrap">
+        <div class="panel panel-info" style="width: 250px;height: 98%;position: absolute;overflow: auto">
+            <div class="panel-heading" style="padding: 5px 15px 5px 15px">基础资料录入</div>
+            <div class="panel-body" style="border: none;padding:0px!important;overflow:hidden;">
+                <ul id="tree" class="ztree" style="height: 95%"></ul>
+            </div>
+        </div>
+        <div class="panel panel-info wrap-fluid" style="width: auto;height:98%;margin-left: 265px;">
+            <div class="panel-heading" style="padding: 5px 15px 5px 15px" id="title">详细信息</div>
+            <div class="panel-body" style="border: none; ">
+                <div id="search" style="display: none; margin: 5px 0px;">
+                    <div id="res" style="display: inline;">
+                        <span style="font-size: 14px; height: 35px; line-height: 35px;">水库名称：</span><span id="reservoir"></span>
+                        <input id="query" type="button" value="查询" title="查询" class="btn btn-warning" style="margin-left: 5px; margin-right: 5px;"/>
+                    </div>
+                    <div id="tool" style="display: inline;">
+                        <input id="lookup" type="button" value="查看" title="查看" class="btn btn-primary"/>
+                        <input id="add" type="button" value="添加"  title="添加" class="btn btn-success"/>
+                        <input id="edit"  type="button" value="编辑" title="编辑" class="btn btn-info"/>
+                        <input id="del" type="button" value="删除"  title="删除"  class="btn btn-danger"/>
+                    </div>
+                </div>
+                <table id="datagrid"></table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

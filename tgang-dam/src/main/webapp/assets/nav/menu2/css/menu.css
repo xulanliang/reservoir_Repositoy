@@ -1,0 +1,22 @@
+@charset "utf-8";
+ul,li,img,a,h3{margin:0;padding:0,list-style:none;outline:none;}
+img{padding:0; margin:0; border:none; vertical-align:top;}
+#myMenu img{height:37px; width:37px; display:inline-block; margin-top:12px;}
+#myMenu ul{margin:0;padding:0;list-style:none;outline:none;}
+.list li{float:left;text-align: center; height:78px; max-width:100px; overflow:hidden;}
+.firstMenuText{color:#fbfeff;font-size:14px; font-family:"微软雅黑"; line-height:24px;width:100px; margin-top:-30px;}
+.firstMenuItem{height:78px; width:100px; cursor:pointer}
+.menuHover{background:url(../img/hover.png) no-repeat;}
+.menuHover .firstMenuText{ color:#fddc01}
+.nav{z-index: 2; position: absolute; right:86px; top: 0px;}
+.nav .cont {position:relative; min-height:28px;}
+.nav .box {position: absolute;top:78px;overflow: hidden;height:0;filter:alpha(opacity =0);opacity: 0;max-width:176px;z-index: 100;background:#2693c0; padding-bottom:4px;}
+.sublist h3.mcate-item-hd {padding-left:24px;font-size: 12px;height:28px;line-height:26px;text-align: left; font-weight:normal; background:url(../img/list_node.gif) 7px center no-repeat;}
+.mcate-item-hd a{font-family: '微软雅黑';color:#fff; text-decoration:none}
+.mcate-item-hd a:hover{ color:#fbe979; text-decoration:none}
+.sublist li{ float:left;height:28px; min-width:76px;clear:both; padding-right:6px}
+.nav  .clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden}
+.nav  .clearfix {display: inline-table}
+.nav  * html .clearfix {height: 1%}
+.nav  .clearfix {display: block}
+.nav  *+html .clearfix {min-height: 1%}

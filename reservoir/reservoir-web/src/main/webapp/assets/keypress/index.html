@@ -1,0 +1,70 @@
+<!-- 键盘 key 和鼠标右击事件 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width" />
+
+        <script src="../../config/requirejs-config.js"></script>
+        <script data-main="./demo" src="../require/require.js"></script>
+    </head>
+
+    <body>
+        <table class="m-table f-mt50">
+            <tbody>
+                <tr>
+                    <td align="right">
+                        <input type="text" onkeyup="enter(DSE.hello);">
+                    </td>
+                    <td>
+                        输入框内回车试试
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <button id="submit" class="u-btn u-btn-c1">提交</button>
+                        <button id="delete" class="u-btn">取消</button>
+                    </td>
+                    <td>点按钮，然后在下面的输入框内回车看看，按钮还添加了鼠标右击事件</td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <input type="text" onkeyup="enter();">
+                    </td>
+                    <td>页面禁止复制粘贴，输入框内也不准，不信你试试</td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <input type="text" onkeyup="enter('#delete');">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        输入框以外有一些全局按键，你可以按
+                        <span style="color:red">abcdefg</span>，
+                        <span style="color:red">ctrl+a</span>，
+                        <span style="color:red">ctrl+s</span>，
+                        <span style="color:red">ctrl+c</span>，
+                        <span style="color:red">ctrl+v</span>，
+                        <span style="color:red">enter</span>，
+                        <span style="color:red">up</span>，
+                        <span style="color:red">down</span>，
+                        <span style="color:red">left</span>，
+                        <span style="color:red">right</span>
+                        <br>
+                        其他的就别乱按了,没有注册事件，你按也没用
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+
+</html>

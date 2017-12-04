@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="reservoir-web:war">
+    <output-path>$PROJECT_DIR$/reservoir-web/target</output-path>
+    <root id="archive" name="reservoir-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="reservoir-web:war exploded" />
+    </root>
+  </artifact>
+</component>

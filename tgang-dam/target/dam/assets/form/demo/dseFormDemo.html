@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../../../pages/frame/common/css/base-min.css" />
+<link rel="stylesheet" href="../../../assets/button/button2/button.css" />
+<link rel="stylesheet" href="../../easyui/themes/metro/easyui.css" />
+
+
+<script type="text/javascript" src="../../jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../util/common.js"></script>
+<script type="text/javascript" src="../../json/json2.js"></script>
+<script type="text/javascript" src="../../easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../easyui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../../form/easyui/DseForm.js"></script>
+
+
+<script type="text/javascript">
+	$(function() {
+		initForm();
+	});
+
+	function initForm() {
+		var form = $("#myForm");
+		form.find("#dname_auto").textbox({
+			required : true,
+			width : '100%',
+			height : '25px',
+			validType : 'maxLength[6]'
+		});
+
+		form.find("#shorttitle_auto").textbox({
+			required : true,
+			width : '100%',
+			height : '25px',
+			validType : 'maxLength[6]'
+		});
+		form.find("#birthday_auto").datebox({
+			required : true,
+			width : '100%',
+			height : '25px'
+		});
+
+		form.find("#question_auto").combobox({
+			width : '100%',
+			height : '25px',
+			valueField : 'lbl',
+			textField : 'txt',
+			data : [ {
+				lbl : 'java',
+				txt : 'Java语言'
+			}, {
+				lbl : 'perl',
+				txt : 'Perl语言'
+			}, {
+				lbl : 'ruby',
+				txt : 'Ruby语言'
+			} ]
+		});
+
+	}
+
+	function save() {
+		var data = $("#myForm").autoFillObject();
+		$("#values").text(JSON.stringify(data));
+	}
+</script>
+</head>
+<body>
+
+	<div class="g-wrap">
+		<form id="myForm" class="m-form" style="width: 500px;">
+			<table class="m-tb">
+				<tr>
+					<td class="u-lbl require" style="width: 15%">区划名称</td>
+					<td class="u-cont" style="width: 35%">
+						<span id="dname_auto"></span>
+					</td>
+
+					<td class="u-lbl" style="width: 15%">简称</td>
+					<td class="u-cont" style="width: 35%">
+						<span id="shorttitle_auto"></span>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td class="u-lbl require">生日</td>
+					<td class="u-cont">
+						<span id="birthday_auto"></span>
+					</td>
+
+					<td class="u-lbl">问题</td>
+					<td class="u-cont">
+
+						<span id="question_auto"></span>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td class="u-lbl require">性别</td>
+					<td class="u-cont">
+						<input type="radio" id="sex_auto" name="sex" value="1" />
+						男
+						<input type="radio" id="sex_auto" name="sex" value="0" />
+						女
+					</td>
+
+					<td class="u-lbl">婚姻状况</td>
+					<td class="u-cont">
+						<input type="radio" name="yh_auto" value="1" />
+						已婚
+						<input type="radio" name="yh_auto" value="2" />
+						未婚
+						<input type="radio" name="yh_auto" value="3" />
+						离婚
+					</td>
+				</tr>
+
+				<tr>
+					<td class="u-lbl require">喜欢的明星</td>
+					<td class="u-cont" colspan="3">
+						<input type="checkbox" name="start_auto" name="" value="1" />
+						李连杰
+						<input type="checkbox" name="start_auto" value="2" />
+						成龙
+						<input type="checkbox" name="start_auto" value="3" />
+						吴京
+						<input type="checkbox" name="start_auto" value="4" />
+						斯坦森
+						<input type="checkbox" name="start_auto" value="5" />
+						李小龙
+					</td>
+				</tr>
+
+
+				<tr>
+					<td class="u-lbl require">喜欢的老师</td>
+					<td class="u-cont" colspan="3">
+						<input type="checkbox" id="teacher_auto" name="" value="1" />
+						刘谦
+						<input type="checkbox" id="teacher_auto" value="2" />
+						蒋欣
+						<input type="checkbox" id="teacher_auto" value="3" />
+						花千骨
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+		
+		<div id="values"></div>
+
+
+		<div class="u-btn-box">
+			<button class="u-btn" onclick="save()">保存</button>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="stylesheet"  href="../../../../assets/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet"  href="../../../../assets/win/layer/skin/layer.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../assets/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../basicData/css/basicDataPage.css">
+    <script type="text/javascript" src="../../../../assets/seajs/dist/sea_dse.js"></script>
+    <script type="text/javascript" src="../../../../config/seajs-config.js"></script>
+    <script type="text/javascript" src="js/basicFeature.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="search" style=" margin: 5px 0px;">
+        <div id="res" style="display: inline; margin-right: 10px;">
+            <span style="font-size: 14px; height: 35px; line-height: 35px;">水库名称：</span><span id="reservoir"></span>
+        </div>
+        <div id="tool" style="display: inline;">
+            <input id="lookup" type="button" value="查看" title="查看" class="btn btn-primary"/>
+            <input id="add" type="button" value="添加"  title="添加" class="btn btn-success"/>
+            <input id="edit"  type="button" value="编辑" title="编辑" class="btn btn-info"/>
+            <input id="del" type="button" value="删除"  title="删除"  class="btn btn-danger"/>
+        </div>
+    </div>
+    <table id="datagrid"></table>
+</div>
+</div>
+</body>
+</html>

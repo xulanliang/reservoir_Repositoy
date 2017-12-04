@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直位移过程线</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/czwygcxmain" src="../../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+    <div id="app" class="g-wrap">
+
+        <!--新增、删除按钮-->
+        <div v-show="operType==''">
+            <!--查询-->
+            <form id="search" class="m-search">
+
+                <!--查询条件 v-show="(!(projcd.indexOf('3')==0))"  -->
+                <span class="f-mr20"  >
+                    <label class="dseLabel type1">选择断面</label>
+                    <input id="adcd_auto" type="text" />
+                </span>
+                <!--
+                <span class="f-mr20"  v-show="(projcd=='3' ||(projcd.indexOf('3')==0))"  >
+                     <label class="dseLabel type1">工程部位</label>
+                </span>
+                -->
+
+                <span class="f-mr20">
+                     <input id="projcd_auto" v-model="projcd"  type="hidden" />
+                    <label class="dseLabel">开始时间</label>
+                    <input id="stm_auto" v-model="minDate" class="Wdate"   style="width: 120px" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'etm_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                </span>
+                <span class="f-mr20">
+                    <label class="dseLabel" >结束时间</label>
+                    <input id="etm_auto" v-model="maxDate" class="Wdate"   style="width: 120px" onClick="WdatePicker({minDate:'#F{$dp.$D(\'stm_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                </span>
+                <!--
+                <span class="f-mr20">
+                    <label class="dseLabel">显示数据：</label>
+                    <span class="g-w100">
+                        <input id="sw_auto" name="chkgcx" checked="{{sw_auto}}" @click="DSE.app.changeChkVal('sw_auto')" type="checkbox" >水位
+                    </span>
+                    <span class="f-ml50 g-w100">
+                        <input id="qw_auto" name="chkgcx" checked="{{qw_auto}}" @click="DSE.app.changeChkVal('qw_auto')" type="checkbox" >气温
+                    </span>
+
+                    <span class="f-ml50 g-w100">
+                        <input id="jyl_auto" name="chkgcx" checked="{{jyl_auto}}" @click="DSE.app.changeChkVal('jyl_auto')" type="checkbox" >降雨量
+                    </span>
+                    <span class="f-ml50 g-w100">
+                        <input id="jy_auto"  name="chkgcx" checked="{{jy_auto}}" @click="DSE.app.changeChkVal('jy_auto')" type="checkbox" >气压
+                    </span>
+                </span>
+                -->
+                <!--查询、重置按钮
+                <span id="doSearch" class="u-btn f-mr10"><i class="fa fa-search"></i> 查 询</span>
+                <span id="doReset" class="u-btn u-btn-c4"><i class="fa fa-refresh"></i> 重 置</span>
+                -->
+            </form>
+            <!--end 查询-->
+
+            <!--表格-->
+            <!--div class="m-datagrid g-mh200">
+                <div id="datagrid"></div>
+            <--div>
+            <!--end 表格-->
+        </div>
+
+
+
+        <div id="ex_0"  class="g-h260">
+
+        </div>
+
+
+
+
+        <div v-if="operType!=''">
+            <iframe :src="url" width="100%" height="100%" scrolling="no" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

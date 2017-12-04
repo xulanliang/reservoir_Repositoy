@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警查询</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/wrwarningbMain" src="../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-clock>
+    <!--新增、删除按钮-->
+    <div v-show="operType==''">
+        <div class="top-btns-box" v-show="!batch">
+            <!--
+            <span class="u-btn u-btn-c1 f-mr10" @click="doOpenWin"><i class="fa fa-plus"></i> 新 增</span>
+            <span class="u-btn u-btn-c2" @click="doBatch"><i class="fa fa-ban"></i> 批量操作</span>
+            -->
+        </div>
+        <div class="top-btns-box f-dn" v-show="batch">
+            <span class="u-btn u-btn-c5 f-mr10" @click="doBatchDelete"><i class="fa fa-trash-o"></i> 批量删除</span>
+            <span class="u-btn u-btn-c2" @click="doEscBatch"><i class="fa fa-close"></i> 退出批量</span>
+        </div>
+        <!--查询-->
+        <form id="search" class="m-search f-cb">
+            <input id="projcd_auto" v-model="projcd"  type="hidden" />
+            <input id="mon_tp_auto" v-model="mon_tp"  type="hidden" />
+            <!--
+            <span class="f-ib g-w300 keyword_box">
+                <input id="ck_name_auto" type="text" placeholder="请输入名称描述搜索" onkeyup="enter('doSearch')">
+                <span id="doSearch" class="submit" @click="doSearch"><i class="fa fa-search"></i> 查 询</span>
+            </span>
+            -->
+            <!--分隔符-->
+
+            <!--
+            <span class="f-division f-ml20 f-mr20"></span>
+            <span class="f-mr20">
+                <label class="dseLabel type1">管理部门</label>
+                <input id="CK_ORG_auto" type="text"/>
+            </span>
+            <span class="f-mr20">
+                <label class="dseLabel type1">巡查类型</label>
+                <input id="CK_TYPE_auto" type="text"/>
+            </span>
+             <span class="f-mr20">
+                <label class="dseLabel type1">巡查对象</label>
+                <input id="CK_OBJECT_auto" type="text"/>
+            </span>
+            监测类型(1:渗压 2 渗流 3 水平位移4垂直位移5水位6雨量7气温<含气压>8深层位移9渡槽沉降)
+            -->
+            <span class="f-mr20">
+                            <label class="dseLabel type1">监测类型:</label>
+                            <span class="f-mt50 g-w100"  >
+                                <input id="st_tp_auto"  name="st_tp" type="text" />
+                            </span>
+            </span>
+            <span class="f-mr20">
+                <label class="dseLabel type1">预警类型</label>
+                <input id="wa_tp_auto" type="text"/>
+            </span>
+            <span class="f-mr20">
+                    <label class="dseLabel">起始时间：</label>
+                    <input id="stm_auto" v-model="minDate" class="Wdate"   style="width: 120px" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'etm_auto\')}',el:'stm_auto',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                     <label class="dseLabel">至</label>
+                    <input id="etm_auto" v-model="maxDate" class="Wdate"   style="width: 120px" onClick="WdatePicker({minDate:'#F{$dp.$D(\'stm_auto\')}',el:'etm_auto',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+            </span>
+
+
+
+            <!--查询、重置按钮-->
+            <!--
+               <span id="doSearch" class="u-btn f-mr10"><i class="fa fa-search"></i> 查 询</span>
+            -->
+            <!--重置按钮-->
+            <a id="doReset" class="f-rbtn" href="javascript:" @click="doReset"><i class="fa fa-refresh"></i> 恢复为默认</a>
+
+        </form>
+        <!--end 查询-->
+
+        <!--表格-->
+        <div class="m-datagrid">
+            <div id="datagrid"></div>
+        </div>
+        <!--end 表格-->
+    </div>
+    <div v-if="operType!=''">
+        <iframe :src="url" width="100%" height="100%" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+﻿/**
+ * mapContent 样式
+ */
+
+html, body,
+.map {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#m-map-type {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    height: 66px;
+    cursor: pointer;
+    font-size: 12px;
+    /*-webkit-transition-property: width, background-color;*/
+    /*transition-property: width, background-color;*/
+    /*-webkit-transition-duration: .5s;*/
+    transition-duration: .5s;
+    /*background-color: #fff;*/
+    background-color: rgba(245, 248, 249, 0.8);
+    z-index: 99;
+}
+
+.m-layer-switch {
+    height: 90%;
+    position: absolute;
+    /* border-radius: 2px; */
+    top: 3px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-size: cover;
+    -webkit-transition-property: left, background, border;
+    transition-property: left, background, border;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+.m-layer-switch span {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    display: inline-block;
+    padding: 3px 3px 2px 4px;
+    font-size: 12px;
+    /*height: 12px;*/
+    line-height: 12px;
+    color: #FFF;
+    border-top-left-radius: 2px;
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.m-layer-switch.active {
+    border: 2px solid #8a8a8a;
+    z-index: 1000;
+}
+
+.m-layer-switch.active span {
+    background-color: #3385FD;
+    /* width: 46px; */
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.m-layer-switch:hover {
+    border: 1px solid #3385FF;
+}
+
+.m-layer-switch:hover span {
+    background-color: #3385FF;
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.satellite:hover.switch-box {
+    visibility: visible
+}
+
+.switch-box {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    line-height: 22px;
+    color: #fff;
+    background: rgba(0, 0, 0, .5)
+}
+
+.switch-box p {
+    display: inline-block;
+    margin-left: 25px
+}
+
+.switch-box input.switch {
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    cursor: pointer
+}
+
+.u-map-type-left {
+    -webkit-transition-property: left, border;
+    transition-property: left, border;
+    left: 5px;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s
+}
+
+#m-map-type.s-width1 {
+    width: 90px;
+}
+
+#m-map-type.s-width2 {
+    width: 180px;
+}
+
+#m-map-type.s-width3 {
+    width: 270px;
+}
+
+#m-map-type.s-width4 {
+    width: 360px;
+}
+
+#m-map-type.s-width5 {
+    width: 450px;
+}
+
+#m-map-type.s-width6 {
+    width: 540px;
+}
+
+#m-map-type.s-width7 {
+    width: 630px;
+}
+
+#m-map-type.s-width8 {
+    width: 720px;
+}
+
+/**
+ * 地图工具条默认样式
+ */
+.m-loc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.u-tool-bar {
+    height: 44px;
+    position: absolute;
+    top: 10px;
+    right: 36px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    z-index: 100;
+    border: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    background: white;
+}
+
+.u-tool-img {
+    padding-left: 27px;
+    margin-left: 10px;
+    cursor: pointer;
+    /* margin-right: 23px; */
+}
+
+.u-tool-img img {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+
+.u-layer-ctrl-bar {
+    position: absolute;
+    z-index: 99;
+    top: 300px;
+    left: 10px;
+}
+
+/**
+   图层管理样式.
+*/
+
+.navbar-nav > li > a {
+
+    border-width: 1px;
+
+    border-right-style: solid;
+
+    border-right-width: 1px;
+
+    border-right-color: gainsboro;
+
+    width: 82px;
+
+    margin-top: 5px;
+}
+
+.navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 6px 4px;
+}
+
+.ztree li span.button.chk {
+    width: 13px;
+    height: 13px;
+    margin: 0 3px 0 0;
+    cursor: pointer;
+}
+
+/**测试控件样式*/
+.m-tst-ctn {
+    background: lightpink;
+    z-index: 5;
+}
+
+.m-tst-ctn .widget {
+    font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-size: 16px;
+}
+
+/**地图查询组件样式*/
+#search {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 164px;
+    left: 74px;
+}
+
+/**地图图例样式*/
+#legend {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    border: 2px solid #e2e2e2;
+    border-radius: 15px;
+    z-index: 99;
+    width: 190px;
+    background-color: #FFFFFF;
+}
+
+.m-map-legend {
+    line-height: 40px;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.m-map-legend li {
+    list-style: none;
+}
+
+.m-map-legend li img {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/**地图对比工具样式.*/
+
+.m-map-compare {
+    /***/
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 49.5%;
+    display: none;
+}
+
+.m-split-compare {
+    position: absolute;
+    background: rebeccapurple;
+    top: 0px;
+    bottom: 0px;
+    width: 0.5%;
+    display: none;
+    left: 50%;
+    cursor: pointer;
+
+}
+
+.m-clip-img {
+    clip: rect(0px, 60px, 200px, 0px)
+}
+
+/**图例标题样式*/
+.m-legend-title {
+    cursor: pointer;
+    margin-left: 41%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/**
+ *==============================================
+ *自定义菜单样式.
+ *==============================================
+*/
+/**一级菜单*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: verdana, sans-serif;
+    font-size: small;
+}
+
+#navigation, #navigation li ul {
+    list-style-type: none;
+}
+
+#navigation {
+    margin-top: 8px;
+}
+#navigation li {
+    float: left;
+    width: 80px;
+    position: relative;
+    margin-top: 7px;
+    paddint-left: 3px;
+}
+
+#navigation li label:link, #navigation li label:visited {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    border-width: 1px 1px 0 0;
+    background: #c5dbf2;
+    padding-left: 10px;
+}
+
+#navigation li label:hover {
+    color: #0056c1;
+    background: #2687eb;
+}
+
+#navigation li ul li label:hover {
+    color: #0056c1;
+}
+
+/**使用bootstrap时分割线样式*/
+.u-split-line{
+    position: absolute;
+    background: lightgray;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 31px;
+}
+/**不使用bootstrap时分割线样式*/
+.u-split-line-nobo{
+    position: absolute;
+    background: lightgray;
+    top: -7px;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 31px;
+}
+/**二级菜单*/
+#navigation li ul {
+    display: none;
+    position: absolute;
+    top: 21px;
+    /* margin-left: 7px; */
+    /* left: 0; */
+    margin-top: 1px;
+    background: white;
+}
+#navigation li ul li {
+    height: 32px;
+    width: 100px;
+    border-top-style: solid;
+    padding-left: 5px;
+    border-top-width: 1px;
+    padding-top: 10px;
+    border-top-color: lightgray;
+}
+
+#navigation li ul li label {
+
+}
+/**三级菜单*/
+#navigation li ul li ul {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 130px;
+    margin-top: 0;
+    margin-left: 1px;
+    width: 120px;
+}
+
+
+label{
+    font-weight: normal;
+}
+/**行政区划导航样式*/
+.m-region-ctn{
+    /* height: 32px; */
+    height: 46px;
+    padding: 6px;
+}
+.m-region-ctn select{
+    width: 84px;
+    height: 32px;
+}

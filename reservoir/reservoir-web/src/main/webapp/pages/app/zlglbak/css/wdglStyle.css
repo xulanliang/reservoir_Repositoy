@@ -1,0 +1,81 @@
+@charset "utf-8";
+html,body{
+    height: 100%;
+}
+/* 两列右侧自适应布局 */
+.g-bd1{margin:0 0 10px;}
+.g-sd1{position:relative;float:left;width:290px;margin-right:-290px;}
+.g-mn1{float:right;width:100%;}
+.g-mn1c{margin-left:300px;}
+
+.g-sd1 h4{
+    width: 265px;
+    position: fixed;
+    left: 5px;
+    top: 0;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #007dff;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.g-sd1 #sublis-tree{
+    margin-top: 28px;
+    margin-left: 5px;
+    padding: 8px 5px;
+    border: 1px solid #dcdcdc;
+}
+.right-fileList{
+    border: 1px solid #ddd;
+    min-height: 400px;
+    margin-left: 270px;
+}
+.g-folder-box{
+    border: 1px solid #dcdcdc;
+    padding: 15px 0;
+    margin: 5px 5px 0 0;
+}
+.g-folder-box li{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.g-folder-box li .folder{
+    display: block;
+    color: #666;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+.g-folder-box li .folder i{
+    font-size: 44px;
+    color: #ffd46f;
+}
+.g-folder-box li .folder:hover{
+    color: #333;
+}
+.g-folder-box li .folder:hover i{
+    color: #fdcd5b;
+}
+.m-tit1{
+    font-size: 14px;
+    font-weight: bold;
+    color: #262626;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 5px 5px 4px 10px;
+    border-left: 8px solid #007dff;
+    background-color: #f7f7f7;
+    letter-spacing: 3px;
+}
+.g-cont2 .reply{
+    margin-left: 20px;
+    cursor: pointer;
+    color: #666;
+}
+.g-cont2 .reply:hover{
+    color: #333;
+}

@@ -1,0 +1,137 @@
+.u-btn {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 2px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: 5px 6px 5px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    
+    color: #d9eef7;
+    border: solid 1px #0076a3;
+    background: #0095cd;
+    .u-m-bgcolor(#00adee,#0078a5);
+}
+
+.u-btn:hover {
+    text-decoration: none;
+    background: #007ead;
+    .u-m-bgcolor(#0095cc,#00678e);
+}
+
+.u-btn:active {
+    position: relative;
+    top: 1px;
+    color: #80bed6;
+    .u-m-bgcolor(#0078a5,#00adee);
+}
+.u-btn::-moz-focus-inner {
+
+}
+
+/*超链接*/
+.u-btn-link{
+    font-weight: 400;
+    color: #337ab7;
+    border-radius: 0;
+        border-color: transparent;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.u-btn-link:hover {
+    color: #23527c;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.u-btn-link:active:focus,
+.u-btn-link:active:hover {
+    color: #74BBFB;
+}
+
+
+/* 较大 */
+.u-btn-lg {
+    font-size: 16px;
+    padding: 5px 15px 5px;
+}
+
+/* 较小 */
+.u-btn-sm {
+    padding: 5px 5px 5px;
+}
+/*很小*/
+.u-btn-xs{
+    font-size: 11px;
+    padding: 3px 3px 3px;
+}
+
+
+.u-m-bgcolor(@f,@t){
+    background: -webkit-gradient(linear,left top, left bottom,from(@f),to(@t));
+    background: -webkit-linear-gradient(top, @f, @t);
+    background: -moz-linear-gradient(top, @f, @t);
+    background: -ms-linear-gradient(top, @f, @t);
+    background: linear-gradient(top, @f, @t);
+}
+
+.u-btn-cs(@c,@bg,@hbg,@ac,@f,@t,@bd,@af,@at,@hf,@ht) {
+    
+    color: @c;
+    border: solid 1px @bd;
+    background: @bg;
+    .u-m-bgcolor(@f,@t);
+    
+     &:hover {
+        background: @hbg;
+        .u-m-bgcolor(@hf,@ht)
+     }
+     &:active {
+       color: @ac;
+       .u-m-bgcolor(@af,@at)
+     }
+}
+
+  
+//按钮样式定义 扩展按钮直接在数组的后面添加对应颜色值 
+
+@c    : #faddde #fef4e9 #e8f0de #606060 ; //color
+@bg   : #d81b21 #f78d1d #64991e #fff    ;//background
+@hbg  : #b61318 #f47c20 #538018 #ededed ;//hover-bgcolor
+@ac   : #de898c #fcd3a5 #a9c08c #999    ;//active - color
+@f    : #ed1c24 #f88e11 #7db72f #fff    ;//bgcolor from 
+@t    : #aa1317 #f06015 #4e7d0e #ededed ;//bgcolor to 
+@bd   : #980c10 #da7c0c #538312 #b7b7b7 ;//boder color
+@af   : #aa1317 #f47a20 #4e7d0e #ededed ;//active color from 
+@at   : #ed1c24 #faa51a #7db72f #fff    ;//active color to 
+@hf   : #c9151b #f88e11 #6b9d28 #fff    ;//hover color from
+@ht   : #a11115 #f06015 #436b0c #dcdcdc ;//hover color to;
+
+.loop(@counter) when (@counter > 0) {
+
+    .u-btn-c@{counter}{
+        .u-btn-cs(  extract(@c, @counter),extract(@bg, @counter),
+                    extract(@hbg, @counter),extract(@ac, @counter),
+                    extract(@f, @counter),extract(@t, @counter),
+                    extract(@bd, @counter),extract(@af, @counter),
+                    extract(@at, @counter),extract(@hf, @counter),
+                    extract(@ht, @counter)
+        ); 
+    }
+
+  .loop((@counter - 1));    // 递归调用自身
+}
+
+//样式的个数,生成样式
+.loop(4);

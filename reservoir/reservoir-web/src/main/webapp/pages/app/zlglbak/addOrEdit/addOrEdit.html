@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap" v-cloak>
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<input id="DID_auto" type="hidden" v-model="rowId">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td align="right" class="dseLabel require">标题</td>
+							<td colspan="3">
+								<!--<input id="DOCNO_auto" type="text" valType="2" maxLength="50">-->
+								<!--<div class="DOCNO_ori f-dn"></div>-->
+								<input id="INFO_TITLE_auto" type="text" valType="2" maxLength="80">
+								<div class="INFO_TITLE_ori f-dn"></div>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel require">资料编号</td>
+							<td width="30%">
+								<!--<input id="ADCD_auto" type="text" maxLength="40">-->
+								<!--<span class="ADCD_ori f-dn"></span>-->
+								<input id="INFO_CD_auto" type="text" maxLength="40">
+								<span class="INFO_CD_ori f-dn"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel require">文档类型</td>
+							<td>
+								<input id="INFO_TP_auto" type="text" maxLength="25">
+								<span class="INFO_TP_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel require">时间</td>
+							<td>
+								<!--<input id="DOCTITLE_auto" type="text" valType="2" maxLength="50">-->
+								<!--<div class="DOCTITLE_ori f-dn"></div>-->
+								<input id="IN_DT_auto" type="text" valType="2" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});">
+								<div class="IN_DT_ori f-dn"></div>
+							</td>
+							<td class="dseLabel require">组织机构</td>
+							<td>
+								<!--<input id="DOCTITLE_auto" type="text" valType="2" maxLength="50">-->
+								<!--<div class="DOCTITLE_ori f-dn"></div>-->
+								<input id="ADCD_auto" type="text" class="dseLabel require" valType="2">
+								<div class="ADCD_ori f-dn"></div>
+							</td>
+							<!--<td align="right" class="dseLabel require">上传时间</td>-->
+							<!--<td>-->
+								<!--&lt;!&ndash;<input id="QHR_auto" type="text" valType="2" maxLength="50">&ndash;&gt;-->
+								<!--&lt;!&ndash;<div class="QHR_ori f-dn"></div>&ndash;&gt;-->
+								<!--<input id="UPDATE_DT_auto" type="text" valType="2">-->
+								<!--<div class="UPDATE_DT_ori f-dn"></div>-->
+
+							<!--</td>-->
+						</tr>
+
+						<!--<tr>-->
+							<!--<td align="right" class="dseLabel require">上传人</td>-->
+							<!--<td>-->
+								<!--&lt;!&ndash;<input id="DOCTITLE_auto" type="text" valType="2" maxLength="50">&ndash;&gt;-->
+								<!--&lt;!&ndash;<div class="DOCTITLE_ori f-dn"></div>&ndash;&gt;-->
+								<!--<input id="UPDATE_USER_auto" type="text" valType="2" maxLength="20">-->
+								<!--<div class="UPDATE_USER_ori f-dn"></div>-->
+							<!--</td>-->
+							<!--<td align="right" class="dseLabel require">时间</td>-->
+							<!--<td>-->
+								<!--&lt;!&ndash;<input id="DOCTITLE_auto" type="text" valType="2" maxLength="50">&ndash;&gt;-->
+								<!--&lt;!&ndash;<div class="DOCTITLE_ori f-dn"></div>&ndash;&gt;-->
+								<!--<input id="IN_DT_auto" type="text" valType="2" class="Wdate" onmouseenter="WdatePicker({dateFmt:'yyyy-MM-dd'});">-->
+								<!--<div class="IN_DT_ori f-dn"></div>-->
+							<!--</td>-->
+						<!--</tr>-->
+					</tbody>
+				</table>
+
+				<!-- Start 问题清单 -->
+				<div v-if="ttype=='jzwaq'||ttype=='aqpg'||ttype=='sxjc'">
+					<table id="queTable" class="m-table quest">
+						<thead>
+							<tr>
+								<td colspan="8" id="tHead" align="center">问 题 清 单</td>
+							</tr>
+							<tr class="head">
+								<td align="center">问题编号</td>
+								<td align="center" class="dseLabel require must">问题类型</td>
+								<td align="center" class="dseLabel require must">责任部门</td>
+								<td align="center" class="dseLabel require must">存在问题</td>
+								<td align="center">处理建议</td>
+								<td align="center">处理措施</td>
+								<td align="center" class="dseLabel require must">计划完成时间</td>
+								<td align="center" class="dseLabel require must">责任人</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="center">1</td>
+								<td>
+									<input type="text" data-id="Q_TYPE" valType="2" id="Q_TYPE"/>
+									<!--<span class="Q_TYPE1_ori f-dn"></span>-->
+								</td>
+								<td>
+									<input type="text" data-id="Q_DEPT" valType="2" maxlength="30"/>
+									<!--<span class="Q_DEPT1_ori f-dn"></span>-->
+								</td>
+								<td>
+									<input type="text" data-id="Q_QUESTION" valType="2" maxlength="200"/>
+									<!--<span class="Q_QUESTION1_ori f-dn"></span>-->
+								</td>
+								<td>
+									<input type="text" data-id="Q_ADDVICE" valType="2" maxlength="200"/>
+									<!--<span class="Q_ADDVICE1_ori f-dn"></span>-->
+								</td>
+								<td>
+									<input type="text" data-id="Q_DEAL" valType="2" maxlength="200"/>
+									<!--<span class="Q_DEAL1_ori f-dn"></span>-->
+								</td>
+								<td>
+									<input type="text" data-id="Q_FINISH" valType="2" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
+									<!--<span class="Q_FINISH1_ori f-dn"></span>-->
+								</td>
+								<td>
+									<input type="text" data-id="Q_PEOPLE" valType="2" maxlength="20"/>
+									<!--<span class="Q_PEOPLE1_ori f-dn"></span>-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<span id="doAdd" class="u-btn u-btn-c1 f-mr10" @click="doAdd" v-if="operType!='detail'"> 添 加</span>
+				</div>
+				<!-- End问题清单 -->
+
+			</form>
+			<!--end 表单-->
+
+		</div>
+		<div class="m-file" id="fileListTable" v-cloak>
+			<div class="f-pb5 f-pt5">
+				<span data-btype="1" :class="['u-btn u-btn-c1',fbtn]" @click="newfiles($event.currentTarget)" data-single="true" data-accept="jpg,png,gif,word"><i class="fa fa-upload"></i> 上传</span>
+				<span>只能上传单个文件</span>
+			</div>
+			<table class="m-table">
+				<thead>
+					<tr>
+						<th width="240" align="center">文件名</th>
+						<th width="50" align="center" v-if="!isIE">文件大小</th>
+						<th width="100" align="center">上传时间</th>
+						<th width="50" align="center">操作</th>
+					</tr>
+				</thead>
+				<tbody :class="fql" data-btype="3">
+				<tr :class="ftr">
+					<td :colspan="isIE ? 3 : 4">
+						<div :class="fnull">{{fnullText}}</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+
+</html>

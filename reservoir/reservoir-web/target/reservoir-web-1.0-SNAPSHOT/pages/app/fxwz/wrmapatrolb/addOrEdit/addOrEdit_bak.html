@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防汛物资巡查登记信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-cloak>
+    <!--表单-->
+    <!--
+            可以使用input,span,a,div,p
+            以 _auto 结尾的id表示保存或提交时会上传的字段
+
+            建议使用span标签
+            以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+            以 _ori 结尾的class表示详情时需要显示的字段
+        -->
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+    <form id="m-form" class="m-form">
+        <input id="IS_FLOOD_auto" type="hidden" v-model="isflood" />
+        <input id="ID_auto" type="hidden"   />
+        <input id="TS_auto" type="hidden"   />
+        <table class="m-table">
+            <tbody>
+            <tr>
+                <td width="20%" align="right" class="dseLabel require">管理部门</td>
+                <td>
+                    <input id="ORG_CD_auto" type="text"/>
+                    <span class="ORG_CD_NAME_ori"></span>
+                </td>
+                <td width="20%" align="right" class="dseLabel require">所属仓库</td>
+                <td width="30%">
+                    <input id="WH_CD_auto" type="text" />
+                    <span class="WH_NM_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查内容</td>
+                <td colspan="3">
+                    <textarea id="PATROL_DESC_auto" maxLength="100"></textarea>
+                    <div class="PATROL_DESC_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查时间</td>
+                <td>
+                    <input id="PATROL_DATE_auto" type="text" class="Wdate"   style="width: 160px" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" />
+                    <span class="PATROL_DATE_ori"></span>
+                </td>
+                <td align="right" class="dseLabel require">状态</td>
+                <td>
+                    <input id="PA_STATUS_auto" type="text" v-if="operType!='detail'"/>
+                    <span class="PA_NAME_ori"></span>
+                    <!--<input id="ORG_CD_auto" type="text"/>-->
+                    <!--<span class="ORG_CD_NAME_ori"></span>-->
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">创建人员</td>
+                <td>
+                    <input id="CREATE_USER_auto" type="text" maxLength="16" data-valType="2"  />
+                    <span class="CREATE_USER_ori"></span>
+                </td>
+                <td align="right" class="dseLabel">检查人员</td>
+                <td>
+                    <input id="CHECK_USER_auto" type="text" maxLength="16" data-valType="2" />
+                    <span class="CHECK_USER_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">存在问题</td>
+                <td colspan="3">
+                    <textarea id="ISSUES_auto" maxLength="50" data-valType="2"></textarea>
+                    <div class="ISSUES_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">处理措施</td>
+                <td colspan="3">
+                    <textarea id="MEASURES_auto" maxLength="50" data-valType="2" ></textarea>
+                    <div class="MEASURES_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">落实情况</td>
+                <td colspan="3">
+                    <textarea id="RESULT_DESC_auto" maxLength="50" data-valType="2"></textarea>
+                    <div class="RESULT_DESC_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">计划完成时间</td>
+                <td>
+                    <input id="PLAN_DATE_auto" type="text" class="Wdate"   style="width: 160px" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});"/>
+                    <span class="PLAN_DATE_ori"></span>
+                </td>
+                <td align="right" class="dseLabel">完成时间</td>
+                <td>
+                    <input id="END_DATE_auto" type="text" class="Wdate"   style="width: 160px" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});"/>
+                    <span class="END_DATE_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">工程技术责任人</td>
+                <td >
+                    <input id="TECH_DUTY_auto" type="text" maxLength="32"/>
+                    <span class="TECH_DUTY_ori"></span>
+                </td>
+                <td align="right" class="dseLabel">工程责任人</td>
+                <td >
+                    <input id="PROJ_DUTY_auto" type="text" maxLength="32"/>
+                    <span class="PROJ_DUTY_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">备注</td>
+                <td colspan="3">
+                    <textarea id="NT_auto" maxLength="128" data-valType="2"></textarea>
+                    <div class="NT_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <!--end 表单-->
+</div>
+
+
+</body>
+</html>

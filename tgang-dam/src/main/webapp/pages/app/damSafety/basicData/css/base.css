@@ -1,0 +1,109 @@
+/**每个页面顶级容器样式，该样式一般定义在body下子容器，页面居中布局*/
+.topCtn {
+    width: 99.4%;
+    height: 99.5%;
+    margin-left: 0.2%;
+    margin-right: 0.2%;
+    margin-top: 0.2%;
+    padding-right: 1px;
+    text-align: left;
+    float: left;
+    text-align: left;
+    padding-right: 1px;
+}
+
+/**内容居中*/
+.center {
+    margin: 0 auto;
+}
+
+/***###搜索框区域****/
+.dseSearch {
+    float: left;
+    border: 1px solid #D9DEE2;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    -moz-border-radius: 1px;
+    /* -webkit-border-radius: 1px; */
+    /* border-radius: 1px; */
+    /* padding-left: 0.1%; */
+    padding-top: 3px;
+    /* padding-right: 0.1%; */
+    margin-top: 3px;
+    padding-bottom: 3px;
+    background-color: #EEEFF1;
+}
+
+/**搜索框文本标签*/
+.dseSearch .dseLabel {
+    margin-left: 10px;
+    color: #484848;; /*yuanl*/
+}
+/**
+通用边框
+*/
+.dseBorder {
+    float: left;
+    border: 1px solid #87D1FB;
+    display: block;
+    text-align: left;
+    vertical-align: middle;
+    -moz-border-radius: 1px; /* Gecko browsers */
+    -webkit-border-radius: 1px; /* Webkit browsers */
+    border-radius: 1px; /* W3C syntax */
+    padding: 3px 3px 3px 3px;
+    background-color: #fafafa;
+    text-align: left;
+}
+
+/**操作按钮*/
+.opBtn {
+    margin-left: 10px;
+    cursor: pointer;
+}
+/**表格无数据*/
+.datagridNoData {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.red {
+    color: red!important;
+    font-size: 18px;
+    float: right;
+}

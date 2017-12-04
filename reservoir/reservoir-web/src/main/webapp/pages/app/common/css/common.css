@@ -1,0 +1,264 @@
+@charset "utf-8";
+.f-mt0{margin:0}
+.f-mt5{margin-top:5px}
+.f-mt10{margin-top:10px}
+.f-mt15{margin-top:15px}
+.f-mt20{margin-top:20px}
+.f-mt30{margin-top:30px}
+.f-mt40{margin-top:40px}
+.f-mt50{margin-top:50px}
+.f-mt60{margin-top:60px}
+.f-mt70{margin-top:70px}
+
+.f-mr0{margin-right:0}
+.f-mr5{margin-right:5px}
+.f-mr10{margin-right:10px}
+.f-mr15{margin-right:15px}
+.f-mr20{margin-right:20px}
+.f-mr30{margin-right:30px}
+.f-mr40{margin-right:40px}
+.f-mr50{margin-right:50px}
+.f-mr60{margin-right:60px}
+.f-mr70{margin-right:70px}
+
+.f-mb0{margin-bottom:0}
+.f-mb5{margin-bottom:5px}
+.f-mb10{margin-bottom:10px}
+.f-mb15{margin-bottom:15px}
+.f-mb20{margin-bottom:20px}
+.f-mb30{margin-bottom:30px}
+.f-mb40{margin-bottom:40px}
+.f-mb50{margin-bottom:50px}
+.f-mb60{margin-bottom:60px}
+.f-mb70{margin-bottom:70px}
+
+.f-ml0{margin-left:0}
+.f-ml5{margin-left:5px}
+.f-ml10{margin-left:10px}
+.f-ml15{margin-left:15px}
+.f-ml20{margin-left:20px}
+.f-ml30{margin-left:30px}
+.f-ml40{margin-left:40px}
+.f-ml50{margin-left:50px}
+.f-ml60{margin-left:60px}
+.f-ml70{margin-left:70px}
+
+.f-pt0{padding-top:0}
+.f-pt5{padding-top:5px}
+.f-pt10{padding-top:10px}
+.f-pt15{padding-top:15px}
+.f-pt20{padding-top:20px}
+.f-pt30{padding-top:30px}
+.f-pt40{padding-top:40px}
+.f-pt50{padding-top:50px}
+.f-pt60{padding-top:60px}
+.f-pt70{padding-top:70px}
+
+.f-pr0{padding-right:0}
+.f-pr5{padding-right:5px}
+.f-pr10{padding-right:10px}
+.f-pr15{padding-right:15px}
+.f-pr20{padding-right:20px}
+.f-pr30{padding-right:30px}
+.f-pr40{padding-right:40px}
+.f-pr50{padding-right:50px}
+.f-pr60{padding-right:60px}
+.f-pr70{padding-right:70px}
+
+.f-pb0{padding-bottom:0}
+.f-pb5{padding-bottom:5px}
+.f-pb10{padding-bottom:10px}
+.f-pb15{padding-bottom:15px}
+.f-pb20{padding-bottom:20px}
+.f-pb30{padding-bottom:30px}
+.f-pb40{padding-bottom:40px}
+.f-pb50{padding-bottom:50px}
+.f-pb60{padding-bottom:60px}
+.f-pb70{padding-bottom:70px}
+
+.f-pl0{padding-left:0}
+.f-pl5{padding-left:5px}
+.f-pl10{padding-left:10px}
+.f-pl15{padding-left:15px}
+.f-pl20{padding-left:20px}
+.f-pl30{padding-left:30px}
+.f-pl40{padding-left:40px}
+.f-pl50{padding-left:50px}
+.f-pl60{padding-left:60px}
+.f-pl70{padding-left:70px}
+
+.g-s1{width:100%}
+.g-s2{width:50%}
+.g-s3{width:25%}
+.g-s4{width:20%}
+.g-s5{width:10%}
+.g-s6{width:5%}
+
+.g-w20{width:20px}
+.g-w30{width:30px}
+.g-w40{width:40px}
+.g-w50{width:50px}
+.g-w80{width:80px}
+.g-w100{width:100px}
+.g-w120{width:120px}
+.g-w150{width:150px}
+.g-w160{width:160px}
+.g-w180{width:180px}
+.g-w200{width:200px}
+.g-w210{width:210px}
+.g-w220{width:220px}
+.g-w240{width:240px}
+.g-w260{width:260px}
+.g-w300{width:300px}
+.g-w350{width:350px}
+.g-w400{width:400px}
+.g-w450{width:450px}
+.g-w500{width:500px}
+.g-w600{width:600px}
+.g-w800{width:800px}
+.g-w900{width:900px}
+.g-w1000{width:1000px}
+.g-w1100{width:1100px}
+.g-w1200{width:1200px}
+
+.g-h20{height:20px}
+.g-h30{height:30px}
+.g-h40{height:40px}
+.g-h50{height:50px}
+.g-h60{height:60px}
+.g-h70{height:70px}
+.g-h80{height:80px}
+.g-h90{height:90px}
+.g-h100{height:100px}
+.g-h120{height:120px}
+.g-h150{height:150px}
+.g-h130{height:130px}
+.g-h160{height:160px}
+.g-h180{height:180px}
+.g-h200{height:200px}
+.g-h260{height:260px}
+.g-h300{height:300px}
+.g-h350{height:350px}
+.g-h400{height:400px}
+.g-h450{height:450px}
+.g-h500{height:500px}
+.g-h550{height:550px}
+.g-h600{height:600px}
+.g-h650{height:650px}
+.g-h700{height:700px}
+.g-h750{height:750px}
+
+.g-mh20{min-height:20px}
+.g-mh30{min-height:30px}
+.g-mh40{min-height:40px}
+.g-mh50{min-height:50px}
+.g-mh60{min-height:60px}
+.g-mh70{min-height:70px}
+.g-mh80{min-height:80px}
+.g-mh90{min-height:90px}
+.g-mh100{min-height:100px}
+.g-mh120{min-height:120px}
+.g-mh150{min-height:150px}
+.g-mh160{min-height:160px}
+.g-mh180{min-height:180px}
+.g-mh200{min-height:200px}
+.g-mh260{min-height:260px}
+.g-mh300{min-height:300px}
+.g-mh350{min-height:350px}
+.g-mh400{min-height:400px}
+.g-mh450{min-height:450px}
+.g-mh500{min-height:500px}
+.g-mh550{min-height:550px}
+.g-mh600{min-height:600px}
+.g-mh600{min-height:650px}
+.g-mh700{min-height:700px}
+.g-mh750{min-height:750px}
+
+.f-lh20{line-height:20px}
+.f-lh30{line-height:30px}
+.f-lh40{line-height:40px}
+.f-lh50{line-height:50px}
+.f-lh60{line-height:60px}
+.f-lh70{line-height:70px}
+.f-lh90{line-height:90px}
+.f-lh100{line-height:100px}
+.f-lh110{line-height:110px}
+.f-lh120{line-height:120px}
+.f-lh150{line-height:150px}
+
+.f-fs10{font-size:10px}
+.f-fs11{font-size:11px}
+.f-fs12{font-size:12px}
+.f-fs13{font-size:13px}
+.f-fs14{font-size:14px}
+.f-fs16{font-size:16px}
+.f-fs18{font-size:18px}
+.f-fs20{font-size:20px}
+.f-fs22{font-size:22px}
+.f-fs24{font-size:24px}
+.f-fs26{font-size:26px}
+.f-fs28{font-size:28px}
+.f-fs30{font-size:30px}
+.f-fs36{font-size:36px}
+.f-fs40{font-size:40px}
+.f-fs44{font-size:44px}
+.f-fs48{font-size:48px}
+.f-fs50{font-size:50px}
+/******=================================******/
+
+/*easyui表单样式修改*/
+.textbox{line-height:1.2 !important;min-height:26px !important;border:1px solid #d2d2d2 !important;top:-1px;}
+.textbox .textbox-text{height:24px !important;line-height:24px !important;}
+.textbox .textbox-text,.combobox-item,.combobox-group,.combobox-stick{margin-right:0 !important;padding:0 8px !important;font-size:14px !important;width:100% !important}
+.combo-arrow{width:26px !important}
+.textbox.combo .textbox-text{padding-right:26px !important}
+.tree-node{padding-right:8px;overflow:hidden}
+.combobox-item,.combobox-group,.tree-node,.tree-node .tree-indent,.tree-node .tree-title{height:26px !important;line-height:26px !important;font-size:14px !important}
+.combobox-gitem{text-indent:18px}
+.tree-node .tree-indent{width:18px !important}
+.tree-expanded,.tree-collapsed,.tree-folder,.tree-file,.tree-checkbox,.tree-indent{position:relative;top:3px}
+.tree-hit{margin-left:5px}
+.textbox-focused{border-color:#007dff !important;transition:0.5s;-moz-transition:0.5s;-webkit-transition:0.5s;-o-transition:0.5s;box-shadow:none}
+.combo-arrow{background-color:#ffffff !important}
+.combobox-item{cursor:pointer}
+
+/**==修改table样式==**/
+.pagination-page-list{display:none}
+.m-table tr,.m-table tr.odd{background:none}
+.datagrid .datagrid-wrap{width:auto !important}
+.datagrid-header td,.datagrid-header td.datagrid-header-over,.datagrid-htable{background-color:#f0f0f0 !important;color:#333 !important}
+.datagrid-htable td{color:#333 !important;border-color:#ebebeb !important}
+.datagrid-htable .datagrid-cell{text-align:center !important}
+.datagrid-header .datagrid-cell span,.datagrid-header .datagrid-cell-group,.datagrid-htable td .datagrid-header-rownumber,.datagrid-htable td .datagrid-cell-rownumber{font-size:14px !important}
+.datagrid-header,.datagrid-toolbar,.datagrid-pager,.datagrid-footer-inner,.datagrid-wrap.panel-body{border-color:#ebebeb !important}
+.datagrid-header td,.datagrid-body td,.datagrid-footer td{border-color:#ebebeb !important;height:30px !important;line-height:28px !important;padding:5px !important}
+.datagrid-cell,.datagrid-cell-group,.datagrid-header-rownumber,.datagrid-cell-rownumber{height:auto !important}
+.datagrid-cell,.datagrid-cell-group,.datagrid-header-rownumber,.datagrid-cell-rownumber{font-size:14px !important;padding:0 !important}
+.datagrid-row-alt,.m-table tr.datagrid-row-alt,.m-table tr.odd.datagrid-row-alt{background:#fafafa}
+.datagrid-row-over,.m-table tr.datagrid-row-over,.m-table tr.odd.datagrid-row-over{background:#f7f7f7}
+.datagrid-btable .operBtns{display:none}
+.datagrid-btable .datagrid-row-over .operBtns{display:block}
+.datagrid-row-selected,.m-table tr.datagrid-row-selected,.m-table tr.odd.datagrid-row-selected{background:#f1f1f1}
+/**==end 修改table样式==**/
+
+.m-tb-fit{
+	position: relative;
+}
+.f-xs-font{     
+    -webkit-transform-origin-x: 0;
+    transform: scale(0.75) translate(0,0);
+    -moz-transform: scale(0.75) translate(0.2em,0);
+    -o-ttransform: scale(0.75) translate(0.2em,0);
+    -webkit-transform: scale(0.75) translate(0.2em,0);
+}
+.dseLabel{
+	text-align: right;
+}
+
+.ellipsis {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

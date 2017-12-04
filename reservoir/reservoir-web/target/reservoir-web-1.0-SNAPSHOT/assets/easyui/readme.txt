@@ -1,0 +1,7 @@
+Current Version: 1.5.1
+======================
+This software is allowed to use under freeware license or you need to buy commercial license for better support or other purpose.
+Please contact us at info@jeasyui.com
+
+/*�޸�*/
+1���滻�� themes/metro/images ����� combo_arrow.png

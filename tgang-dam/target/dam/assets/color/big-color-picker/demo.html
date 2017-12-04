@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>range演示</title>
+		<link rel="stylesheet" type="text/css" href="jquery.bigcolorpicker.css"/>
+		<script type="text/javascript" src="../../jquery/jquery-1.9.1.min.js" ></script>
+		<script src="jquery.bigcolorpicker.js"></script>
+		
+	<style type="text/css">
+			.ic0{background-color: rgb(135, 242, 109)}
+			.colorCont{
+				height: 40px;
+			    width: 40px;
+			    display: inline-block;
+			    background-color: rgb(51, 129, 172);
+			}
+	</style>
+	
+	</head>
+	<body>
+		<a href="javascript:void(0)" class="colorCont ic0"></a>
+			<div> 点击颜色块</div>
+			<div> js中153行    bgmage.src = "big_bgcolor.jpg";  图片前面加上项目路径 __path</div>
+	</body>
+	<script >
+	$(".colorCont").bigColorpicker(function(ele,color){
+		$(ele).css("backgroundColor",color);
+	});
+		
+	</script>
+</html>

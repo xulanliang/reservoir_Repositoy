@@ -1,0 +1,128 @@
+@comm-bgcolor-from:#6dbde4;
+@comm-bgcolor-to:#399dd8;
+@comm-bgcolor-hover:#399dd8;
+
+
+/* 通用自定义按钮-默认蓝色 */
+.u-btn {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 0 12px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #2d88bf;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    word-wrap: normal;
+    white-space: nowrap;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    text-shadow: 0 -1px rgba(0,0,0,0.2);
+    background: -webkit-gradient(linear,0% 0%,0% 100%,from(@comm-bgcolor-from),to(@comm-bgcolor-to));
+    background: -webkit-linear-gradient(@comm-bgcolor-from,@comm-bgcolor-to);
+    background: -moz-linear-gradient(@comm-bgcolor-from,@comm-bgcolor-to);
+    background: -ms-linear-gradient(@comm-bgcolor-from,@comm-bgcolor-to);
+    background: linear-gradient(@comm-bgcolor-from,@comm-bgcolor-to);
+}
+.u-btn,.u-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.u-btn:hover,.u-btn:focus {
+    background: @comm-bgcolor-hover;
+}
+.u-btn:active {
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.2);
+}
+.u-btn::-moz-focus-inner {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*超链接*/
+.u-btn-link{
+    font-weight: 400;
+    color: #337ab7;
+    border-radius: 0;
+        border-color: transparent;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.u-btn-link:hover {
+    color: #23527c;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.u-btn-link:active:focus,
+.u-btn-link:active:hover {
+    color: #74BBFB;
+}
+
+/* 较大 */
+.u-btn-lg {
+    padding: 0 15px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+}
+
+/* 较小 */
+.u-btn-sm {
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+}
+/*很小*/
+.u-btn-xs{
+    padding: 0 8px;
+    height: 20px;
+    line-height: 20px;
+}
+//按钮字体颜色默认有个，如果传递颜色进来说明是要更改颜色，否则不用添加颜色属性
+.u-m-color (@c) when (iscolor(@c)){  
+    color: @c;  
+}
+
+.u-btn-cs(@from,@to,@bd,@hover,@color) {
+    border-color: @bd;
+    background: -webkit-gradient(linear,0% 0%,0% 100%,from(@from),to(@to));
+    background: -webkit-linear-gradient(@from,@to);
+    background: -moz-linear-gradient(@from,@to);
+    background: -ms-linear-gradient(@from,@to);
+    background: linear-gradient(@from,@to);
+    
+    .u-m-color(@color);
+
+     &:hover, &:focus {
+      background: @hover;
+      .u-m-color(@color);
+     }
+}
+
+  
+//按钮样式定义 扩展按钮直接在数组的后面添加对应颜色值 
+@bgcolor-from: #ee232a #fbb149 #68c668 #fefefe #337ab7;
+@bgcolor-to:   #cc1c23 #f8960a #50b150 #e7e7e7 #286090;
+@bgcolor-hover:#cc1c23 #f8960a #50b150 #e7e7e7 #286090;
+@bdcolor:      #9f161b #e1962d #52a552 #d0d0d0 #204d74;
+@color:        xxxxxxx xxxxxxx xxxxxxx #333    xxxxxxx;
+.loop(@counter) when (@counter > 0) {
+
+    .u-btn-c@{counter}{
+        .u-btn-cs(extract(@bgcolor-from, @counter),extract(@bgcolor-to, @counter),extract(@bdcolor, @counter),extract(@bgcolor-hover, @counter),extract(@color, @counter))
+    }
+
+  .loop((@counter - 1));    // 递归调用自身
+}
+
+//样式的个数,生成样式
+.loop(5);

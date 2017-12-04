@@ -1,0 +1,152 @@
+<!--
+Created by IntelliJ IDEA.
+User: zhoujc
+Date: 2016-8-5
+Time: 14:28
+-->
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>广东省水资源</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../../main/main1/js/easyui/themes/metro/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../main/main1/js/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../../main/main1/js/easyui/themes/color.css">
+    <script type="text/javascript" src="assets/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../../main/main1/js/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../main/main1/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../../main/main1/js/json/json2.js"></script>
+    <script type="text/javascript" src="../../main/main1/js/layer/layer/layer.js"></script>
+    <script type="text/javascript" src="js/common/common.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+    <!--整个页面-->
+    <div class="main">
+        <div class="content">
+            <form class="loginform" method="get" action="/sysController/login.do">
+                <div class="row" style="padding-left: 70px;">
+                    <label for="userName">用户名</label>
+                    <input style="margin-left: 15px" type="text" id="userName" name="userName">
+                </div>
+                <div class="row" style="margin-top: 15px;padding-left: 80px;">
+                    <!--a href="#" class="pull-right label-forgot">Forgot password?</a-->
+                    <label for="password">密码</label>
+                    <input style="margin-left: 22px" type="password" id="password" name="password">
+                </div>
+                <div class="row" style="margin-top: 15px;padding-left: 140px;">
+                    <button class="btn" type="button" id="subBtn">
+                        登 录
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+    <div class="bottom">
+        <span id="tips">请使用IE11或360极速浏览器（点击地址栏后面闪电标记，切换极速模式） <a  href="javascript:void(0);"  title="下载" class="download">点击下载</a></span>
+    </div>
+    </div>
+
+    <div class="loginbg"></div>
+
+
+
+</body>
+<script type="text/javascript">
+    function downBrowser(name) {
+        window.location.href = $.contextPath() + "uploadController/downLoadBrowser/" + name + '.do';
+        layer.closeAll();
+    }
+    $(function () {
+        var checkIe = function () {
+            if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0") {
+                return true;
+            }
+            else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0") {
+                return true;
+            }
+            else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE8.0") {
+                return true;
+            }
+            else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE9.0") {
+                return true;
+            }
+            return false;
+        };
+
+
+        if(!checkIe()){
+            $('#tips').text('');
+        }
+
+
+        $('#subBtn').click(function () {
+           if (checkIe()) {
+               checkIeFailure();
+            }else {
+               $.ajax({
+                   url: "sysController/login.do",
+                   type: "post",
+                   data: JSON.stringify({userName: $('#userName').val(), password: $('#password').val()}),
+                   async: false,
+                   contentType: "application/json",
+                   dataType: "json",
+                   success: function (data) {
+                       if (data.flag == '0') {
+                           window.top.location.href = $.contextPath() + 'sysController/index.do';
+                           //window.top.location.href = '<%=basePath%>index.html';
+                       } else { layer.msg(data.msg, { offset: '250px',icon: 4, time: 3000});
+
+                       }
+                   },
+                   error: function (data) {
+                       layer.msg('登录失败', { offset: '250px',icon: 4, time: 3000});
+                   }
+               });
+           }
+        });
+
+        $('.download').click(function(){
+            downBrowser();
+        });
+
+        function checkIeFailure(){
+            layer.confirm('当前浏览器版本太低，是否升级浏览器获得更好的体验？', {
+                btn: ['好的'], //按钮
+                 success: function(layero, index){
+                     $(".layui-layer").css({"top":"50%","margin-top":"-120px","left":"50%","margin-left":"-210px"});
+                 }
+            }, function(){
+                downBrowser();
+            });
+        }
+
+        function downBrowser(){
+            layer.open({
+                type: 1,
+                shade: 0.5,
+                move:false,
+                area: ['420px', '240px'], //宽高
+                content: '<div> <table class="browser" style="width: 360px; height: 175px; margin-left: 20px;"> <tr> <th width="70%"   > 浏览器名称</th><th>操作</th></tr> <tr> <td >360se8.1.exe<span class="recommend">（推荐）</span></td> <td ><a onclick="downBrowser(\'360se8.1.exe\')" href="javascript:void(0)" title="下载">下载</a> </td> </tr><tr> <td >Chrome47.exe</td> <td ><a onclick="downBrowser(\'Chrome47.exe\')"  href="javascript:void(0)" title="下载">下载</a> </td> </tr> <tr> <td >FireFox41.exe</td> <td><a onclick="downBrowser(\'FireFox41.exe\')" href="javascript:void(0)"  title="下载">下载</a> </td> </tr>  <tr> <td>自行搜索下载</td> <td><a target="_blank" href="https://www.baidu.com/" title="跳转">跳转</a> </td> </tr></table> </div>',
+                cancel: function(index){
+                    layer.closeAll();
+                },
+                success: function(layero, index){
+                    $(".layui-layer").css({"top":"50%","margin-top":"-120px","left":"50%","margin-left":"-210px"});
+                }
+            });
+        }
+
+        $(document).keydown(function(event) {
+            if (event.keyCode == 13) {
+                $("#subBtn").click();
+            }
+        });
+    });
+
+</script>
+</html>

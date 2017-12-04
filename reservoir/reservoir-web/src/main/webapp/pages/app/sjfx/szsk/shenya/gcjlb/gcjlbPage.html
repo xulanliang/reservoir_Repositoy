@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/gcjlbmain" src="../../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+    <div id="app" class="g-wrap">
+        <!--新增、删除按钮-->
+        <div v-show="operType==''">
+            <!--查询-->
+            <form id="search" class="m-search f-cb">
+
+                <span class="f-mr20">
+                    <label class="dseLabel type1">选择时间</label>
+                    <input id="projcd_auto" name="projcd" type="hidden">
+                    <input id="ppcd_auto" name="ppcd" type="hidden">
+                    <input id="year_auto" name="year" type="text">
+                    <input id="month_auto" name="month" type="text">
+                </span>
+
+                <!--<span class="f-mr20" id="rb">-->
+                    <!--<label class="dseLabel type1">选择断面</label>-->
+                    <!--<input id="RB_CD_auto" name="RB_CD" type="text">-->
+                <!--</span>-->
+
+                <span id="doExport" class="u-btn u-btn-c1 f-rbtn f-mr20" @click="doExport">导出</span>
+                <input id="type" type="hidden" name="type" value="1">
+            </form>
+            <!--end 查询-->
+
+            <!--表格-->
+            <div class="m-datagrid g-mh200">
+                <div class="gc-select">
+                    <a id="jcdata" class="gc_tab">基础数据表</a><a id="tjdata" class="gc_tab" style="margin-right: 20px;">统计数据表</a>
+                </div>
+                <div id="datagrid"></div>
+            </div>
+            <!--end 表格-->
+        </div>
+        <div v-if="operType!=''">
+            <iframe :src="url" width="100%" height="100%" scrolling="no" frameborder="0" onload="this.height=document.documentElement.clientHeight-8;"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

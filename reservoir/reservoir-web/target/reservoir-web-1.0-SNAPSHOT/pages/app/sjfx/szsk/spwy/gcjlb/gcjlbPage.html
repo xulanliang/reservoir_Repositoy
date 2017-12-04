@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平位移观测记录表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/gcjlbmain" src="../../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+    <div id="app" class="g-wrap">
+        <!--新增、删除按钮-->
+        <div v-show="operType==''">
+            <!--查询-->
+            <form id="search" class="m-search f-cb">
+
+                <!--查询条件-->
+                <span>
+                    <label class="dseLabel type1">选择时间</label>
+                    <input id="projcd_auto" type="hidden" name="projcd" />
+                    <input id="ppcd_auto" type="hidden"  name="ppcd"/>
+                    <input id="syear_auto" type="text" name="syear"/>
+                    <input id="type" type="hidden" value="1" name="type">
+                </span>
+
+                <span class="f-mr20">
+                    <label class="dseLabel type1">至</label>
+                    <input id="eyear_auto" type="text" name="eyear" />
+                </span>
+
+                <span id="doExport" class="u-btn u-btn-c1 f-rbtn f-mr20" @click="doExport">导出</span>
+
+            </form>
+            <!--end 查询-->
+
+
+
+            <!--表格-->
+            <div class="m-datagrid g-mh200">
+                <div class="gc-select">
+                    <a id="jcdata" class="gc_tab">基础数据表</a><a id="tjdata" class="gc_tab" style="...">统计数据表</a>
+                </div>
+                <div id="datagrid"></div>
+            </div>
+            <!--end 表格-->
+        </div>
+
+
+        <div v-if="operType!=''">
+            <iframe :src="url" width="100%" height="100%" scrolling="no" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>

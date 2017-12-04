@@ -1,0 +1,1 @@
+1、对ajaxfileupload.js 添加了seajs支持，但没测试

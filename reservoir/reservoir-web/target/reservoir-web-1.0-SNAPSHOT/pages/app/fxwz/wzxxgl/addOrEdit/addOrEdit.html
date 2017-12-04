@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物资信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap">
+    <!--表单-->
+    <!--
+            可以使用input,span,a,div,p
+            以 _auto 结尾的id表示保存或提交时会上传的字段
+
+            建议使用span标签
+            以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+            以 _ori 结尾的class表示详情时需要显示的字段
+        -->
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+    <form id="m-form" class="m-form">
+        <table class="m-table">
+            <tbody>
+            <tr>
+                <td width="20%" align="right" class="dseLabel require">物资名称</td>
+                <td width="30%">
+                    <input id="ma_cd_auto" type="hidden">
+                    <input id="ma_nm_auto" type="text" maxLength="100">
+                    <span class="ma_nm_ori"></span>
+                </td>
+                <td width="20%" align="right" class="dseLabel require">物资分类</td>
+                <td>
+                    <input id="ma_type_id_auto" type="text">
+                    <span class="ma_type_id_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">规格或型号</td>
+                <td>
+                    <input id="model_auto" type="text" maxLength="100">
+                    <span class="model_ori"></span>
+                </td>
+                <td align="right" class="dseLabel require">单位</td>
+                <td>
+                    <input id="mu_auto" type="text" maxLength="20">
+                    <span class="mu_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">水利部定额</td>
+                <td>
+                    <input id="sl_std_quan_auto" type="text" data-rule="d{6,2}">
+                    <span class="sl_std_quan_ori"></span>
+                </td>
+                <td align="right" class="dseLabel">公司储备定额</td>
+                <td>
+                    <input id="gs_std_quan_auto" type="text" data-rule="d{6,2}">
+                    <span class="gs_std_quan_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">参考储备年限</td>
+                <td>
+                    <input id="std_year_auto" type="text" maxLength="3" data-rule="d">
+                    <span class="std_year_ori"></span>
+                </td>
+                <td align="right" class="dseLabel">生产厂家</td>
+                <td>
+                    <input id="manufacturer_auto" type="text" maxLength="100">
+                    <span class="manufacturer_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">状态</td>
+                <td colspan="3">
+                    <input id="status_auto" type="text">
+                    <span class="status_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">备注</td>
+                <td colspan="3">
+                    <textarea id="nt_auto" maxLength="256"></textarea>
+                    <div class="nt_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <!--end 表单-->
+</div>
+
+</body>
+</html>

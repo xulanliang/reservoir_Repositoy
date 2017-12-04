@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/shenyaPage" src="../../../../../assets/require/require.js"></script>
+    <style>
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        #cont-lists{
+            height:-moz-calc(100% - (46px)) !important;
+            height:-webkit-calc(100% - (46px)) !important;
+            height: calc(100% - (46px)) !important;
+            overflow: auto;
+        }
+        #cont-lists li{
+            height:100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tab-btns" class="f-cb">
+        <a href="javascript:">过程线</a>
+        <a href="javascript:" id="jrxURL">浸润线图</a>
+        <a href="javascript:">相关图</a>
+        <a href="javascript:">观测记录表</a>
+        <a href="javascript:">渗压特征值报表</a>
+        <a href="javascript:">季（年）报表</a>
+
+    </div>
+    <div id="chart">
+        <ul id="cont-lists">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!-- fileToUpload 文件上传 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width">
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./demo" src="../../../../require/require.js"></script>
+</head>
+
+<body>
+    <div id="fileListTable" v-cloak>
+        <div class="f-pb5 f-pt5">
+            <span data-btype="1" :class="['u-btn u-btn-c1',fbtn]" @click="newfiles($event.currentTarget)" data-accept="word" :data-submit="subBtn">选择文件</span>
+            <span :id="subBtn" class="u-btn u-btn-c2" @click="submitfiles" v-if="!autosubmit"><i class="fa fa-upload"></i> 点击上传</span>
+            <span>选择文件后点击上传，限制上传 word。</span>
+            <span>（ IE9 只可以单文件上传，其他浏览器默认多文件上传 ）</span>
+        </div>
+        <table class="m-table">
+            <thead>
+                <tr>
+                    <th width="240" align="center">文件名</th>
+                    <th width="50" align="center" v-if="!isIE">文件大小</th>
+                    <th width="100" align="center">上传时间</th>
+                    <th width="50" align="center">操作</th>
+                </tr>
+            </thead>
+            <tbody :class="fql" data-btype="1">
+                <tr :class="ftr">
+                    <td :colspan="isIE ? 3 : 4">
+                        <div :class="fnull">{{fnullText}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="f-pb5 f-pt5">
+            <span data-btype="2" :class="['u-btn u-btn-c1',fbtn]" @click="newfiles($event.currentTarget)" data-accept="word,excel"><i class="fa fa-upload"></i> 上传</span>
+            <span>选择文件后直接上传，限制上传 execl</span>
+        </div>
+        <table class="m-table">
+            <thead>
+                <tr>
+                    <th width="240" align="center">文件名</th>
+                    <th width="50" align="center" v-if="!isIE">文件大小</th>
+                    <th width="100" align="center">上传时间</th>
+                    <th width="50" align="center">操作</th>
+                </tr>
+            </thead>
+            <tbody :class="fql" data-btype="2">
+                <tr :class="ftr">
+                    <td :colspan="isIE ? 3 : 4">
+                        <div :class="fnull">{{fnullText}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="f-pb5 f-pt5">
+            <span data-btype="3" :class="['u-btn u-btn-c1',fbtn]" @click="newfiles($event.currentTarget)" data-accept="jpg,png,gif" data-single="true"><i class="fa fa-upload"></i> 上传</span>
+            <span>选择文件后直接上传，只能上传单个文件，重复上传会直接替换，限制上传 jpg</span>
+        </div>
+        <table class="m-table">
+            <thead>
+                <tr>
+                    <th width="240" align="center">文件名</th>
+                    <th width="50" align="center" v-if="!isIE">文件大小</th>
+                    <th width="100" align="center">上传时间</th>
+                    <th width="50" align="center">操作</th>
+                </tr>
+            </thead>
+            <tbody :class="fql" data-btype="3">
+                <tr :class="ftr">
+                    <td :colspan="isIE ? 3 : 4">
+                        <div :class="fnull">{{fnullText}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

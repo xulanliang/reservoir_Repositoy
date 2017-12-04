@@ -1,0 +1,159 @@
+//bootstrap
+.u-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    
+    .u-m-bgcolor(#fff,#337ab7,#2e6da4);
+}
+
+.u-btn:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.u-btn:focus,.u-btn:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.u-btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.u-btn:active:focus,
+.u-btn:active:hover {
+    color: #fff;
+    background-color: #204d74;
+    border-color: #122b40;
+}
+
+/*超链接*/
+.u-btn-link{
+    font-weight: 400;
+    color: #337ab7;
+    border-radius: 0;
+        border-color: transparent;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.u-btn-link:hover {
+    color: #23527c;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.u-btn-link:active:focus,
+.u-btn-link:active:hover {
+    color: #74BBFB;
+}        
+
+/* 较大 */
+.u-btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+/* 较小 */
+.u-btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+/*很小*/
+.u-btn-xs{
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+
+.u-m-bgcolor(@c,@bg,@bd){
+        color: @c;
+        background-color: @bg;
+        border-color: @bd;
+}
+
+.u-btn-cs(@c,@bg,@bd,@fc,@fbg,@fbd,@hc,@hbg,@hbd,@ac,@abg,@abd) {
+        .u-m-bgcolor(@c,@bg,@bd);
+        &:focus {
+           .u-m-bgcolor(@fc,@fbg,@fbd);
+        }
+        &:hover {
+           .u-m-bgcolor(@hc,@hbg,@hbd);
+        }
+        &:active{
+            .u-m-bgcolor(@ac,@abg,@abd);
+        }
+        
+        &:active:focus,
+        &:active:hover {
+            color: @c;
+            background-color: @abd;
+            border-color: @fbd;
+        }
+
+}
+
+  
+
+@c  :#fff    #fff    #fff    #333;//color
+@bg :#d9534f #f0ad4e #5cb85c #fff;//background-color
+@bd :#d43f3a #eea236 #4cae4c #ccc;//border-color
+@fc :#fff    #fff    #fff    #333;//focus color
+@fbg:#c9302c #ec971f #449d44 #e6e6e6;//focus background-color
+@fbd:#761c19 #985f0d #255625 #8c8c8c;//focus border-color
+@hc :#fff    #fff    #fff    #333; //hover color
+@hbg:#c9302c #ec971f #449d44 #e6e6e6;//hover background-color
+@hbd:#ac2925 #d58512 #398439 #adadad;// hover border-color
+@ac :#fff    #fff    #fff    #333;// active color
+@abg:#c9302c #ec971f #449d44 #e6e6e6; //active background-color
+@abd:#ac2925 #d58512 #398439 #adadad;//active boder-color
+
+.loop(@counter) when (@counter > 0) {
+
+    .u-btn-c@{counter}{
+        .u-btn-cs(
+            extract(@c, @counter),extract(@bg, @counter),extract(@bd, @counter),
+            extract(@fc, @counter),extract(@fbg, @counter),extract(@fbd, @counter),
+            extract(@hc, @counter),extract(@hbg, @counter),extract(@hbd, @counter),
+            extract(@ac, @counter),extract(@abg, @counter),extract(@abd, @counter)
+        ); 
+    }
+
+  .loop((@counter - 1));    // 递归调用自身
+}
+
+//样式的个数,生成样式
+.loop(4);

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../../seajs/dist/sea_dse.js"></script>
+<script type="text/javascript" src="../../../../config/seajs-config.js"></script>
+<script type="text/javascript" src="dseFormDemo.js"></script>
+</head>
+<body>
+
+
+	<form id="myForm" class="m-form">
+		<table class="m-tb">
+			<tr>
+				<td class="u-lbl require" style="width: 15%">区划名称</td>
+				<td class="u-cont" style="width: 35%">
+					<span id="dname_auto"></span>
+				</td>
+
+				<td class="u-lbl" style="width: 15%">简称</td>
+				<td class="u-cont" style="width: 35%">
+					<span id="shorttitle_auto"></span>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td class="u-lbl require">生日</td>
+				<td class="u-cont">
+					<span id="birthday_auto"></span>
+				</td>
+
+				<td class="u-lbl">问题</td>
+				<td class="u-cont">
+
+					<span id="question_auto"></span>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td class="u-lbl require">性别</td>
+				<td class="u-cont">
+					<input type="radio" id="sex_auto" name="sex" value="1"  class="easyui-validatebox" data-options="required:true"/>
+					男
+					<input type="radio" id="sex_auto" name="sex" value="0" />
+					女
+				</td>
+
+				<td class="u-lbl">婚姻状况</td>
+				<td class="u-cont">
+					<input type="radio" name="yh_auto" value="1" />
+					已婚
+					<input type="radio" name="yh_auto" value="2" />
+					未婚
+					<input type="radio" name="yh_auto" value="3" />
+					离婚
+				</td>
+			</tr>
+
+			<tr>
+				<td class="u-lbl require">喜欢的明星</td>
+				<td class="u-cont" colspan="3">
+					<input type="checkbox" name="start_auto" name="" value="1" />
+					李连杰
+					<input type="checkbox" name="start_auto" value="2" />
+					成龙
+					<input type="checkbox" name="start_auto" value="3" />
+					吴京
+					<input type="checkbox" name="start_auto" value="4" />
+					斯坦森
+					<input type="checkbox" name="start_auto" value="5" />
+					李小龙
+				</td>
+			</tr>
+
+
+			<tr>
+				<td class="u-lbl require">喜欢的老师</td>
+				<td class="u-cont" colspan="3">
+					<input type="checkbox" id="teacher_auto" name="" value="1" />
+					刘谦
+					<input type="checkbox" id="teacher_auto" value="2" />
+					蒋欣
+					<input type="checkbox" id="teacher_auto" value="3" />
+					花千骨
+					
+				</td>
+			</tr>
+
+
+
+		</table>
+	</form>
+	<div id="values"></div>
+
+
+	<div class="u-btn-box">
+		<button class="u-btn" onclick="module.save()">保存</button>
+	</div>
+
+
+
+
+</body>
+</html>

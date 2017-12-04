@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巡查计划信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-cloak>
+    <!--表单-->
+    <!--
+            可以使用input,span,a,div,p
+            以 _auto 结尾的id表示保存或提交时会上传的字段
+
+            建议使用span标签
+            以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+            以 _ori 结尾的class表示详情时需要显示的字段
+        -->
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+    <form id="m-form" class="m-form">
+        <input id="TS_auto"  type="hidden" />
+        <input id="CK_TK_ID_auto" type="hidden" />
+        <table class="m-table">
+            <tbody>
+
+                <!--
+                <tr>
+                <td width="30%" align="right" class="dseLabel require">编码</td>
+                <td >
+                    <input id="CK_TK_ID_auto" type="text"  placeholder="编码不填将自动生成" />
+                    <span class="CK_TK_ID_ori"></span>
+                </td>
+                </tr>
+                -->
+                <tr>
+                    <td width="30%" align="right" class="dseLabel require">计划描述</td>
+                    <td colspan="3" >
+                        <input id="CK_TK_DESC_auto" type="text" maxLength="200"  placeholder="计划描述" />
+                        <span class="CK_TK_DESC_ori"></span>
+                    </td>
+                </tr>
+            <tr>
+                <td align="right" class="dseLabel require">管理部门</td>
+                <td  colspan="3" >
+                    <input id="CK_ORG_auto" type="text" />
+                    <span class="CK_ORG_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查类型</td>
+                <td  colspan="3">
+                    <input id="CK_TYPE_auto" type="text" />
+                    <span class="CK_TYPE_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">对象分类</td>
+                <td  colspan="3" >
+                    <input id="CK_OBJECT_auto" type="text" />
+                    <span class="CK_OBJECT_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查对象</td>
+                <td colspan="3" >
+                    <input id="CK_OBJ_ID_auto" type="text" />
+                    <span id="ck_obj_id_name" class="CK_OBJ_ID_NAME_ori" ></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">制定人</td>
+                <td >
+                    <input id="CREATE_USER_auto" type="text" maxlength="50"/>
+                    <span class="CREATE_USER_ori"></span>
+                </td>
+                <td align="right" class="dseLabel">制定日期</td>
+                <td >
+                    <input id="CREATE_DATE_auto" type="text" class="Wdate"   style="width: 160px" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" />
+                    <span class="CREATE_DATE_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">起始日期</td>
+                <td >
+                    <input id="CK_BEGIN_auto" type="text" class="Wdate"   style="width: 160px" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'CK_END_auto\')}',dateFmt:'yyyy-MM-dd HH:mm:ss'});" />
+                    <span class="CK_END_ori"></span>
+                </td>
+                <td align="right" class="dseLabel require">结束日期</td>
+                <td >
+                    <input id="CK_END_auto" type="text" class="Wdate"   style="width: 160px" onClick="WdatePicker({minDate:'#F{$dp.$D(\'CK_BEGIN_auto\')}',dateFmt:'yyyy-MM-dd HH:mm:ss'});" />
+                    <span class="CK_END_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">巡查人员</td>
+                <td colspan="3">
+                    <input id="CK_USERS_auto" type="text" maxlength="200"/>
+                    <span class="CK_USERS_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查周期</td>
+                <td>
+                    <input id="CK_CYCLE_auto" type="text"/>
+                    <span class="CK_CYCLE_NAME_ori"></span>
+                </td>
+                <td align="right" class="dseLabel require">巡查次数</td>
+                <td>
+                    <input id="CK_FREQUENCY_auto" type="text" data-rule="d" />
+                    <span class="CK_FREQUENCY_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">间隔小时</td>
+                <td>
+                    <input id="CK_INT_HOURS_auto" type="text" data-rule="d{4}"/>
+                    <span class="CK_INT_HOURS_ori"></span>
+                </td>
+                <td align="right" class="dseLabel require">状态</td>
+                <td colspan="1">
+                    <input id="STATUS_auto" type="text"/>
+                    <span class="STATUS_NAME_ori"></span>
+                </td>
+                <!--<td align="right" class="dseLabel require">下一次生成任务数据时间</td>-->
+                <!--<td>-->
+                     <!--<input id="LAST_CREATE_DATE_auto" type="text" class="Wdate"   style="width: 160px" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" />-->
+                     <!--<span class="LAST_CREATE_DATE_ori"></span>-->
+                <!--</td>-->
+            </tr>
+
+            <!--<tr>-->
+                <!--<td align="right" class="dseLabel require">状态</td>-->
+                <!--<td colspan="3">-->
+                    <!--<input id="STATUS_auto" type="text"/>-->
+                    <!--<span class="STATUS_NAME_ori"></span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--
+            <tr>
+                <td align="right" class="dseLabel">巡查对象分类</td>
+                <td colspan="3">
+                    <input id="CK_ITEM_auto" type="text">
+                    <span class="CK_ITEM_ori"></span>
+                </td>
+            </tr>
+            -->
+            <tr>
+                <td align="right" class="dseLabel">备注</td>
+                <td colspan="3">
+                    <textarea id="NT_auto" maxLength="100"></textarea>
+                    <div class="NT_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            <!--
+            <tr >
+                <td align="right" class="dseLabel">创建时间</td>
+                <td colspan="3">
+                    <input id="TS_auto"  type="hidden" />
+                    <span class="TS_ori"></span>
+                </td>
+            </tr>
+            -->
+            </tbody>
+        </table>
+    </form>
+    <!--end 表单-->
+</div>
+
+</body>
+</html>

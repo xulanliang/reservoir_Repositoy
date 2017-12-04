@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <!-- Le styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader-style.css">
+    <link rel="stylesheet" href="js/bootstrap/bootstrap.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <style>
+        body{
+            background: none!important;
+        }
+    </style>
+    <script src="js/html5.js"></script>
+</head>
+
+<body>
+<div class="row" id="user">
+    <div class="col-sm-12">
+        <div class="well profile">
+            <div class="col-sm-12">
+                <div class="col-xs-6 col-sm6 profile-name">
+                    <dl class="dl-horizontal-profile">
+
+                        <dt>姓名</dt>
+                        <dd name="name"></dd>
+
+                        <dt>用户名</dt>
+                        <dd name="userName"></dd>
+
+                        <dt>拥有角色</dt>
+                        <dd name="roleName"></dd>
+
+                        <!--<dt>出生年月日</dt>-->
+                        <!--<dd name="birthday" class="date"></dd>-->
+
+                        <!--<dt>身份证</dt>-->
+                        <!--<dd name="cardId"></dd>-->
+
+                        <!--<dt>性别</dt>-->
+                        <!--<dd name="sexName"></dd>-->
+
+                        <!--<dt>电话号码</dt>-->
+                        <!--<dd name="telephone"></dd>-->
+
+                        <!--<dt>手机号码</dt>-->
+                        <!--<dd name="mobile"></dd>-->
+
+                        <!--<dt>学历</dt>-->
+                        <!--<dd name="degreeName"></dd>-->
+
+                        <!--<dt>毕业院校</dt>-->
+                        <!--<dd name="school"></dd>-->
+
+                        <!--<dt>所学专业</dt>-->
+                        <!--<dd name="studyMajor"></dd>-->
+
+                        <!--<dt>家庭住址</dt>-->
+                        <!--<dd name="address"></dd>-->
+                    </dl>
+                </div>
+
+                <div class="col-xs-6 col-sm6 profile-name">
+                    <dl class="dl-horizontal-profile">
+
+                        <!--<dt>电子邮件</dt>-->
+                        <!--<dd name="email"></dd>-->
+
+                        <!--<dt>民族</dt>-->
+                        <!--<dd name="nationality"></dd>-->
+
+                        <!--<dt>政治面貌</dt>-->
+                        <!--<dd name="politicalStatus"></dd>-->
+
+                        <!--<dt>出生地</dt>-->
+                        <!--<dd name="bornPlace"></dd>-->
+
+                        <!--<dt>开始工作日期</dt>-->
+                        <!--<dd name="startWorkdate" class="date"></dd>-->
+
+                        <dt>所属部门</dt>
+                        <dd name="departmentName"></dd>
+
+                        <dt>岗位</dt>
+                        <dd name="jobName"></dd>
+
+                        <!--<dt>职务级别</dt>-->
+                        <!--<dd name="dutyLevelName"></dd>-->
+
+                        <!--<dt>技术职称</dt>-->
+                        <!--<dd name="techTitle"></dd>-->
+
+                        <!--<dt>拥有角色</dt>-->
+                        <!--<dd name="roleName"></dd>-->
+
+                        <!--<dt>用户类型</dt>-->
+                        <!--<dd name="typeName">-->
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+   var user = JSON.parse(sessionStorage.getItem(Constans.USER_INFO));
+    $(document).ready(function () {
+
+        $.ajax({
+            url: $.contextPath() +  "userController/getUserById.do",
+            type: "post",
+            data: JSON.stringify({
+                id: user.id
+            }),
+            contentType: "application/json",
+            dataType: "json",
+            success: function (data) {
+                $('#user').autoFillName(data);
+            }
+        });
+    });
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+基础资料录入：pages/app/damSafety/basicData/basicDataPage.html
+监测点绑定：pages/app/damSafety/pointBinding/pointBinding.html
+浸润线：pages/app/damSafety/infiltrationLine/infiltrationLinePage.html
+分布图分析：pages/app/damSafety/distribution/distribution.html
+监测过程线：pages/app/damSafety/process/process.html
+渗压数据管理：pages/app/SeepagePressureDM/SeepagePressureDM.html
+渗流数据管理：pages/app/damSafety/seepageDM/seepageDM.html
+手动同步大坝数据：pages/app/damSafety/exchangeData/exchangeData.html

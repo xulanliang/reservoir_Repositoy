@@ -1,0 +1,127 @@
+.vform-box .m-vf{
+    position: relative;
+    z-index: 1;
+}
+.vform-box .m-vf .u-arr1,
+.vform-box .m-vf .u-arr2,
+.vform-box .m-vf .u-msg{
+    display: none;
+    position: absolute;
+}
+.vform-box .m-vf .u-msg{
+    z-index: 100;
+}
+.vform-box .m-vf .u-arr1{
+    z-index: 101;
+}
+.vform-box .m-vf .u-arr2{
+    z-index: 102;
+}
+.vform-box .m-vf.top .u-arr1,
+.vform-box .m-vf.top .u-arr2,
+.vform-box .m-vf.top .u-msg{
+    left: 0;
+    bottom: 100%;
+}
+.vform-box .m-vf.right .u-arr1,
+.vform-box .m-vf.right .u-arr2,
+.vform-box .m-vf.right .u-msg{
+    left: 100%;
+    top: 50%;
+}
+.vform-box .m-vf.bottom .u-arr1,
+.vform-box .m-vf.bottom .u-arr2,
+.vform-box .m-vf.bottom .u-msg{
+    left: 0;
+    top: 100%;
+}
+.vform-box .m-vf.left .u-arr1,
+.vform-box .m-vf.left .u-arr2,
+.vform-box .m-vf.left .u-msg{
+    right: 100%;
+    top: 50%;
+}
+.vform-box .m-vf .u-msg{
+    height: 22px;
+    line-height: 20px;
+    padding: 0 5px;
+    background-color: #ffffcc;
+    border: 1px solid #dfbf6c;
+    color: #010101;
+    word-wrap:normal;
+    white-space:nowrap;
+    border-radius: 5px;
+}
+.vform-box .m-vf.top .u-msg{
+    margin-bottom: 8px;
+}
+.vform-box .m-vf.right .u-msg{
+    margin-left: 8px;
+    margin-top: -12px;
+}
+.vform-box .m-vf.bottom .u-msg{
+    margin-top: 8px;
+}
+.vform-box .m-vf.left .u-msg{
+    margin-right: 8px;
+    margin-top: -12px;
+}
+.vform-box .m-vf .u-msg.f-err-msg{
+    color: red;
+}
+.vform-box .m-vf .u-arr1,
+.vform-box .m-vf .u-arr2{
+    width: 0;
+    height: 0;
+}
+.vform-box .m-vf.right .u-arr1,
+.vform-box .m-vf.right .u-arr2,
+.vform-box .m-vf.left .u-arr1,
+.vform-box .m-vf.left .u-arr2{
+    margin-top: -6px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+.vform-box .m-vf.top .u-arr1,
+.vform-box .m-vf.top .u-arr2,
+.vform-box .m-vf.bottom .u-arr1,
+.vform-box .m-vf.bottom .u-arr2{
+    margin-left: 15px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.vform-box .m-vf.top .u-arr1{
+    margin-bottom: 1px;
+    border-top: 8px solid #dfbf6c;
+}
+.vform-box .m-vf.top .u-arr2{
+    margin-bottom: 2px;
+    border-top: 8px solid #ffffcc;
+}
+.vform-box .m-vf.right .u-arr1{
+    margin-left: 1px;
+    border-right: 8px solid #dfbf6c;
+}
+.vform-box .m-vf.right .u-arr2{
+    margin-left: 2px;
+    border-right: 8px solid #ffffcc;
+}
+.vform-box .m-vf.bottom .u-arr1{
+    margin-top: 1px;
+    border-bottom: 8px solid #dfbf6c;
+}
+.vform-box .m-vf.bottom .u-arr2{
+    margin-top: 2px;
+    border-bottom: 8px solid #ffffcc;
+}
+.vform-box .m-vf.left .u-arr1{
+    margin-right: 1px;
+    border-left: 8px solid #dfbf6c;
+}
+.vform-box .m-vf.left .u-arr2{
+    margin-right: 2px;
+    border-left: 8px solid #ffffcc;
+}
+.vform-box .m-vf .u-err{
+    border-color:#c00 #e00 #e00;
+}

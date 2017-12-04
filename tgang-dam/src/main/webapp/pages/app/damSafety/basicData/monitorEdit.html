@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="stylesheet"  href="../../../../assets/win/layer/skin/layer.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../assets/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="css/form.css" type="text/css"/>
+    <script type="text/javascript" src="../../../../assets/seajs/dist/sea_dse.js"></script>
+    <script type="text/javascript" src="../../../../config/seajs-config.js"></script>
+    <script type="text/javascript" src="js/monitorEdit.js"></script>
+</head>
+<body>
+<div class="divContentCenter"  style="margin-top: 10%;">
+    <form id="dseForm" class="dseForm">
+        <table class="dseTable">
+            <tr>
+                <td class="dseLabel require" style="width: 15%">监测点代码<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="pointcd_auto" name="pointcd"    />
+                    <input id="opointcd_auto" name="opointcd"   type="hidden" />
+                    <input id="bntrcd_auto" name="bntrcd" type="hidden" />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">监测点名称<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="point_auto" name="point"   />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">监测点类型<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="category_auto" name="category"    />
+                    <input id="ucategory_auto" name="ucategory"   type="hidden" />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">监测方法<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="ptype_auto" name="ptype"   />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="dseButtonCtn" id="btns">
+    <button class="btn btn-success" type="button" id="subBtn">保存</button>
+    <button class="btn btn-primary" type="button" id="closeBtn">关闭</button>
+</div>
+</body>
+</html>

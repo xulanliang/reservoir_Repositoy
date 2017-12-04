@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table" align="enter">
+					<tbody>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">渡槽编号</td>
+							<td width="30%">
+								<!--to do id-->
+								<input id="DC_CD_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="DC_CD_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">工程编号</td>
+							<td width="30%">
+								<input id="PROJ_CD_auto" type="text" readonly>
+								<span class="PROJ_CD_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">渡槽名称</td>
+							<td width="30%">
+								<input id="DC_NM_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="DC_NM_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">工程级别</td>
+							<td width="30%">
+								<input id="DC_LEAGUE_auto" type="text" maxlength="15">
+								<span class="DC_LEAGUE_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">全长</td>
+							<td width="30%">
+								<input id="LEN_auto" type="text" valType="2" data-rule="d{6,2}" >
+								<span class="LEN_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">设计流量</td>
+							<td width="30%">
+								<input id="PLAN_INS_auto" type="text" data-rule="d{8,2}" >
+								<span class="PLAN_INS_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">加大流量</td>
+							<td width="30%">
+								<input id="OPT_INS_auto" type="text" valType="2" data-rule="d{8,2}">
+								<span class="OPT_INS_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">底宽</td>
+							<td width="30%">
+								<input id="BOTTON_WIDTH_auto" type="text" data-rule="d{3,3}">
+								<span class="BOTTON_WIDTH_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">正常水深</td>
+							<td width="30%">
+								<input id="NORMAL_DEPTH_auto" type="text" valType="2" data-rule="d{3,3}" >
+								<span class="NORMAL_DEPTH_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">加大水深</td>
+							<td width="30%">
+								<input id="OTP_DEPTH_auto" type="text" data-rule="d{3,3}">
+								<span class="OTP_DEPTH_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">渠底高程</td>
+							<td width="30%">
+								<input id="BOTTOM_GC_auto" type="text" valType="2" data-rule="d{3,3}" >
+								<span class="BOTTOM_GC_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">正常水位</td>
+							<td width="30%">
+								<input id="NORMAL_Z_auto" type="text" data-rule="d{3,3}">
+								<span class="NORMAL_Z_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">加大水位</td>
+							<td width="30%">
+								<input id="OTP_Z_auto" type="text" valType="2" data-rule="d{3,3}" >
+								<span class="OTP_Z_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">正常流速</td>
+							<td width="30%">
+								<input id="NORMAL_FLOW_auto" type="text" data-rule="d{3,3}" >
+								<span class="NORMAL_FLOW_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">备注</td>
+							<td   colspan="3">
+								<input id="NT_auto" type="text" valType="2" maxLength="128">
+								<span class="NT_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

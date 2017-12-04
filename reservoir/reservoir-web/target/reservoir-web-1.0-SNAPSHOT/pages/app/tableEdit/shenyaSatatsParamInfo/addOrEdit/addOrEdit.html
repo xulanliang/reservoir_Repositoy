@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<style>
+		.readonly{
+			background-color: #dedddd;
+		}
+
+	</style>
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">测点名称</td>
+							<td width="15%">
+								<input id="STCD_auto" type="hidden">
+								<input id="ID_auto" type="hidden">
+								<input id="PROJ_CD_auto" type="hidden">
+								<input id="ST_TP_auto" type="hidden">
+								<input id="STNM_auto" type="text" class="readonly" maxLength="100" readonly>
+								<span class="STNM_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子B0</td>
+							<td width="15%">
+								<input id="B0_auto" type="text"   onkeyup="value=value.replace(/[^\-\d{1,}\.\d{1,}|\d{1,}]/g,'')"   >
+								<span class="B0_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X1</td>
+							<td width="15%">
+								<input id="X1_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X1_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X2</td>
+							<td width="15%">
+								<input id="X2_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X2_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">因子X3</td>
+							<td width="15%">
+								<input id="X3_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X3_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X4</td>
+							<td width="15%">
+								<input id="X4_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X4_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X5</td>
+							<td width="15%">
+								<input id="X5_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X5_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X6</td>
+							<td width="15%">
+								<input id="X6_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X6_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">因子X7</td>
+							<td width="15%">
+								<input id="X7_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X7_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X8</td>
+							<td width="15%">
+								<input id="X8_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X8_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X9</td>
+							<td width="15%">
+								<input id="X9_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X9_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X10</td>
+							<td width="15%">
+								<input id="X10_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X10_ori f-dn"></span>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">因子X11</td>
+							<td width="15%">
+								<input id="X11_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X11_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X12</td>
+							<td width="15%">
+								<input id="X12_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X12_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X13</td>
+							<td width="15%">
+								<input id="X13_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X13_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X14</td>
+							<td width="15%">
+								<input id="X14_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X14_ori f-dn"></span>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">因子X15</td>
+							<td width="15%">
+								<input id="X15_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X15_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X16</td>
+							<td width="15%">
+								<input id="X16_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X16_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X17</td>
+							<td width="15%">
+								<input id="X17_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X17_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">因子X18</td>
+							<td width="15%">
+								<input id="X18_auto" type="text"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  >
+								<span class="X18_ori f-dn"></span>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

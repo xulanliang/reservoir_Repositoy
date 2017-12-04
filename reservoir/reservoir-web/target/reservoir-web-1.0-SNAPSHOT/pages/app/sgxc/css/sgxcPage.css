@@ -1,0 +1,10 @@
+.g-bd1{background-color:#eff3f6;}
+.g-sd1{position:relative;float:left;width:230px;margin-right:-230px;height: 100%}
+.g-mn1{float:right;width:100%;height: 100%}
+.g-mn1c{margin-left:230px;margin-top:5px;margin-right:5px}
+
+.myztree{width: 230px;padding:5px 5px 0 5px;overflow: auto;}
+.lev1{
+    height: 500px;
+    background-color: white;
+}

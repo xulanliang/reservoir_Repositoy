@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/tab.css" />
+<script type="text/javascript" src="../../../jquery/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../js/tab.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var myTab=$("#myTab").tab2({
+			tabs : [ {
+				title : '淘宝',
+				content : 'http://10.100.9.50/bjgcjsClient/assets/tab/tab2/demo/child.html',
+				type : 2
+			}, {
+				title : '京东',
+				content : '刘强东和奶茶妹',
+				type : 1
+			}, {
+				title : '百度',
+				content : 'http://10.100.9.50/bjgcjsClient/assets/tab/tab2/demo/child.html',
+				type : 2
+			} ]
+		});
+		
+	});
+</script>
+</head>
+<body>
+
+	<div id="myTab" style="background: #334456"></div>
+	
+</body>
+</html>

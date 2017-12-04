@@ -1,0 +1,51 @@
+/* 本例子css */
+.slideGroup {
+	width: 100%;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+.slideGroup .parHd {
+	height: 30px;
+	line-height: 30px;
+	background: #f4f4f4;
+	padding: 0 10px 0 20px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.slideGroup .parHd ul {
+	float: left;
+	position: absolute;
+	left: 20px;
+	top: -1px;
+	height: 32px;
+}
+
+.slideGroup .parHd ul li {
+	float: left;
+	padding: 0 15px;
+	cursor: pointer;
+}
+
+.slideGroup .parHd ul li.on {
+	height: 30px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-bottom: 2px solid #fff;
+}
+
+.slideGroup .parBd ul {
+	padding: 15px;
+	zoom: 1;
+}
+
+.slideGroup .parBd li {
+	height: 24px;
+	line-height: 24px;
+}
+
+.slideGroup .parBd li .date {
+	float: right;
+	color: #999;
+}

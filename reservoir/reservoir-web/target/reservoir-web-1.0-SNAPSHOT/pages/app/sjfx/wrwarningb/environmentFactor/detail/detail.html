@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../../config/requirejs-config.js"></script>
+    <script data-main="./detail" src="../../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+<div id="app" class="g-wrap" v-cloak >
+
+    <!--表单-->
+    <!--
+                可以使用input,span,a,div,p
+                以 _auto 结尾的id表示保存或提交时会上传的字段
+
+                建议使用span标签
+                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+                以 _ori 结尾的class表示详情时需要显示的字段
+    -->
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+    <form id="m-form" class="m-form">
+        <table class="m-table">
+            <tbody>
+            <tr>
+                <td width="20%" align="right" class="dseLabel">工程名称</td>
+                <td>
+                    <input id="WA_ID_auto" type="hidden"  v-model="wa_id"   />
+                    <input id="WA_STATUS_auto" type="hidden"     />
+                    <input id="PROJ_CD_NAME_auto" type="text" readonly="readonly"   />
+                    <span class="PROJ_CD_NAME_ori"></span>
+                </td>
+                <td width="20%" align="right" class="dseLabel">监测类型</td>
+                <td width="30%">
+                    <input id="MON_TP_NAME_auto" type="text"  readonly="readonly"  />
+                    <span class="MON_TP_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel ">测点名称</td>
+                <td>
+                    <input id="STNM_auto" type="text" maxLength="9" data-rule="d" readonly="readonly"  />
+                    <span class="STNM_ori f-dn"></span>
+                </td>
+                <td align="right" class="dseLabel">报警类型</td>
+                <td>
+                    <input id="WA_TP_NAME_auto" type="text"  readonly="readonly"  />
+                    <span class="WA_TP_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">预警值</td>
+                <td>
+                    <input id="WA_VALUE_auto" type="text" maxLength="10" data-rule="d" readonly="readonly" >
+                    <span class="WA_VALUE_ori f-dn"></span>
+                </td>
+                <td align="right" class="dseLabel">实际值</td>
+                <td>
+                    <input id="REAL_VALUE_auto" type="text" maxLength="10" data-rule="d" readonly="readonly" >
+                    <span class="REAL_VALUE_ori f-dn"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">超预警值</td>
+                <td>
+                    <input id="DA_VALUE_auto" type="text" maxLength="10" data-rule="d" readonly="readonly" >
+                    <span class="DA_VALUE_ori f-dn"></span>
+                </td>
+                <td align="right" class="dseLabel">发生时间</td>
+                <td>
+                    <input id="TSS_auto" type="text" valType="2" maxLength="50"  class="date" readonly="readonly" >
+                    <span class="TSS_ori f-dn"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">处理意见</td>
+                <td colspan="3">
+                    <!--<input id="NT_auto" type="text" valType="2" class="Wdate"  onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});" readonly="readonly" >-->
+                    <textarea id="NT_auto" valType="2" maxLength="100" ></textarea>
+                    <div class="NT_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <!--end 表单-->
+
+</div>
+</body>
+</html>

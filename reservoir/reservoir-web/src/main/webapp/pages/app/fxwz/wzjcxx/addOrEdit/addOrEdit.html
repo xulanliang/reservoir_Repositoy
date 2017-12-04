@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td align="right" class="dseLabel require">物资名称</td>
+							<td colspan="3">
+								<input id="WZID_auto" type="hidden">
+								<input id="WZNAME_auto" type="text" valType="2" maxLength="50">
+								<span class="WZNAME_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel require">物资计量单位</td>
+							<td colspan="3">
+								<input id="WZDW_auto" type="text" valType="2" maxLength="10">
+								<span class="WZDW_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel require">物资参考单价(元)</td>
+							<td colspan="3">
+								<input id="WZDJ_auto" type="text" maxLength="16" data-rule="d{16,2}">
+								<span class="WZDJ_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel require">物资类型</td>
+							<td colspan="3">
+								<input id="WZTYPE_auto" type="text">
+								<span class="WZTYPE_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">型号及参数</td>
+							<td colspan="3">
+								<input id="XHCS_auto" type="text" valType="2" maxLength="100">
+								<span class="XHCS_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">生产厂家</td>
+							<td colspan="3">
+								<input id="WZCJ_auto" type="text" valType="2" maxLength="100">
+								<span class="WZCJ_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">联系电话</td>
+							<td colspan="3">
+								<input id="LTEL_auto" type="text" valType="2" maxLength="20">
+								<span class="LTEL_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">备注</td>
+							<td colspan="3">
+								<textarea id="REMARK_auto" valType="2" maxLength="200"></textarea>
+								<div class="REMARK_ori f-dn g-mh120"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

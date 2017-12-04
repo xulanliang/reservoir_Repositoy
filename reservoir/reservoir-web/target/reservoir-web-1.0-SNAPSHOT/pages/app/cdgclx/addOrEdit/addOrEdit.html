@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">测点编号</td>
+							<td width="30%">
+								<input id="WR_PROJ_ID_auto" type="hidden">
+								<input id="STCD_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="STCD_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">测点名称</td>
+							<td>
+								<input id="STNM_auto" type="text" readonly>
+								<span class="STNM_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">工程编号</td>
+							<td width="30%">
+								<input id="PROJ_CD_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="PROJ_CD_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">工程名称</td>
+							<td>
+								<input id="PROJ_NAME_auto" type="text" readonly>
+								<span class="PROJ_NAME_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">测点类型</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="ST_TP_auto" type="text" valType="2" maxLength="6">
+								<span class="ST_TP_ori"></span>
+							</td>
+							<td width="50%" colspan="2" align="right" class="dseLabel"></td>
+							<!--<td width="20%" align="right" class="dseLabel">多测点</td>-->
+							<!--<td>-->
+								<!--<input id="NOT_SINGLE_auto" type="text">-->
+								<!--<span class="NOT_SINGLE_ori f-dn"></span>-->
+							<!--</td>-->
+						</tr>
+						<!--<tr>-->
+							<!--<td width="20%" align="right" class="dseLabel">自动化监测</td>-->
+							<!--<td width="30%">-->
+								<!--&lt;!&ndash;<input id="STNM_auto" type="hidden">&ndash;&gt;-->
+								<!--<input id="IS_AUTO_auto" type="text" valType="2" maxLength="6">-->
+								<!--<span class="IS_AUTO_ori"></span>-->
+							<!--</td>-->
+							<!--<td width="20%" align="right" class="dseLabel">时间</td>-->
+							<!--<td>-->
+								<!--<input id="TS_auto" type="text" valType="2"class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});">-->
+								<!--<span class="TS_ori f-dn"></span>-->
+							<!--</td>-->
+						<!--</tr>-->
+						<tr>
+							<td width="20%" align="right" class="dseLabel">备注</td>
+							<td colspan="3">
+								<input id="NT_auto" type="text" valType="2" maxLength="128">
+								<span class="NT_ori f-dn"></span>
+							</td>
+						</tr>
+						<!--<tr>-->
+							<!--<td width="20%" align="right" class="dseLabel require">天气状况</td>-->
+							<!--<td width="30%" colspan="3">-->
+								<!--&lt;!&ndash;<input id="STNM_auto" type="hidden">&ndash;&gt;-->
+								<!--<input id="WTH_auto" type="text" valType="2" maxLength="6">-->
+								<!--<span class="WTH_ori"></span>-->
+							<!--</td>-->
+							<!--&lt;!&ndash;<td width="20%" align="right" class="dseLabel">日降水量</td>&ndash;&gt;-->
+							<!--&lt;!&ndash;<td>&ndash;&gt;-->
+								<!--&lt;!&ndash;<input id="DYP_auto" type="text">&ndash;&gt;-->
+								<!--&lt;!&ndash;<span class="DYP_ori f-dn"></span>&ndash;&gt;-->
+							<!--&lt;!&ndash;</td>&ndash;&gt;-->
+						<!--</tr>-->
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

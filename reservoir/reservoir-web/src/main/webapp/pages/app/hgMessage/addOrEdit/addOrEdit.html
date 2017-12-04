@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table" align="enter">
+					<tbody>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">涵管编号</td>
+							<td width="30%">
+								<!--to do id-->
+								<input id="HG_CD_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="HG_CD_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">工程编号</td>
+							<td width="30%">
+								<input id="PROJ_CD_auto" type="text" readonly>
+								<span class="PROJ_CD_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">涵管名称</td>
+							<td width="30%">
+								<input id="HG_NM_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="HG_NM_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">进口底高程</td>
+							<td width="30%">
+								<input id="IN_GC_auto" type="text" valType="2" data-rule="d{3,4}">
+								<span class="IN_GC_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">出口底高程</td>
+							<td width="30%">
+								<input id="OUT_GC_auto" type="text" valType="1" data-rule="d{3,4}">
+								<span class="OUT_GC_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">管材</td>
+							<td width="30%">
+								<input id="HG_DESC_auto" type="text" maxlength="50">
+								<span class="HG_DESC_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">内径</td>
+							<td width="30%">
+								<input id="IN__DIAM_auto" type="text" valType="2" data-rule="d{3,4}">
+								<span class="IN__DIAM_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">设计流量</td>
+							<td width="30%">
+								<input id="PLAN_INS_auto" type="text" data-rule="d{4,3}" >
+								<span class="PLAN_INS_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">设计压力</td>
+							<td width="30%">
+								<input id="PLAN_PRESS_auto" type="text" valType="2" data-rule="d{6,3}" >
+								<span class="PLAN_PRESS_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">备注</td>
+							<td  width="30%">
+								<input id="NT_auto" type="text" valType="2" maxLength="256">
+								<span class="NT_ori f-dn"></span>
+							</td>
+						</tr>
+
+
+						<tr>
+
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width">
+
+        <script src="./config/requirejs-config.js"></script>
+        <script data-main="./index" src="./assets/require/require.js"></script>
+    </head>
+
+    <body>
+
+        <div id="app" v-cloak>
+            <header>
+                <h1 v-text="msg"></h1>
+                <div id="tab-btns" class="f-cb">
+                    <a v-for="(list,index) in lists" href="javascript:" v-text="list.text" :class="['f-ib', {on: index==showIndex}]" @click="handleClick(list,index,$event)"></a>
+                </div>
+            </header>
+
+            <div id="cont-lists">
+                <div v-for="(list, index) in lists" class="items" v-show="index==showIndex">
+                    <ul>
+                        <li v-for="(item, index) in list.items">
+                            <a target="_blank" :href="item.url" v-text="index+1+'、'+item.text"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

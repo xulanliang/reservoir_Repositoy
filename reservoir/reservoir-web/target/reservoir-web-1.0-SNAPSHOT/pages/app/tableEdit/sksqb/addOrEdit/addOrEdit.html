@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">测点名称</td>
+							<td width="30%">
+								<input id="STCD_auto" type="hidden">
+								<input id="STNM_auto" type="text" valType="2" maxLength="100" readonly>
+								<span class="STNM_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">采集时间</td>
+							<td>
+								<input id="TM_auto" type="text" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" readonly>
+								<span class="TM_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">库上水位</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="RZ_auto" type="text" valType="2" data-rule="d{4,3}">
+								<span class="RZ_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">入库流量</td>
+							<td>
+								<input id="INQ_auto" type="text" data-rule="d{6,3}">
+								<span class="INQ_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">蓄水量</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="W_auto" type="text" valType="2" maxlength="1">
+								<span class="W_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">库下水位</td>
+							<td>
+								<input id="BLRZ_auto" type="text" valType="2" data-rule="d{4,3}">
+								<span class="BLRZ_ori "></span>
+							</td>
+						</tr>
+						<tr>
+								<td width="20%" align="right" class="dseLabel">出库流量</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="OTQ_auto" type="text" valType="2" data-rule="d{6,3}">
+								<span class="OTQ_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">库水特征码</td>
+							<td>
+								<input id="RWCHRCD_auto" type="text" valType="2" maxlength="1">
+								<span class="RWCHRCD_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">库水水势</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="RWPTN_auto" type="text" valType="2" maxlength="1">
+								<span class="RWPTN_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">入流时段长</td>
+							<td>
+								<input id="INQDR_auto" type="text" valType="2">
+								<span class="INQDR_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">测流方法</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="GATTYPE_auto" type="text" valType="2" maxlength="1">
+								<span class="GATTYPE_ori"></span>
+							</td>
+						</tr>
+						<!--<tr>-->
+							<!--<td width="20%" align="right" class="dseLabel require">天气状况</td>-->
+							<!--<td width="30%" colspan="3">-->
+								<!--&lt;!&ndash;<input id="STNM_auto" type="hidden">&ndash;&gt;-->
+								<!--<input id="WTH_auto" type="text" valType="2" maxLength="6">-->
+								<!--<span class="WTH_ori"></span>-->
+							<!--</td>-->
+							<!--&lt;!&ndash;<td width="20%" align="right" class="dseLabel">日降水量</td>&ndash;&gt;-->
+							<!--&lt;!&ndash;<td>&ndash;&gt;-->
+								<!--&lt;!&ndash;<input id="DYP_auto" type="text">&ndash;&gt;-->
+								<!--&lt;!&ndash;<span class="DYP_ori f-dn"></span>&ndash;&gt;-->
+							<!--&lt;!&ndash;</td>&ndash;&gt;-->
+						<!--</tr>-->
+					</tbody>
+ 				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

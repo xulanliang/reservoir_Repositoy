@@ -1,0 +1,120 @@
+<!-- Vue + ElementUI -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width">
+
+        <script src="../../config/requirejs-config.js"></script>
+        <script data-main="./demo" src="../require/require.js"></script>
+    </head>
+
+    <body>
+
+        <div id="app" class="f-mt50 f-ml50 f-mr50 f-mb50" v-cloak>
+
+            <el-button @click.native="startHacking">Let's do it</el-button>
+
+            <div class="f-mt10"></div>
+
+            <el-progress :text-inside="true" :stroke-width="18" :percentage="num1" status="exception" v-if="num1 < 10"></el-progress>
+            <el-progress :text-inside="true" :stroke-width="18" :percentage="num1" v-if="num1 >= 10 && num1 < 90"></el-progress>
+            <el-progress :text-inside="true" :stroke-width="18" :percentage="num1" status="success" v-if="num1 >= 90"></el-progress>
+
+            <div class="f-mt10"></div>
+
+            <el-progress :percentage="num2" status="exception" v-if="num2 < 10"></el-progress>
+            <el-progress :percentage="num2" v-if="num2 >= 10 && num2 < 90"></el-progress>
+            <el-progress :percentage="num2" status="success" v-if="num2 >= 90"></el-progress>
+
+            <div class="f-mt10"></div>
+
+            <el-progress type="circle" :percentage="num3" status="exception" v-if="num3 < 10"></el-progress>
+            <el-progress type="circle" :percentage="num3" v-if="num3 >= 10 && num3 < 90"></el-progress>
+            <el-progress type="circle" :percentage="num3" status="success" v-if="num3 >= 90"></el-progress>
+
+            <div class="f-mt10"></div>
+
+            <el-button @click="next">下一步</el-button>
+
+            <div class="f-mt10"></div>
+
+            <el-steps :space="100" :active="active" finish-status="success">
+                <el-step title="步骤 1"></el-step>
+                <el-step title="步骤 2"></el-step>
+                <el-step title="步骤 3"></el-step>
+            </el-steps>
+
+            <div class="f-mt10"></div>
+
+            <el-steps :space="200" :active="active">
+                <el-step title="步骤 1" description="这是一段很长很长很长的描述性文字"></el-step>
+                <el-step title="步骤 2" description="这是一段很长很长很长的描述性文字"></el-step>
+                <el-step title="步骤 3" description="这是一段很长很长很长的描述性文字"></el-step>
+            </el-steps>
+
+            <div class="f-mt10"></div>
+
+            <el-steps :space="100" :active="active">
+                <el-step title="步骤 1" icon="edit"></el-step>
+                <el-step title="步骤 2" icon="upload"></el-step>
+                <el-step title="步骤 3" icon="picture"></el-step>
+            </el-steps>
+
+            <div class="f-mt10"></div>
+
+            <el-steps :space="100" direction="vertical" :active="active">
+                <el-step title="步骤 1"></el-step>
+                <el-step title="步骤 2"></el-step>
+                <el-step title="步骤 3"></el-step>
+            </el-steps>
+
+            <div class="f-mt10"></div>
+
+            <el-button :plain="true" @click="open2">成功</el-button>
+            <el-button :plain="true" @click="open3">警告</el-button>
+            <el-button :plain="true" @click="open">消息</el-button>
+            <el-button :plain="true" @click="open4">错误</el-button>
+
+            <div class="f-mt10"></div>
+
+            <el-alert title="成功提示的文案" type="success" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon>
+            </el-alert>
+            <div class="f-mt10"></div>
+            <el-alert title="消息提示的文案" type="info" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon>
+            </el-alert>
+            <div class="f-mt10"></div>
+            <el-alert title="警告提示的文案" type="warning" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon>
+            </el-alert>
+            <div class="f-mt10"></div>
+            <el-alert title="错误提示的文案" type="error" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon>
+            </el-alert>
+
+            <div class="f-mt10"></div>
+
+            <el-button plain @click="open5">
+                成功
+            </el-button>
+            <el-button plain @click="open6">
+                警告
+            </el-button>
+            <el-button plain @click="open7">
+                消息
+            </el-button>
+            <el-button plain @click="open8">
+                错误
+            </el-button>
+
+            <div class="f-mt10"></div>
+
+            <el-date-picker v-model="dateVal" type="daterange" align="right" placeholder="选择日期范围" :picker-options="pickerOptions2">
+            </el-date-picker>
+
+        </div>
+
+    </body>
+
+</html>

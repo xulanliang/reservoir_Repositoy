@@ -1,0 +1,283 @@
+{
+    "lists": [
+        {
+            "text": "html+css 规范",
+            "items": [
+                {
+                    "text": "HTML 规范",
+                    "url": "http://nec.netease.com/standard/html-format.html"
+                },
+                {
+                    "text": "css 规范",
+                    "url": "http://nec.netease.com/standard/css-practice.html"
+                }
+            ]
+        },
+        {
+            "text": "技巧和 demo",
+            "items": [
+                {
+                    "text": "css 常规布局",
+                    "url": "http://nec.netease.com/library/category/#grid"
+                },
+                {
+                    "text": "css 布局技巧",
+                    "url": "http://nec.netease.com/library/category/#skill"
+                },
+                {
+                    "text": "css3 动画效果",
+                    "url": "http://nec.netease.com/library/category/#animation"
+                },
+                {
+                    "text": "buttons 效果",
+                    "url": "./assets/button/button1"
+                },
+                {
+                    "text": "基础 UI 效果",
+                    "url": "./pages/app/demos/baseui"
+                },
+
+                {
+                    "text": "基础通用函数",
+                    "url": "./pages/app/demos/basejs"
+                },
+                {
+                    "text": "input 输入校验",
+                    "url": "./pages/app/demos/form"
+                },
+                {
+                    "text": "layer 弹窗技巧",
+                    "url": "./pages/app/demos/layer"
+                },
+                {
+                    "text": "头部固定的 table 写法",
+                    "url": "./pages/app/demos/table"
+                },
+                {
+                    "text": "iframe 自适应高度的 tab 页签切换",
+                    "url": "./pages/app/demos/tab3"
+                },
+                {
+                    "text": "autocomplete 自动提示",
+                    "url": "./assets/autocomplete"
+                },
+                {
+                    "text": "键盘 key 和鼠标右击事件",
+                    "url": "./assets/keypress"
+                },
+                {
+                    "text": "PDF 文件在线预览",
+                    "url": "./assets/media/jspdf"
+                },
+                {
+                    "text": "视频播放器",
+                    "url": "./assets/media/video"
+                },
+                {
+                    "text": "图片查看器",
+                    "url": "./assets/media/viewer"
+                },
+                {
+                    "text": "kindeditor 在线编辑器 demo",
+                    "url": "./assets/editor/kindeditor"
+                },
+                {
+                    "text": "range 滑动条",
+                    "url": "./assets/range/jquery-range"
+                },
+                {
+                    "text": "icheck 美化 checkbox 插件",
+                    "url": "./assets/icheck"
+                },
+                {
+                    "text": "表单验证插件",
+                    "url": "./assets/valid/vform"
+                },
+                {
+                    "text": "Vuejs + ElementUI 的调用方法",
+                    "url": "./assets/vue"
+                },
+                {
+                    "text": "单表操作通用 demo",
+                    "url": "./pages/app/demos/singletable"
+                },
+                {
+                    "text": "fileToUpload 文件上传插件，兼容 IE9",
+                    "url": "./assets/upload/fileToUpload/demos/demo1"
+                },
+                {
+                    "text": "date97，修复了 IE9 下选择年月错误的 bug",
+                    "url": "./assets/datetime/my97datepicker"
+                },
+                {
+                    "text": "vue 下拉组件",
+                    "url": "./pages/app/demos/select3/"
+                }
+            ]
+        },
+        {
+            "text": "api 文档",
+            "items": [
+                {
+                    "text": "jquery API 文档",
+                    "url": "http://jquery.cuishifeng.cn"
+                },
+                {
+                    "text": "EasyUI API 文档",
+                    "url": "http://www.jeasyui.com/documentation/index.php"
+                },
+                {
+                    "text": "layer API 文档",
+                    "url": "http://layer.layui.com/"
+                },
+                {
+                    "text": "ztree 官网",
+                    "url": "http://www.treejs.cn/v3/demo.php#_101"
+                },
+                {
+                    "text": "fontawesome 字体图标库",
+                    "url": "http://fontawesome.dashgame.com/"
+                },
+                {
+                    "text": "autocomplete 官网",
+                    "url": "https://www.devbridge.com/sourcery/components/jquery-autocomplete/"
+                },
+                {
+                    "text": "bootstrap 官网",
+                    "url": "http://www.bootcss.com/"
+                },
+                {
+                    "text": "bootstrap 官网",
+                    "url": "http://www.bootcss.com/"
+                },
+                {
+                    "text": "echarts3 官网 demo",
+                    "url": "http://echarts.baidu.com/examples.html"
+                },
+                {
+                    "text": "echarts2 官网 demo",
+                    "url": "http://echarts.baidu.com/echarts2/doc/example.html"
+                },
+                {
+                    "text": "my97datepicker API 文档",
+                    "url": "http://www.my97.net/dp/demo/index.htm"
+                },
+                {
+                    "text": "keymaster 官网",
+                    "url": "http://www.bootcdn.cn/keymaster/readme/"
+                },
+                {
+                    "text": "lodash 中文文档",
+                    "url": "http://lodashjs.com/docs/"
+                },
+                {
+                    "text": "superslide 特效插件",
+                    "url": "http://www.superslide2.com/"
+                },
+                {
+                    "text": "draggabilly 拖拽插件",
+                    "url": "http://draggabilly.desandro.com/"
+                },
+                {
+                    "text": "kindeditor 在线编辑器",
+                    "url": "http://kindeditor.net/demo.php"
+                },
+                {
+                    "text": "laypage 多功能分页组件",
+                    "url": "http://www.layui.com/laypage/"
+                },
+                {
+                    "text": "laytpl 模板引擎",
+                    "url": "http://www.layui.com/laytpl/"
+                },
+                {
+                    "text": "dropzone 文件上传插件",
+                    "url": "http://www.dropzonejs.com/"
+                },
+                {
+                    "text": "jQuery Media 官网",
+                    "url": "http://jquery.malsup.com/media/"
+                },
+                {
+                    "text": "viewer 图片查看器官网",
+                    "url": "http://fengyuanchen.github.io/viewer/"
+                },
+                {
+                    "text": "video 官网",
+                    "url": "http://videojs.com/getting-started/"
+                },
+                {
+                    "text": "jquery 打印插件",
+                    "url": "http://www.jq22.com/jquery-info347"
+                },
+                {
+                    "text": "stickUp 固定顶部元素",
+                    "url": "http://www.bootcss.com/p/stickup/"
+                }
+            ]
+        },
+        {
+            "text": "辅助工具",
+            "items": [
+                {
+                    "text": "bejson 校验压缩工具",
+                    "url": "http://www.bejson.com/"
+                },
+                {
+                    "text": "有道在线翻译",
+                    "url": "http://fanyi.youdao.com/"
+                },
+                {
+                    "text": "CDN 公共库",
+                    "url": "http://www.bootcdn.cn/"
+                },
+                {
+                    "text": "WEB 安全色",
+                    "url": "http://www.bootcss.com/p/websafecolors/"
+                }
+            ]
+        },
+        {
+            "text": "下载",
+            "items": [
+                {
+                    "text": "前端开发规范文档下载",
+                    "url": "http://10.100.3.213:3000/downloads/文档规范.rar"
+                },
+                {
+                    "text": "nodejs 下载",
+                    "url": "http://10.100.3.213:3000/downloads/node-v6.10.2-x64.msi"
+                }
+            ]
+        },
+        {
+            "text": "学习研究",
+            "items": [
+                {
+                    "text": "nodejs",
+                    "url": "http://nodejs.cn/api/"
+                },
+                {
+                    "text": "lesscss",
+                    "url": "http://lesscss.cn/"
+                },
+                {
+                    "text": "sass",
+                    "url": "http://sass.bootcss.com/docs/sass-reference/"
+                },
+                {
+                    "text": "requirejs",
+                    "url": "http://www.requirejs.cn/"
+                },
+                {
+                    "text": "vuejs",
+                    "url": "http://cn.vuejs.org/v2/guide/"
+                },
+                {
+                    "text": "elementUI",
+                    "url": "http://element.eleme.io/#/zh-CN/component/installation"
+                }
+            ]
+        }
+    ]
+}

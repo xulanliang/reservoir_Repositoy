@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-4.1.xsd 
+	http://www.springframework.org/schema/jee 
+	http://www.springframework.org/schema/jee/spring-jee-4.1.xsd 
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+	http://www.springframework.org/schema/task    
+    http://www.springframework.org/schema/task/spring-task-4.1.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd"
+	default-lazy-init="false">
+
+	<!--
+				 每隔5秒执行一次：*/5 * * * * ?
+                 每隔1分钟执行一次：0 */1 * * * ?
+                 每天23点执行一次：0 0 23 * * ?
+                 每天凌晨1点执行一次：0 0 1 * * ?
+                 每月1号凌晨1点执行一次：0 0 1 1 * ?
+                 每月最后一天23点执行一次：0 0 23 L * ?
+                 每周星期天凌晨1点实行一次：0 0 1 ? * L
+                 在26分、29分、33分执行一次：0 26,29,33 * * * ?
+                 每天的0点、13点、18点、21点都执行一次：0 0 0,13,18,21 * * ?
+	-->
+	<bean name="startQuertz" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!--
+				<ref bean="cronTrigger" />
+				-->
+				<!--<ref bean="wrMaWarningbcronTrigger" />-->
+				<!--<ref bean="cronTrigger" />-->
+
+			</list>
+		</property>
+	</bean>
+	<!-- -->
+	<bean id="wrchkTaskJob" class="com.dse.reservoir.scheduler.jobs.WrchkTaskJob"></bean>
+
+	<bean id="wrMaWarningbTaskJob" class="com.dse.reservoir.scheduler.jobs.WrMaWarningbTaskJob"></bean>
+
+	<bean id="wrMaWarningbTaskJobDetail"
+		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="wrMaWarningbTaskJob" />
+		</property>
+		<property name="targetMethod">
+			<value>work</value>
+		</property>
+	</bean>
+
+	<bean id="wrMaWarningbcronTrigger"
+		  class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail">
+			<ref bean="wrMaWarningbTaskJobDetail" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0 23 * * ?</value>
+			<!--<value>*/5 * * * * ?</value>-->
+			<!--
+			<value>0 0/20 5 * * *</value>
+			<value>0/1 * * * * ?</value>
+			-->
+		</property>
+	</bean>
+
+	<!-- 巡查 -->
+	<bean id="jobDetail"
+		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="wrchkTaskJob" />
+		</property>
+		<property name="targetMethod">
+			<value>work</value>
+		</property>
+	</bean>
+
+	<bean id="cronTrigger"
+		  class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail">
+			<ref bean="jobDetail" />
+		</property>
+		<property name="cronExpression">
+			<!--<value>0 */10 * * * ?</value>-->
+			<!--<value>*/5 * * * * ?</value>-->
+			<value>0 0 23 * * ?</value>
+			<!--
+			<value>0 0/20 5 * * *</value>
+			<value>0/1 * * * * ?</value>
+			-->
+		</property>
+	</bean>
+
+</beans>

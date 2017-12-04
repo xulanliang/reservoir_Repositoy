@@ -1,0 +1,195 @@
+<!-- base UI 效果 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+        <title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width">
+
+		<script src="../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/index" src="../../../../assets/require/require.js"></script>
+	</head>
+
+	<body>
+
+		<div class="f-ml50 f-mt50 f-mb50 f-mr50">
+			<h2 class="f-mt10">一、栅格化布局</h2>
+			<div class="layout f-cb">
+				<div class="g-ms-12">.g-ms-12</div>
+				<div class="g-ms-11">.g-ms-11</div>
+				<div class="g-ms-1">.g-ms-1</div>
+				<div class="g-ms-10">.g-ms-10</div>
+				<div class="g-ms-2">.g-ms-2</div>
+				<div class="g-ms-9">.g-ms-9</div>
+				<div class="g-ms-3">.g-ms-3</div>
+				<div class="g-ms-8">.g-ms-8</div>
+				<div class="g-ms-4">.g-ms-4</div>
+				<div class="g-ms-7">.g-ms-7</div>
+				<div class="g-ms-5">.g-ms-5</div>
+				<div class="g-ms-6">.g-ms-6</div>
+				<div class="g-ms-6">.g-ms-6</div>
+
+				<div class="g-ms-3">.g-ms-3</div>
+				<div class="g-ms-4 f-offset-1">.g-ms-4.f-offset-1</div>
+				<div class="g-ms-3 f-push-1">.g-ms-3.f-push-1</div>
+
+				<div class="g-ms-3">.g-ms-3</div>
+				<div class="g-ms-3 f-push-6">.g-ms-3.f-push-6</div>
+				<div class="g-ms-4 f-pull-2">.g-ms-4.f-pull-2</div>
+			</div>
+			<h2 class="f-mt10">二、表单元素</h2>
+			<table class="m-table f-mt10">
+				<thead>
+					<tr>
+						<td class="g-w100"></td>
+						<td align="center">默认</td>
+						<td align="center">.war 警示</td>
+						<td align="center">.err 错误</td>
+						<td align="center">.suc 成功</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td align="center">默认</td>
+						<td align="center">
+							<input type="text" placeholder="请输入文字">
+						</td>
+						<td align="center">
+							<input type="text" class="war">
+						</td>
+						<td align="center">
+							<input type="text" class="err">
+						</td>
+						<td align="center">
+							<input type="text" class="suc">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">.xs</td>
+						<td align="center">
+							<input type="text" class="xs">
+						</td>
+						<td align="center">
+							<input type="text" class="xs war">
+						</td>
+						<td align="center">
+							<input type="text" class="xs err">
+						</td>
+						<td align="center">
+							<input type="text" class="xs suc">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">.sm</td>
+						<td align="center">
+							<input type="text" class="sm">
+						</td>
+						<td align="center">
+							<input type="text" class="sm war">
+						</td>
+						<td align="center">
+							<input type="text" class="sm err">
+						</td>
+						<td align="center">
+							<input type="text" class="sm suc">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">.md</td>
+						<td align="center">
+							<input type="text" class="md">
+						</td>
+						<td align="center">
+							<input type="text" class="md war">
+						</td>
+						<td align="center">
+							<input type="text" class="md err">
+						</td>
+						<td align="center">
+							<input type="text" class="md suc">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">.lg</td>
+						<td align="center">
+							<input type="text" class="lg">
+						</td>
+						<td align="center">
+							<input type="text" class="lg war">
+						</td>
+						<td align="center">
+							<input type="text" class="lg err">
+						</td>
+						<td align="center">
+							<input type="text" class="lg suc">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">easyui</td>
+						<td align="center">
+							<input id="combotree" type="text">
+						</td>
+						<td align="center">
+							<input id="combobox" type="text">
+						</td>
+						<td align="center">
+							<input id="combobox2" type="text">
+						</td>
+						<td align="center">
+							<input id="combogrid" type="text">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="f-msg-err f-mt10"><i class="fa fa-times-circle-o f-fs16"></i> 错误信息提示 .f-msg-err</div>
+			<div class="f-msg-ban f-mt10"><i class="fa fa-ban f-fs16"></i> 禁止信息提示 .f-msg-ban</div>
+			<div class="f-msg-suc f-mt10"><i class="fa fa-check-circle-o f-fs16"></i> 成功信息提示 .f-msg-suc</div>
+			<div class="f-msg-war f-mt10"><i class="fa fa-bell-o f-fs16"></i> 警示信息提示 .f-msg-war</div>
+			<div class="f-msg-tip f-mt10"><i class="fa fa-volume-up f-fs16"></i> 公告信息提示 .f-msg-tip</div>
+			<div class="f-msg-alt f-mt10"><i class="fa fa-lightbulb-o f-fs16"></i> 提示信息提示 .f-msg-alt</div>
+			<div class="f-msg-rem f-mt10"><i class="fa fa-warning f-fs16"></i> 提醒信息提示 .f-msg-rem</div>
+			<div class="f-msg-dou f-mt10"><i class="fa fa-question-circle-o f-fs16"></i> 疑问信息提示 .f-msg-dou</div>
+
+		</div>
+
+	</body>
+
+</html>

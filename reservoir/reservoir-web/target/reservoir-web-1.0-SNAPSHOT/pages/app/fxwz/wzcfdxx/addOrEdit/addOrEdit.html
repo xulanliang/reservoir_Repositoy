@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td width="20%" align="right" class="dseLabel require">仓库名称</td>
+							<td width="30%">
+								<input id="CKID_auto" type="hidden">
+								<input id="CKNAME_auto" type="text" valType="2" maxLength="50">
+								<span class="CKNAME_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">所属行政区划</td>
+							<td>
+								<input id="ADCD_auto" type="text">
+								<span class="ADCD_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">启用年份</td>
+							<td>
+								<input id="YEAR_auto" type="text" data-rule="d" maxLength="4">
+								<span class="YEAR_ori"></span>
+							</td>
+							<td align="right" class="dseLabel">联系电话</td>
+							<td>
+								<input id="LXTEL_auto" type="text" valType="2" maxLength="20">
+								<span class="LXTEL_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">经度</td>
+							<td>
+								<input id="LGTD_auto" type="text" valType="2" maxLength="21" data-rule="d{12,9}">
+								<span class="LGTD_ori f-dn"></span>
+							</td>
+							<td align="right" class="dseLabel">纬度</td>
+							<td>
+								<input id="LTTD_auto" type="text" valType="2" maxLength="20" data-rule="d{11,9}">
+								<span class="LTTD_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">仓库详细地点</td>
+							<td colspan="3">
+								<input id="CKADDRESS_auto" type="text" valType="2" maxLength="50">
+								<span class="CKADDRESS_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">物资来源</td>
+							<td colspan="3">
+								<input id="WZLY_auto" type="text" valType="2" maxLength="200">
+								<span class="WZLY_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">负责人名称</td>
+							<td>
+								<input id="FZRNAME_auto" type="text" valType="2" maxLength="50">
+								<span class="FZRNAME_ori f-dn"></span>
+							</td>
+							<td align="right" class="dseLabel">负责人联系电话</td>
+							<td>
+								<input id="FZRTEL_auto" type="text" valType="2" maxLength="20">
+								<span class="FZRTEL_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="dseLabel">备注</td>
+							<td colspan="3">
+								<textarea id="REMARK_auto" valType="2"  maxLength="200"></textarea>
+								<div class="REMARK_ori f-dn g-mh120"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

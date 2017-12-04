@@ -1,0 +1,62 @@
+textarea {
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+#tab-btns {
+    background-color: #e2ebf1;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 20px;
+}
+
+#tab-btns a {
+    display: block;
+    float: left;
+    height: 50px;
+    /*padding: 0 20px;*/
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    width: 120px;
+    color: #565656;
+    border: 1px solid #dcdcdc;
+}
+
+#tab-btns a:hover {
+    font-weight: bold;
+    color: #000;
+}
+
+#tab-btns a.on,
+#tab-btns a.on:hover {
+    /*top: 1px;*/
+    border: 1px solid #dcdcdc;
+    border-bottom: 0;
+    background-color: #007dff;
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+}
+
+.tab3-menus {
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    width: 100px;
+    padding: 5px 0;
+    border-radius: 3px;
+}
+
+.tab3-menus li:first-child a {
+    border-top: 0;
+}
+
+.tab3-menus a {
+    display: block;
+    line-height: 24px;
+    padding: 0 10px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.tab3-menus a:hover {
+    background-color: #f4f4f4;
+}

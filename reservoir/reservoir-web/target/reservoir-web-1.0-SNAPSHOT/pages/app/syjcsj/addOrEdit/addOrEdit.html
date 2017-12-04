@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody align="enter">
+						<tr>
+							<td width="10%" align="right" class="dseLabel">测点编号</td>
+							<td width="30%">
+								<!--<input id="STCD_auto" type="hidden">-->
+								<input id="STCD_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="STCD_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">采集时间</td>
+							<td width="30%">
+								<input id="TM_auto" type="text" readonly>
+								<span class="TM_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">监测值</td>
+							<td width="30%">
+								<input id="ORIGDATA_auto" type="text" valType="2" data-rule="d{10,2}">
+								<span class="ORIGDATA_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">校验值</td>
+							<td width="30%">
+								<input id="CALCDATA_auto" type="text" valType="2" data-rule="d{10,2}">
+								<span class="CALCDATA_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">监测量</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="JCL_auto" type="text" valType="2" maxLength="100">
+								<span class="JCL_ori"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">转换状态</td>
+							<td width="30%">
+								<input id="TRANSST_auto" type="text" valType="2">
+								<span class="TRANSST_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">采集方式</td>
+							<td width="30%">
+								<input id="GETTYPE_auto" type="text" valType="2" maxLength="1">
+								<span class="GETTYPE_ori f-dn"></span>
+							</td>
+							<td width="10%" align="right" class="dseLabel">其他</td>
+							<td width="30%">
+								<input id="OTDESC_auto" type="text" valType="2" maxLength="100">
+								<span class="OTDESC_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="10%" align="right" class="dseLabel">备注</td>
+							<td colspan="3">
+								<input id="NT_auto" type="text" valType="2" maxLength="100">
+								<span class="NT_ori f-dn"></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

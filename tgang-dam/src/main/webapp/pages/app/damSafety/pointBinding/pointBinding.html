@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="stylesheet"  href="../../../../assets/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet"  href="../../../../assets/win/layer/skin/layer.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../assets/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/pointBinding.css">
+    <script type="text/javascript" src="../../../../assets/seajs/dist/sea_dse.js"></script>
+    <script type="text/javascript" src="../../../../config/seajs-config.js"></script>
+    <script type="text/javascript" src="js/pointBinding.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div>
+        <span>水库名称：</span><span id="reservoir"></span>
+        <span style="margin-left: 20px;">大坝：</span><span id="dyKe"></span>
+        <span style="margin-left: 20px;">断面：</span><span id="section"></span>
+    </div>
+    <div id="container" style="width:99%;min-height:300px;"></div>
+    <div style="margin-top: 10px;">
+        <button id="add" class="btn btn-success">添加</button>
+        <button id="fsqBtn" class="btn btn-primary" style="margin-left: 10px;">保存防渗墙</button>
+        <button id="del" class="btn btn-danger">删除防渗墙</button>
+    </div>
+    <table id="fsqTab"></table>
+    <div style="margin-top: 10px;">
+        <button id="jkdBtn" class="btn btn-primary">保存监控点</button>
+    </div>
+    <table id="jkdTab"></table>
+
+    <div style="margin-top: 10px;">
+        <button id="addBtd" class="btn btn-success">添加</button>
+        <button id="btdBtn" class="btn btn-primary">保存坝体关键点</button>
+        <button id="delBtn" class="btn btn-danger">删除坝体关键点</button>
+    </div>
+    <table id="btdTab"></table>
+</div>
+</body>
+</html>

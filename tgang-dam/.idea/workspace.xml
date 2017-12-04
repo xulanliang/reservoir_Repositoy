@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a382273-56e8-4f60-bf02-682448aef2ff" name="Default" comment="" />
+    <ignored path="tgang-dam.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="tgang-dam" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BasicDataServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/impl/BasicDataServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.61958045">
+              <caret line="408" column="31" selection-start-line="408" selection-start-column="31" selection-end-line="408" selection-end-column="31" />
+              <folding>
+                <marker date="1512109452774" expanded="true" signature="1791:1863" placeholder="select PROJ_..wr_proj_b..." />
+                <marker date="1512109452774" expanded="true" signature="2754:2845" placeholder="select d.enn..tb0401_dkcmin_044..." />
+                <marker date="1512109452774" expanded="true" signature="3125:3218" placeholder="select b.enn..tb0404_bnbdcrpr_044..." />
+                <marker date="1512109452774" expanded="true" signature="3498:3639" placeholder="select t.bnt..dse_monitoring_points..." />
+                <marker date="1512109452774" expanded="true" signature="5133:5442" placeholder="INSERT INTO TB0201_RSCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="7241:7629" placeholder="UPDATE TB020..." />
+                <marker date="1512109452774" expanded="true" signature="8067:8123" placeholder="update TB040..." />
+                <marker date="1512109452774" expanded="true" signature="8520:8838" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="8575:8837" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="8919:9169" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="8972:9168" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="9249:9438" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="9300:9437" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="9517:9564" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="9921:9984" placeholder="INSERT INTO TB0401_DKCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="10437:10502" placeholder="UPDATE TB040..." />
+                <marker date="1512109452774" expanded="true" signature="10719:10777" placeholder="update TB040..." />
+                <marker date="1512109452774" expanded="true" signature="11092:11342" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="11147:11341" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="11423:11616" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="11476:11615" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="11695:11742" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="12091:12156" placeholder="INSERT INTO TB0404_BNBDCRPR_044..." />
+                <marker date="1512109452774" expanded="true" signature="12565:12621" placeholder="UPDATE TB040..." />
+                <marker date="1512109452774" expanded="true" signature="12831:12891" placeholder="update DSE_M..." />
+                <marker date="1512109452774" expanded="true" signature="13212:13411" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="13267:13410" placeholder="SELECT TOP 1..TB0404_BNBDCRPR_044..." />
+                <marker date="1512109452774" expanded="true" signature="13491:13540" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="13989:14077" placeholder="INSERT INTO DSE_MONITORING_POINTS..." />
+                <marker date="1512109452774" expanded="true" signature="14243:14297" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+                <marker date="1512109452774" expanded="true" signature="14903:14986" placeholder="UPDATE DSE_M..." />
+                <marker date="1512109452774" expanded="true" signature="15612:15666" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+                <marker date="1512109452774" expanded="true" signature="16123:16175" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="16403:16454" placeholder="select bntrc..V_RSC_M_BNTR..." />
+                <marker date="1512109452774" expanded="true" signature="16675:16790" placeholder="select id,bn..dse_dbjc_009_fsqinfo..." />
+                <marker date="1512109452774" expanded="true" signature="17010:17088" placeholder="select xwidt..dse_dbjc_009_cxcdinfo..." />
+                <marker date="1512109452774" expanded="true" signature="17390:17412" placeholder="select a.stc..wr_stat_m..." />
+                <marker date="1512109452774" expanded="true" signature="17390:18008" placeholder="select a.stc..wr_stat_m..." />
+                <marker date="1512109452774" expanded="true" signature="17390:18070" placeholder="select a.stc..wr_stat_m..." />
+                <marker date="1512109452774" expanded="true" signature="17707:17799" placeholder="select c.tm,..WR_HYDO_B..." />
+                <marker date="1512109452774" expanded="true" signature="17707:17942" placeholder="select c.tm,..WR_HYDO_B..." />
+                <marker date="1512109452774" expanded="true" signature="18024:18068" placeholder="select stcd ..wr_st_rb_map..." />
+                <marker date="1512109452774" expanded="true" signature="19112:19550" placeholder="select fsltd..st_rsvrfsr_b..." />
+                <marker date="1512109452774" expanded="true" signature="20074:20155" placeholder="UPDATE DSE_M..." />
+                <marker date="1512109452774" expanded="true" signature="20274:20345" placeholder="UPDATE DSE_D..." />
+                <marker date="1512109452774" expanded="true" signature="20406:20514" placeholder="INSERT INTO DSE_DBJC_009_CXCDINFO..." />
+                <marker date="1512109452774" expanded="true" signature="20459:20512" placeholder="SELECT ISNUL..DSE_DBJC_009_CXCDINFO..." />
+                <marker date="1512109452774" expanded="true" signature="20658:20730" placeholder="UPDATE DSE_D..." />
+                <marker date="1512109452774" expanded="true" signature="20791:20863" placeholder="INSERT INTO DSE_DBJC_009_FSQINFO..." />
+                <marker date="1512109452774" expanded="true" signature="21194:21239" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="21539:21652" placeholder="select PROJ_..wr_proj_b..." />
+                <marker date="1512109452774" expanded="true" signature="21991:22174" placeholder="select rb_cd..WR_RB_M..." />
+                <marker date="1512109452774" expanded="true" signature="22600:22835" placeholder="select '水 位'..DSE_ST_RSVR_R..." />
+                <marker date="1512109452774" expanded="true" signature="22958:23244" placeholder="select m.poi..DSE_DBJC_005_HYDORIGDATA..." />
+                <marker date="1512109452774" expanded="true" signature="23669:23941" placeholder="select disti..dse_monitoring_op_points..." />
+                <marker date="1512109452774" expanded="true" signature="24976:25052" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="26842:26932" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="28065:28211" placeholder="select t.bnt..dse_monitoring_points..." />
+                <marker date="1512109452774" expanded="true" signature="28343:28674" placeholder="select * fro..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+                <marker date="1512109452774" expanded="true" signature="28399:28648" placeholder="SELECT max(i..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+                <marker date="1512109452774" expanded="true" signature="28799:29059" placeholder="Select LevVa..TG..." />
+                <marker date="1512109452774" expanded="true" signature="29083:29343" placeholder="Select LevVa..SY..." />
+                <marker date="1512109452774" expanded="true" signature="30273:30333" placeholder="select w fro..ST_ZVARL_B..." />
+                <marker date="1512109452774" expanded="true" signature="30610:30654" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="31128:31322" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+                <marker date="1512109452774" expanded="true" signature="31363:31556" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+                <marker date="1512109452774" expanded="true" signature="32348:32461" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="32502:32614" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="33026:33101" placeholder="select top 1..DSE_DOT_INFO..." />
+                <marker date="1512109452774" expanded="true" signature="33140:33214" placeholder="select top 1..DSE_DOT_INFO..." />
+                <marker date="1512109452774" expanded="true" signature="35369:35482" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="36425:36537" placeholder="DELETE FROM ..." />
+                <marker date="1512109452774" expanded="true" signature="37794:37873" placeholder="SELECT R.ENN..TB0201_RSCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="38063:38135" placeholder="SELECT D.ENN..TB0401_DKCMIN_044..." />
+                <marker date="1512109452774" expanded="true" signature="38329:38403" placeholder="SELECT B.ENN..TB0404_BNBDCRPR_044..." />
+                <marker date="1512109452774" expanded="true" signature="38598:38696" placeholder="SELECT P.BNT..DSE_MONITORING_POINTS..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="node.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/node.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicDataCtl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/web/BasicDataCtl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.233333">
+              <caret line="431" column="47" selection-start-line="431" selection-start-column="47" selection-end-line="431" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicDataService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/BasicDataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/config/seajs-config.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/infiltrationLinePage.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/js/infiltrationLinePage.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/impl/BasicDataServiceImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/soft/apache-maven-3.3.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="tgang-dam(水工平台大坝安全)" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="tgang-dam(水工平台大坝安全)" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Gradle</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>Probable bugsGradle</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="damSafety" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="damSafety" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infiltrationLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="damSafety" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infiltrationLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="damSafety" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infiltrationLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgang-dam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="SearchEverywhereHistoryKey" value="BasicDataCtl&#9;FILE&#9;file://F:/IdeaWorkSpace/tgang-dam/src/main/java/com/dse/tgang/dam/web/BasicDataCtl.java&#10;BasicData&#9;FILE&#9;file://F:/IdeaWorkSpace/tgang-dam/src/main/java/com/dse/tgang/dam/service/impl/BasicDataServiceImpl.java&#10;infiltrationLinePage&#9;FILE&#9;file://F:/IdeaWorkSpace/tgang-dam/src/main/webapp/pages/app/damSafety/infiltrationLine/infiltrationLinePage.html" />
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="tgang-dam" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.33" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/da/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="tgang-dam:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/dam" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_tgang-dam_2" />
+        <option name="JNDI_PORT" value="1098" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57711" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tgang-dam:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a382273-56e8-4f60-bf02-682448aef2ff" name="Default" comment="" />
+      <created>1509442771204</created>
+      <option name="number" value="Default" />
+      <updated>1509442771204</updated>
+      <workItem from="1509442773445" duration="20376000" />
+      <workItem from="1509702316108" duration="8605000" />
+      <workItem from="1512098877889" duration="2316000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31297000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3454301" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/impl/BasicDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="493" column="0" selection-start-line="493" selection-start-column="0" selection-end-line="493" selection-end-column="0" />
+          <folding>
+            <marker date="1512109452774" expanded="true" signature="1791:1863" placeholder="select PROJ_..wr_proj_b..." />
+            <marker date="1512109452774" expanded="true" signature="2754:2845" placeholder="select d.enn..tb0401_dkcmin_044..." />
+            <marker date="1512109452774" expanded="true" signature="3125:3218" placeholder="select b.enn..tb0404_bnbdcrpr_044..." />
+            <marker date="1512109452774" expanded="true" signature="3498:3639" placeholder="select t.bnt..dse_monitoring_points..." />
+            <marker date="1512109452774" expanded="true" signature="5133:5442" placeholder="INSERT INTO TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="7241:7629" placeholder="UPDATE TB020..." />
+            <marker date="1512109452774" expanded="true" signature="8067:8123" placeholder="update TB040..." />
+            <marker date="1512109452774" expanded="true" signature="8520:8838" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="8575:8837" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="8919:9169" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="8972:9168" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="9249:9438" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="9300:9437" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="9517:9564" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="9921:9984" placeholder="INSERT INTO TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="10437:10502" placeholder="UPDATE TB040..." />
+            <marker date="1512109452774" expanded="true" signature="10719:10777" placeholder="update TB040..." />
+            <marker date="1512109452774" expanded="true" signature="11092:11342" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="11147:11341" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="11423:11616" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="11476:11615" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="11695:11742" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="12091:12156" placeholder="INSERT INTO TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="12565:12621" placeholder="UPDATE TB040..." />
+            <marker date="1512109452774" expanded="true" signature="12831:12891" placeholder="update DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="13212:13411" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="13267:13410" placeholder="SELECT TOP 1..TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="13491:13540" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="13989:14077" placeholder="INSERT INTO DSE_MONITORING_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="14243:14297" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="14903:14986" placeholder="UPDATE DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="15612:15666" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="16123:16175" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="16403:16454" placeholder="select bntrc..V_RSC_M_BNTR..." />
+            <marker date="1512109452774" expanded="true" signature="16675:16790" placeholder="select id,bn..dse_dbjc_009_fsqinfo..." />
+            <marker date="1512109452774" expanded="true" signature="17010:17088" placeholder="select xwidt..dse_dbjc_009_cxcdinfo..." />
+            <marker date="1512109452774" expanded="true" signature="17390:17412" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17390:18008" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17390:18070" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17707:17799" placeholder="select c.tm,..WR_HYDO_B..." />
+            <marker date="1512109452774" expanded="true" signature="17707:17942" placeholder="select c.tm,..WR_HYDO_B..." />
+            <marker date="1512109452774" expanded="true" signature="18024:18068" placeholder="select stcd ..wr_st_rb_map..." />
+            <marker date="1512109452774" expanded="true" signature="19112:19550" placeholder="select fsltd..st_rsvrfsr_b..." />
+            <marker date="1512109452774" expanded="true" signature="20074:20155" placeholder="UPDATE DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="20274:20345" placeholder="UPDATE DSE_D..." />
+            <marker date="1512109452774" expanded="true" signature="20406:20514" placeholder="INSERT INTO DSE_DBJC_009_CXCDINFO..." />
+            <marker date="1512109452774" expanded="true" signature="20459:20512" placeholder="SELECT ISNUL..DSE_DBJC_009_CXCDINFO..." />
+            <marker date="1512109452774" expanded="true" signature="20658:20730" placeholder="UPDATE DSE_D..." />
+            <marker date="1512109452774" expanded="true" signature="20791:20863" placeholder="INSERT INTO DSE_DBJC_009_FSQINFO..." />
+            <marker date="1512109452774" expanded="true" signature="21194:21239" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="21539:21652" placeholder="select PROJ_..wr_proj_b..." />
+            <marker date="1512109452774" expanded="true" signature="21991:22174" placeholder="select rb_cd..WR_RB_M..." />
+            <marker date="1512109452774" expanded="true" signature="22600:22835" placeholder="select '水 位'..DSE_ST_RSVR_R..." />
+            <marker date="1512109452774" expanded="true" signature="22958:23244" placeholder="select m.poi..DSE_DBJC_005_HYDORIGDATA..." />
+            <marker date="1512109452774" expanded="true" signature="23669:23941" placeholder="select disti..dse_monitoring_op_points..." />
+            <marker date="1512109452774" expanded="true" signature="24976:25052" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="26842:26932" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="28065:28211" placeholder="select t.bnt..dse_monitoring_points..." />
+            <marker date="1512109452774" expanded="true" signature="28343:28674" placeholder="select * fro..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="28399:28648" placeholder="SELECT max(i..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="28799:29059" placeholder="Select LevVa..TG..." />
+            <marker date="1512109452774" expanded="true" signature="29083:29343" placeholder="Select LevVa..SY..." />
+            <marker date="1512109452774" expanded="true" signature="30273:30333" placeholder="select w fro..ST_ZVARL_B..." />
+            <marker date="1512109452774" expanded="true" signature="30610:30654" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="31128:31322" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="31363:31556" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="32348:32461" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="32502:32614" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="33026:33101" placeholder="select top 1..DSE_DOT_INFO..." />
+            <marker date="1512109452774" expanded="true" signature="33140:33214" placeholder="select top 1..DSE_DOT_INFO..." />
+            <marker date="1512109452774" expanded="true" signature="35369:35482" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="36425:36537" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="37794:37873" placeholder="SELECT R.ENN..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="38063:38135" placeholder="SELECT D.ENN..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="38329:38403" placeholder="SELECT B.ENN..TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="38598:38696" placeholder="SELECT P.BNT..DSE_MONITORING_POINTS..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/js/infiltrationLinePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="279" column="53" selection-start-line="279" selection-start-column="46" selection-end-line="279" selection-end-column="53" />
+          <folding>
+            <element signature="e#1829#5149#0" expanded="false" />
+            <element signature="e#5164#5168#0" expanded="false" />
+            <element signature="e#6561#6565#0" expanded="false" />
+            <marker date="1510046054716" expanded="true" signature="30153:30182" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/infiltrationLinePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/css/infiltrationLinePage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/web/BasicDataCtl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="402" column="69" selection-start-line="402" selection-start-column="69" selection-end-line="402" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/BasicDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/impl/BasicDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1512109452774" expanded="true" signature="1791:1863" placeholder="select PROJ_..wr_proj_b..." />
+            <marker date="1512109452774" expanded="true" signature="2754:2845" placeholder="select d.enn..tb0401_dkcmin_044..." />
+            <marker date="1512109452774" expanded="true" signature="3125:3218" placeholder="select b.enn..tb0404_bnbdcrpr_044..." />
+            <marker date="1512109452774" expanded="true" signature="3498:3639" placeholder="select t.bnt..dse_monitoring_points..." />
+            <marker date="1512109452774" expanded="true" signature="5133:5442" placeholder="INSERT INTO TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="7241:7629" placeholder="UPDATE TB020..." />
+            <marker date="1512109452774" expanded="true" signature="8067:8123" placeholder="update TB040..." />
+            <marker date="1512109452774" expanded="true" signature="8520:8838" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="8575:8837" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="8919:9169" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="8972:9168" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="9249:9438" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="9300:9437" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="9517:9564" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="9921:9984" placeholder="INSERT INTO TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="10437:10502" placeholder="UPDATE TB040..." />
+            <marker date="1512109452774" expanded="true" signature="10719:10777" placeholder="update TB040..." />
+            <marker date="1512109452774" expanded="true" signature="11092:11342" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="11147:11341" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="11423:11616" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="11476:11615" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="11695:11742" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="12091:12156" placeholder="INSERT INTO TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="12565:12621" placeholder="UPDATE TB040..." />
+            <marker date="1512109452774" expanded="true" signature="12831:12891" placeholder="update DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="13212:13411" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="13267:13410" placeholder="SELECT TOP 1..TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="13491:13540" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="13989:14077" placeholder="INSERT INTO DSE_MONITORING_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="14243:14297" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="14903:14986" placeholder="UPDATE DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="15612:15666" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="16123:16175" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="16403:16454" placeholder="select bntrc..V_RSC_M_BNTR..." />
+            <marker date="1512109452774" expanded="true" signature="16675:16790" placeholder="select id,bn..dse_dbjc_009_fsqinfo..." />
+            <marker date="1512109452774" expanded="true" signature="17010:17088" placeholder="select xwidt..dse_dbjc_009_cxcdinfo..." />
+            <marker date="1512109452774" expanded="true" signature="17390:17412" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17390:18008" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17390:18070" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17707:17799" placeholder="select c.tm,..WR_HYDO_B..." />
+            <marker date="1512109452774" expanded="true" signature="17707:17942" placeholder="select c.tm,..WR_HYDO_B..." />
+            <marker date="1512109452774" expanded="true" signature="18024:18068" placeholder="select stcd ..wr_st_rb_map..." />
+            <marker date="1512109452774" expanded="true" signature="19112:19550" placeholder="select fsltd..st_rsvrfsr_b..." />
+            <marker date="1512109452774" expanded="true" signature="20074:20155" placeholder="UPDATE DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="20274:20345" placeholder="UPDATE DSE_D..." />
+            <marker date="1512109452774" expanded="true" signature="20406:20514" placeholder="INSERT INTO DSE_DBJC_009_CXCDINFO..." />
+            <marker date="1512109452774" expanded="true" signature="20459:20512" placeholder="SELECT ISNUL..DSE_DBJC_009_CXCDINFO..." />
+            <marker date="1512109452774" expanded="true" signature="20658:20730" placeholder="UPDATE DSE_D..." />
+            <marker date="1512109452774" expanded="true" signature="20791:20863" placeholder="INSERT INTO DSE_DBJC_009_FSQINFO..." />
+            <marker date="1512109452774" expanded="true" signature="21194:21239" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="21539:21652" placeholder="select PROJ_..wr_proj_b..." />
+            <marker date="1512109452774" expanded="true" signature="21991:22174" placeholder="select rb_cd..WR_RB_M..." />
+            <marker date="1512109452774" expanded="true" signature="22600:22835" placeholder="select '水 位'..DSE_ST_RSVR_R..." />
+            <marker date="1512109452774" expanded="true" signature="22958:23244" placeholder="select m.poi..DSE_DBJC_005_HYDORIGDATA..." />
+            <marker date="1512109452774" expanded="true" signature="23669:23941" placeholder="select disti..dse_monitoring_op_points..." />
+            <marker date="1512109452774" expanded="true" signature="24976:25052" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="26842:26932" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="28065:28211" placeholder="select t.bnt..dse_monitoring_points..." />
+            <marker date="1512109452774" expanded="true" signature="28343:28674" placeholder="select * fro..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="28399:28648" placeholder="SELECT max(i..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="28799:29059" placeholder="Select LevVa..TG..." />
+            <marker date="1512109452774" expanded="true" signature="29083:29343" placeholder="Select LevVa..SY..." />
+            <marker date="1512109452774" expanded="true" signature="30273:30333" placeholder="select w fro..ST_ZVARL_B..." />
+            <marker date="1512109452774" expanded="true" signature="30610:30654" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="31128:31322" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="31363:31556" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="32348:32461" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="32502:32614" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="33026:33101" placeholder="select top 1..DSE_DOT_INFO..." />
+            <marker date="1512109452774" expanded="true" signature="33140:33214" placeholder="select top 1..DSE_DOT_INFO..." />
+            <marker date="1512109452774" expanded="true" signature="35369:35482" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="36425:36537" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="37794:37873" placeholder="SELECT R.ENN..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="38063:38135" placeholder="SELECT D.ENN..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="38329:38403" placeholder="SELECT B.ENN..TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="38598:38696" placeholder="SELECT P.BNT..DSE_MONITORING_POINTS..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/js/infiltrationLinePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="323" column="41" selection-start-line="323" selection-start-column="41" selection-end-line="323" selection-end-column="41" />
+          <folding>
+            <element signature="e#1829#5149#0" expanded="false" />
+            <element signature="e#5164#5168#0" expanded="false" />
+            <element signature="e#6561#6565#0" expanded="false" />
+            <marker date="1510046054716" expanded="true" signature="30153:30182" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/infiltrationLinePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="72" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="72" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/web/BasicDataCtl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="402" column="69" selection-start-line="402" selection-start-column="69" selection-end-line="402" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/BasicDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.75">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/config/gis-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7012987">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/config/seajs-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37762237">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dam.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/css/infiltrationLinePage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/js/infiltrationLinePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="279" column="53" selection-start-line="279" selection-start-column="46" selection-end-line="279" selection-end-column="53" />
+          <folding>
+            <element signature="e#1829#5149#0" expanded="false" />
+            <element signature="e#5164#5168#0" expanded="false" />
+            <element signature="e#6561#6565#0" expanded="false" />
+            <marker date="1510046054716" expanded="true" signature="30153:30182" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/app/damSafety/infiltrationLine/infiltrationLinePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dbaq1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="13.392858">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/node.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/web/BasicDataCtl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.233333">
+          <caret line="431" column="47" selection-start-line="431" selection-start-column="47" selection-end-line="431" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/BasicDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dse/tgang/dam/service/impl/BasicDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61958045">
+          <caret line="408" column="31" selection-start-line="408" selection-start-column="31" selection-end-line="408" selection-end-column="31" />
+          <folding>
+            <marker date="1512109452774" expanded="true" signature="1791:1863" placeholder="select PROJ_..wr_proj_b..." />
+            <marker date="1512109452774" expanded="true" signature="2754:2845" placeholder="select d.enn..tb0401_dkcmin_044..." />
+            <marker date="1512109452774" expanded="true" signature="3125:3218" placeholder="select b.enn..tb0404_bnbdcrpr_044..." />
+            <marker date="1512109452774" expanded="true" signature="3498:3639" placeholder="select t.bnt..dse_monitoring_points..." />
+            <marker date="1512109452774" expanded="true" signature="5133:5442" placeholder="INSERT INTO TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="7241:7629" placeholder="UPDATE TB020..." />
+            <marker date="1512109452774" expanded="true" signature="8067:8123" placeholder="update TB040..." />
+            <marker date="1512109452774" expanded="true" signature="8520:8838" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="8575:8837" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="8919:9169" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="8972:9168" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="9249:9438" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="9300:9437" placeholder="SELECT TOP 1..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="9517:9564" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="9921:9984" placeholder="INSERT INTO TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="10437:10502" placeholder="UPDATE TB040..." />
+            <marker date="1512109452774" expanded="true" signature="10719:10777" placeholder="update TB040..." />
+            <marker date="1512109452774" expanded="true" signature="11092:11342" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="11147:11341" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="11423:11616" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="11476:11615" placeholder="SELECT TOP 1..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="11695:11742" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="12091:12156" placeholder="INSERT INTO TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="12565:12621" placeholder="UPDATE TB040..." />
+            <marker date="1512109452774" expanded="true" signature="12831:12891" placeholder="update DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="13212:13411" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="13267:13410" placeholder="SELECT TOP 1..TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="13491:13540" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="13989:14077" placeholder="INSERT INTO DSE_MONITORING_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="14243:14297" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="14903:14986" placeholder="UPDATE DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="15612:15666" placeholder="INSERT INTO DSE_MONITORING_OP_POINTS..." />
+            <marker date="1512109452774" expanded="true" signature="16123:16175" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="16403:16454" placeholder="select bntrc..V_RSC_M_BNTR..." />
+            <marker date="1512109452774" expanded="true" signature="16675:16790" placeholder="select id,bn..dse_dbjc_009_fsqinfo..." />
+            <marker date="1512109452774" expanded="true" signature="17010:17088" placeholder="select xwidt..dse_dbjc_009_cxcdinfo..." />
+            <marker date="1512109452774" expanded="true" signature="17390:17412" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17390:18008" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17390:18070" placeholder="select a.stc..wr_stat_m..." />
+            <marker date="1512109452774" expanded="true" signature="17707:17799" placeholder="select c.tm,..WR_HYDO_B..." />
+            <marker date="1512109452774" expanded="true" signature="17707:17942" placeholder="select c.tm,..WR_HYDO_B..." />
+            <marker date="1512109452774" expanded="true" signature="18024:18068" placeholder="select stcd ..wr_st_rb_map..." />
+            <marker date="1512109452774" expanded="true" signature="19112:19550" placeholder="select fsltd..st_rsvrfsr_b..." />
+            <marker date="1512109452774" expanded="true" signature="20074:20155" placeholder="UPDATE DSE_M..." />
+            <marker date="1512109452774" expanded="true" signature="20274:20345" placeholder="UPDATE DSE_D..." />
+            <marker date="1512109452774" expanded="true" signature="20406:20514" placeholder="INSERT INTO DSE_DBJC_009_CXCDINFO..." />
+            <marker date="1512109452774" expanded="true" signature="20459:20512" placeholder="SELECT ISNUL..DSE_DBJC_009_CXCDINFO..." />
+            <marker date="1512109452774" expanded="true" signature="20658:20730" placeholder="UPDATE DSE_D..." />
+            <marker date="1512109452774" expanded="true" signature="20791:20863" placeholder="INSERT INTO DSE_DBJC_009_FSQINFO..." />
+            <marker date="1512109452774" expanded="true" signature="21194:21239" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="21539:21652" placeholder="select PROJ_..wr_proj_b..." />
+            <marker date="1512109452774" expanded="true" signature="21991:22174" placeholder="select rb_cd..WR_RB_M..." />
+            <marker date="1512109452774" expanded="true" signature="22600:22835" placeholder="select '水 位'..DSE_ST_RSVR_R..." />
+            <marker date="1512109452774" expanded="true" signature="22958:23244" placeholder="select m.poi..DSE_DBJC_005_HYDORIGDATA..." />
+            <marker date="1512109452774" expanded="true" signature="23669:23941" placeholder="select disti..dse_monitoring_op_points..." />
+            <marker date="1512109452774" expanded="true" signature="24976:25052" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="26842:26932" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="28065:28211" placeholder="select t.bnt..dse_monitoring_points..." />
+            <marker date="1512109452774" expanded="true" signature="28343:28674" placeholder="select * fro..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="28399:28648" placeholder="SELECT max(i..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="28799:29059" placeholder="Select LevVa..TG..." />
+            <marker date="1512109452774" expanded="true" signature="29083:29343" placeholder="Select LevVa..SY..." />
+            <marker date="1512109452774" expanded="true" signature="30273:30333" placeholder="select w fro..ST_ZVARL_B..." />
+            <marker date="1512109452774" expanded="true" signature="30610:30654" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="31128:31322" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="31363:31556" placeholder="select CONVE..DSE_DBJC_005_HYDORIGDATA_EXT..." />
+            <marker date="1512109452774" expanded="true" signature="32348:32461" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="32502:32614" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="33026:33101" placeholder="select top 1..DSE_DOT_INFO..." />
+            <marker date="1512109452774" expanded="true" signature="33140:33214" placeholder="select top 1..DSE_DOT_INFO..." />
+            <marker date="1512109452774" expanded="true" signature="35369:35482" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="36425:36537" placeholder="DELETE FROM ..." />
+            <marker date="1512109452774" expanded="true" signature="37794:37873" placeholder="SELECT R.ENN..TB0201_RSCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="38063:38135" placeholder="SELECT D.ENN..TB0401_DKCMIN_044..." />
+            <marker date="1512109452774" expanded="true" signature="38329:38403" placeholder="SELECT B.ENN..TB0404_BNBDCRPR_044..." />
+            <marker date="1512109452774" expanded="true" signature="38598:38696" placeholder="SELECT P.BNT..DSE_MONITORING_POINTS..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>tgang-dam:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>tgang-dam</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.45517242" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

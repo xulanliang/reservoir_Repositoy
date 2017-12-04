@@ -1,0 +1,8 @@
+Current Version: 1.4.3
+1、assets/plugins/easyui/themes/metro/easyui.css 皮肤更改了.textbox-focused样式
+2、easyui/themes/color.css 按钮都添加了自适应 padding属性,去掉了 必须为a标签的限制
+3、assets/plugins/easyui/themes/metro/easyui.css 添加了.easyui-textbox样式
+4、assets/plugins/easyui/locale/easyui-lang-zh_CN.js 因为校验时tip长度有点长，默认简化了一下
+5、添加了校验器 assets/plugins/easyui/plugins/jquery.validtor.rules.js
+
+

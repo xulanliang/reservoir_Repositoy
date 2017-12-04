@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>广东省水资源 1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="js/bootstrap/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="js/formValidation/css/formValidation.css" type="text/css"/>
+
+
+    <style>
+        .form-group {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        label {
+            color: #999999;
+            float:left;
+        }
+
+    </style>
+    <script src="js/html5.js"></script>
+</head>
+
+<body>
+<div class="container-fluid" style="padding: 0px;">
+    <div class="content-wrap">
+        <div class="panel  wrap-fluid"
+             style="width: auto;margin-bottom: 0px;">
+            <div class="panel-body" style="border: none;padding: 0px;" id="moduleInfo">
+                <form method="get" class="form-horizontal bucket-form" id="pwdForm" style="height: 182px">
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="control-label" style="width: 22%; text-align: right">原密码</label>
+
+                        <div class="col-sm-6" style="display: inline-block">
+                            <input type="password" class="form-control" name="oldPassword">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="width: 22%; text-align: right">新密码</label>
+
+                        <div class="col-sm-6" style="display: inline-block">
+                            <input type="password" class="form-control" name="password" id="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="width: 22%; text-align: right">重复密码</label>
+
+                        <div class="col-sm-6" style="display: inline-block">
+                            <input type="password" class="form-control" name="confirmPassword">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin: 0px">
+                        <button class="btn btn-success center-block"
+                                style="width: 100px;height: 30px;background-color: #13b5f5;border-color: #13b5f5;font-size: 15px;font-weight: 500"
+                                type="submit" id="subBtn">保存
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/layer/layer/layer.js"></script>
+<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/formValidation/js/formValidation.js"></script>
+<script type="text/javascript" src="js/formValidation/js/framework/bootstrap.js"></script>
+<script type="text/javascript" src="js/formValidation/js/language/zh_CN.js"></script>
+
+<script type="text/javascript">
+
+    $('#pwdForm').formValidation({
+        err: {
+            container: 'popover'
+        },
+        //        trigger: 'blur',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            oldPassword: {
+                row: '.col-sm-6',
+                validators: {
+                    callback: {
+                        callback: function (value, validator) {
+                            var flag = false;
+                            $.ajax({
+                                url: $.contextPath() + "sysController/checkPassword.do",
+                                type: "post",
+                                async: false,
+                                data: {password: value},
+                                dataType: "json",
+                                success: function (data) {
+                                    flag = JSON.parse(data);
+                                }
+                            });
+                            if (flag) return true;
+                            else return {valid: false, message: '原密码错误'};
+                        }
+                    }
+                }
+            },
+            password: {
+                row: '.col-sm-6',
+                validators: {
+                    notEmpty: {
+                        message: '密码不能为空'
+                    }
+                    ,
+                    stringLength: {
+                        min: 6,
+                        max: 40,
+                        message: '长度为6-40个字符'
+                    },
+                    regexp: {
+                        regexp: /^(?!([a-zA-Z]+|\d+)$)[a-zA-Z\d]{6,40}$/,
+                        message: "必须包含数值和字母"
+                    }
+                }
+            },
+            confirmPassword: {
+                row: '.col-sm-6',
+                validators: {
+                    notEmpty: {
+                        message: '密码不能为空'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: '两次输入不同'
+                    }
+                }
+            }
+        }
+    }).on('success.form.fv', function (e) {
+        // Prevent form submission
+        e.preventDefault();
+        // Use Ajax to submit form data
+        $.ajax({
+            url: $.contextPath() + "userController/savePassword.do",
+            type: "post",
+            data: JSON.stringify({password: $('#password').val()}),
+            contentType: "application/json",
+            success: function (data) {
+                if (data) {
+                    layer.confirm('保存成功', {
+                        btn: ['确定'],
+                    }, function (index, layero) {
+                        $.closeWin();
+                    });
+                } else
+                    layer.msg('保存失败', {
+                        icon: 4,
+                        time: 3000,
+                    });
+                $("#pwdForm").formValidation("resetForm");
+            }
+        });
+    });
+    $(document).keydown(function (event) {
+        if (event.keyCode == 13) {
+            $("#subBtn").click();
+        }
+    });
+
+</script>
+</body>
+
+</html>

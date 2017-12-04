@@ -1,0 +1,21 @@
+.gc-select{
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+    margin: 10px;
+}
+
+.m-search{
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.gc_tab{
+    border: 1px solid #dcdcdc;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, "Microsoft Yahei";
+}

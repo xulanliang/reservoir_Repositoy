@@ -1,0 +1,184 @@
+<!-- js 通用函数 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width">
+
+        <script src="../../../../config/requirejs-config.js"></script>
+        <script data-main="./js/index" src="../../../../assets/require/require.js"></script>
+    </head>
+
+    <body>
+
+        <dl class="f-mt20 f-mr20 f-mb20 f-ml20 f-lh20">
+            <dt>
+                <h2 id="m1">1、用evil自执行函数替代eval</h2>
+            </dt>
+            <dd>
+                <textarea style="height:83px;" readonly="readonly">function evil(fn) {
+    var Fn = Function;  //一个变量指向Function，防止有些前端编译工具报错
+    return new Fn('return ' + fn)();
+}</textarea>
+            </dd>
+            <dd>
+                例：evil("alert('hello evil !')");
+                <a id="doEvil" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+            <dt class="f-mt10">
+                <h2 id="m2">2、返回空字符串或非空参数自身</h2>
+            </dt>
+            <dd>
+                <textarea style="height:63px;" readonly="readonly">function nullToSpace(v) {
+    return v != '0' && v != 'false' && !v ? '' : v;
+}</textarea>
+            </dd>
+            <dd>
+                例：alert(nullToSpace(false));
+                <a id="doNullToSpace1" href="javascript:" class="link f-ml20">试一试</a><br> 例：alert(nullToSpace(0));
+                <a id="doNullToSpace2" href="javascript:" class="link f-ml20">试一试</a><br> 例：alert(nullToSpace(null));
+                <a id="doNullToSpace3" href="javascript:" class="link f-ml20">试一试</a><br> 例：alert(nullToSpace(undefined));
+                <a id="doNullToSpace4" href="javascript:" class="link f-ml20">试一试</a><br> 例：alert(nullToSpace("hello world !"));
+                <a id="doNullToSpace5" href="javascript:" class="link f-ml20">试一试</a><br>
+            </dd>
+            <dt class="f-mt10">
+                <h2 id="m3">3、灵活使用top对象传递参数，可以大量减少重复的ajax请求和重复函数执行。获取当前域的top对象，完美规避脚本跨域问题</h2>
+            </dt>
+            <dd>
+                <textarea style="height:373px;" readonly="readonly">window.topWindow = function () {
+    var obj = window.self,
+        t_obj = obj;
+        try {
+            if (window.top.location.host) {
+                return window.top;
+            }
+        } catch (e) {
+            while (true) {
+                try {
+                    if (obj.location.host) {
+                        t_obj = obj;
+                        obj = obj.window.parent;
+                    }
+                } catch (e) {
+                    return t_obj;
+                }
+            }
+        }
+}();</textarea>
+            </dd>
+            <dd>
+                例：alert(topWindow);
+                <a id="doTopWindow1" href="javascript:" class="link f-ml20">试一试</a><br> 例：alert(topWindow.nullToSpace("hello world !"));
+                <a id="doTopWindow2" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+            <dt class="f-mt10">
+                <h2 id="m4">4、随机获取主键ID</h2>
+            </dt>
+            <dd>
+                <textarea style="height:153px;" readonly="readonly">$.getId = function(num) {
+	num = num || 16;
+	var str = "";
+	// 格式化时间类型
+	for(var i = 0; i &lt; num; i++) {
+		// 循环产生随机数字串
+		str += Math.floor(Math.random() * 10);
+	}
+	return str;
+};</textarea>
+            </dd>
+            <dd>
+                例：alert(getId());
+                <a id="doGetId1" href="javascript:" class="link f-ml20">试一试</a><br> 例：alert(getId(8));
+                <a id="doGetId2" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+            <dt class="f-mt10">
+                <h2 id="m5">5、获取项目基础路径，如http://localhost:8080/xxx</h2>
+            </dt>
+            <dd>
+                <textarea style="height:153px;" readonly="readonly">window.DSE.serverPath = function() {
+　　if (!window.DSE.baseUrl) {
+　　　　var local = window.location;
+　　　　var contextPath = local.pathname.split("/")[1];
+　　　　window.DSE.baseUrl = local.protocol + "//" + local.host + "/" + contextPath + "/";
+　　}
+　　return window.DSE.baseUrl;
+}();</textarea>
+            </dd>
+            <dd>
+                例：alert(DSE.serverPath);
+                <a id="do_serverPath" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+            <dt class="f-mt10">
+                <h2 id="m6">6、jquery获取url地址栏参数</h2>
+            </dt>
+            <dd>
+                <textarea style="height:423px;" readonly="readonly">function getURLparam(name, search) {
+    var reg = new RegExp("(^|[&|?])" + name + "=([^&]*)(&|$)");
+    var r = search.substr(1).match(reg);
+    if (r != null) {
+        var val = unescape(r[2]);
+        return val == '' ? null : val;
+    }
+    return null;
+}
+$.getParam = function (name, url) {
+    if (name) {
+        if (!url) {
+            url = decodeURI(window.location.href);
+        }
+        return $.trim(getURLparam(name, url));
+    } else {
+        var param = window.location.search;
+        if (param.indexOf("?", 0) == 0) {
+            param = param.substring(1, param.length);
+        }
+        return $.trim(param);
+    }
+};</textarea>
+            </dd>
+            <dd>
+                例：var a = $.getParam('a') || ''; alert(a);
+                <a id="doGetParam1" href="javascript:" class="link f-ml20">试一试</a><br> 例：var a = $.getParam('b') || ''; alert(b);
+                <a id="doGetParam2" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+            <dt class="f-mt10">
+                <h2 id="m7">7、jquery同步获取ajax数据</h2>
+            </dt>
+            <dd>
+                <textarea style="height:283px;" readonly="readonly">function $ajax(param) {
+    var $data = [];
+    param = param || {};
+    if (!param.url) {
+        return false;
+    }
+    $.ajax({
+        type: param.type || 'get',
+        url: param.url,
+        async: param.async || false,
+        data: param.data || {},
+        dataType: param.dataType || 'json',
+        contentType: param.contentType || 'application/x-www-form-urlencoded',
+        success: param.async ? param.success : function (data) {
+            $data = data;
+        },
+        error: param.error || function(){
+        	log('请求出错了！');
+        }
+    });
+    if(!param.async){
+    	return $data;
+    }
+}</textarea>
+            </dd>
+            <dd>
+                例：var $data = $ajax({url:DSE.serverPath + 'pages/app/demos/data/data1.json'}) || []; alert(JSON.stringify($data));
+                <a id="doGetDataInfo" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+        </dl>
+
+    </body>
+
+</html>

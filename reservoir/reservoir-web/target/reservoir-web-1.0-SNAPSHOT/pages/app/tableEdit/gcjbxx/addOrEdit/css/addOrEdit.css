@@ -1,0 +1,32 @@
+@charset "utf-8";
+input[type="text"],
+textarea{
+    width: 100%;
+}
+textarea{
+    height: 90px;
+}
+.top-title{
+	position: relative;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background-color: #ededed;
+}
+.top-title .tt{
+	padding: 0 120px;
+	font-size: 16px;
+	font-weight: 700;
+}
+.top-title .btns{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.m-form{
+	margin: 15px 30px;
+}
+.el-date-editor.el-input{
+	width: 100%;
+	border-radius: 0;
+}

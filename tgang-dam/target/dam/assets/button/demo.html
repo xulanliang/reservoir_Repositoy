@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>button效果展示</title>
+		<link rel="stylesheet" href="../../pages/frame/common/css/base-min.css" />
+
+		<style>
+			body{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			iframe{
+				width: 100%;
+				height: auto;
+				padding-top: 6px;
+			}
+			
+			table{
+				width: 100%;
+			}
+			
+			td{
+				border: 1px solid #AED0FF;
+			}
+			.td1{
+				width: 9%;
+				color: #337AB7;
+				text-align: center;
+				font-weight: bolder;
+				font-size: 20px;
+			}
+			.td2{
+				width: 90%;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="container">
+			<tbody>
+			</tbody>
+		</table>
+	</body>
+	<script id="tableInfo" type="text/template">
+		<% _.forEach(nums, function(i) { %>
+			<tr>
+				<td class="td1">button<%-i%> </td>
+				<td class="td2">
+					<iframe src="buttons.html?sytle=<%-i%>"  frameborder="no" framespacing="0"></iframe>
+				</td>
+			</tr>
+		<% }); %>
+	</script>
+	
+	<script src="../jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../lodash/lodash.js" ></script>
+	
+	<script>
+		var compiled = _.template($('#tableInfo').html());
+		$("#container>tbody").html(compiled({ 'nums': [1,2,3,4] }));
+	</script>
+</html>

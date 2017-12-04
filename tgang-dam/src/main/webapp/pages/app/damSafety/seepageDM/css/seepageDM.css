@@ -1,0 +1,86 @@
+#container{
+    width: 99.8%;
+    margin: 0;
+    padding: 0
+}
+.bodyMargin{
+    margin: 0px;
+    padding: 0px;
+}
+.hearTool{
+    width: 90%;
+    height: 38px;
+    margin-left: 20px;
+}
+.leftDiv{
+    width: 20%;
+    height:93%;
+    border:1px solid #8abae7;
+    float: left;
+    margin-left: 1%;
+    margin-top: 3px;
+}
+
+.rightDiv{
+    width: 78%;
+    height: 93%;
+    float: left;
+    border:1px solid #8abae7;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.myBtn{
+    float: left;
+    width: 20%;
+    height: 35px;
+    margin-top: -40px;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+.titleHearderDate{
+    width: 155px;
+    height: 66px;
+    background: #ddf0fe;
+    font-weight: bold;
+}
+
+.titleHearder2{
+    width: 80%;
+    height: 30px;
+    background: #ddf0fe;
+    font-weight: bold;
+}
+
+.Tr2Bg{
+    background: #ddf0fe;
+}
+
+.DynamicTd{
+    font-weight: bold;
+}
+
+input::input-placeholder{
+    color:lightgray;
+}
+input::-webkit-input-placeholder{
+    color: lightgray;
+}
+input:-moz-placeholder{
+    color:lightgray;
+}
+input::-moz-placeholder{
+    color:lightgray;
+}
+input:-ms-input-placeholder{
+    color: lightgray;
+}
+
+.updated {
+    background-image: url(../img/dirty.gif);
+    background-repeat: no-repeat;
+}

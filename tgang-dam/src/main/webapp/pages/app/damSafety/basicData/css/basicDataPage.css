@@ -1,0 +1,6 @@
+/**表格无数据*/
+.datagridNoData {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}

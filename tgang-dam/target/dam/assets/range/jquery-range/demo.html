@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>range演示</title>
+		<link rel="stylesheet" type="text/css" href="jquery.range.css"/>
+		<script type="text/javascript" src="../../jquery/jquery-1.9.1.min.js" ></script>
+		<script src="jquery.range.js"></script>
+	</head>
+	<body>
+		<input id="opacityBar" type="hidden" class="slider-input" value="60" /> 
+	</body>
+	<script >
+	/**
+	 * 修改透明度
+	 */
+	$("#opacityBar").jRange({ 
+				    from: 0, 
+				    to: 100, 
+				    step: 10,
+				    format: '%s', 
+				    width: 110, 
+				    showLabels: true, 
+				    showScale: true,
+				    onstatechange:function(val){
+				    	alert(val);
+				    }
+	}); 
+		
+	</script>
+</html>

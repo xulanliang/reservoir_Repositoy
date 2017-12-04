@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath*:dubbo.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<dubbo:application name="message-provider"
+		owner="message" organization="dubbox" />
+
+	<!-- 注册服务端口号 -->
+	<dubbo:protocol name="dubbo" port="20870"/>
+
+
+	<dubbo:registry address="${service.register.address}" />
+
+
+	<import resource="dubbo-client.xml"/>
+</beans>

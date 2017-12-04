@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../../assets/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../assets/util/common.js"></script>
+<link rel="stylesheet" href="../../frame/common/css/base-min.css" />
+<link rel="stylesheet" href="../../../assets/button/button3/button.css" />
+<link rel="stylesheet" href="css/userPage.css" />
+
+<script type="text/javascript">
+	function doSearch() {
+		alert($("#epName").val());
+	}
+</script>
+</head>
+<body>
+	<!-- 每个界面都应该在顶层包含一个g-wrap的容器,以后UI设计师调整内容边距的时候，可以统一处理 -->
+	<div class="g-wrap">
+		<div class="g-sd1"><!-- g-  左侧布局 -->
+			<div style="background: red; height: 500px;">左侧定宽</div>
+		</div><!-- /g-sd1 -->
+		<div class="g-mn1"><!-- g-  右侧布局 -->
+			<div class="g-mn1c">
+				<!-- 引入common.js后，对m-search样式的容器添加了 enter属性时回车自动调用doSearch方法 -->
+				<div class="m-search" enter="doSearch"><!-- m- 这是一个查询模块功能 -->
+					企业名称：
+					<input id="epName" class="u-ipt" /><!-- u-输入框元素 -->
+					<button class="u-btn" onclick="doSearch()">查询</button><!-- u- 按钮元素 -->
+				</div>
+			</div><!-- /g-mn1c -->
+		</div><!-- /g-mn1 -->
+	</div><!-- /g-wrap -->
+</body>
+</html>

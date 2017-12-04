@@ -1,0 +1,233 @@
+.u-btn {
+    color: #666;
+    background-color: #eee;
+    border-color: #eee;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Arial, "Microsoft Yahei";
+    text-decoration: none;
+    text-align: center;
+    line-height: 26px;
+    height: 26px;
+    padding: 0 15px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/*大小*/
+.u-btn.sm,
+.u-btn.xs {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.u-btn.md,
+.u-btn.lg {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.u-btn.xs {
+    height: 20px;
+    line-height: 20px;
+}
+.u-btn.sm {
+    height: 24px;
+    line-height: 24px;
+}
+.u-btn.md {
+    height: 30px;
+    line-height: 30px;
+}
+.u-btn.lg {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+/*圆角*/
+.u-btn.xs.rds{
+    border-radius: 3px;
+}
+.u-btn.ms.rds{
+    border-radius: 5px;
+}
+.u-btn.rds{
+    border-radius: 7px;
+}
+.u-btn.md.rds{
+    border-radius: 10px;
+}
+.u-btn.lg.rds{
+    border-radius: 15px;
+}
+
+/*半圆*/
+.u-btn.xs.cc{
+    border-radius: 10px;
+}
+.u-btn.ms.cc{
+    border-radius: 12px;
+}
+.u-btn.cc{
+    border-radius: 13px;
+}
+.u-btn.md.cc{
+    border-radius: 15px;
+}
+.u-btn.lg.cc{
+    border-radius: 20px;
+}
+
+/*扁平*/
+.u-btn:visited {
+    color: #666;
+}
+.u-btn:focus,
+.u-btn:hover {
+    background-color: #f6f6f6;
+    text-decoration: none;
+    outline: none;
+}
+.u-btn.active,
+.u-btn:active {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-color: #cfcfcf;
+    color: #d4d4d4;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.u-btn.disabled,
+.u-btn:disabled {
+    top: 0 !important;
+    background: #EEE !important;
+    border: 1px solid #DDD !important;
+    text-shadow: 0 1px 1px white !important;
+    color: #CCC !important;
+    cursor: default !important;
+    appearance: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    opacity: 0.8 !important;
+}
+.u-btn-style(@b, @c) {
+    background-color: @b;
+    border-color: @b;
+    color: @c;
+}
+.u-btn-test(@bgc, @c, @hbgc, @abgc, @ac) {
+    .u-btn-style(@bgc,@c);
+    &:visited {
+        color: @c;
+    };
+    &:focus,
+        &:hover {
+        .u-btn-style(@hbgc,@c);
+    };
+    &.active,
+    &:active {
+        .u-btn-style(@abgc,@ac);
+    };
+}
+
+/*立体*/
+.u-btn-3d {
+    position: relative;
+    top: 0;
+    -webkit-box-shadow: 0 5px 0 #bbbbbb, 0 6px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 0 #bbbbbb, 0 6px 3px rgba(0, 0, 0, 0.2);
+}
+.u-btn-3d:focus,
+.u-btn-3d:hover {
+    -webkit-box-shadow: 0 5px 0 #bbbbbb, 0 6px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 0 #bbbbbb, 0 6px 3px rgba(0, 0, 0, 0.2);
+}
+.u-btn-3d.active,
+.u-btn-3d:active {
+    top: 3px;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-box-shadow: 0 1px 0 #bbbbbb, 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0 #bbbbbb, 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.u-btn-style-3d(@a) {
+    -webkit-box-shadow: 0 5px 0 @a, 0 6px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 0 @a, 0 6px 3px rgba(0, 0, 0, 0.3);
+}
+.u-btn-test-3d(@bw_3d, @hbw_3d, @abw_3d) {
+    .u-btn-style-3d(@bw_3d);
+    &:focus,
+        &:hover {
+        .u-btn-style-3d(@hbw_3d);
+    };
+    &.active,
+    &:active {
+        -webkit-box-shadow: 0 1px 0 @abw_3d, 0 2px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 0 @abw_3d, 0 2px 2px rgba(0, 0, 0, 0.2);
+    };
+}
+
+/*凸起*/
+.u-btn-rd {
+    border-color: #e1e1e1;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 22px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.u-btn-rd.active,
+.u-btn-rd:active {
+    background: #eeeeee;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 0 white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 0 white;
+}
+.u-btn-test-rd(@bd_rd, @abd_rd, @abg_rd) {
+    border-color: @bd_rd;
+    &.active,
+    &:active {
+        border-color: @abd_rd;
+        background: @abg_rd;
+    };
+}
+
+/*颜色值*/
+@bgc    : #1B9AF7, #f7f7f7, #A5DE37, #FEAE1B, #FF4351, #7B72E9, #222222; //background-color
+@c      : #ffffff, #1B9AF7, #ffffff, #ffffff, #ffffff, #ffffff, #eeeeee; //color
+@hbgc   : #4cb0f9, #ffffff, #b9e563, #fec04e, #ff7680, #a49ef0, #3c3c3c; //:hover background-color
+@abgc   : #2798eb, #ffffff, #a1d243, #f3ab26, #f64c59, #827ae1, #222222; //:active background-color
+@ac     : #0880d7, #e6e6e6, #8bc220, #e59501, #ff1022, #5246e2, #090909; //:active color
+@bw_3d  : #0880d7, #e6e6e6, #8bc220, #e59501, #ff1022, #5246e2, #090909; //box-shadow 3d
+@hbw_3d : #077ace, #e0e0e0, #84b91f, #db8e01, #ff0618, #493de1, #030303; //:hover box-shadow 3d
+@abw_3d : #0662a6, #cccccc, #6b9619, #b27401, #dc0010, #2f21d4, #000000; //:active box-shadow 3d
+@bd_rd  : #088ef0, #f2f2f2, #9ad824, #fea502, #ff2939, #665ce6, #151515; //border-color rd
+@abd_rd : #0880d7, #e6e6e6, #8bc220, #e59501, #ff1022, #5246e2, #090909; //:active border-color rd
+@abg_rd : #2798eb, #ffffff, #a1d243, #f3ab26, #f64c59, #827ae1, #222222; //:active background-color rd
+.u-btn-loop(@n) when (@n > 0) {
+    .u-btn.u-btn-c@{n} {
+        .u-btn-test(extract(@bgc, @n),extract(@c, @n),extract(@hbgc, @n),extract(@abgc, @n),extract(@ac, @n));
+    };
+    .u-btn.u-btn-3d.u-btn-c@{n} {
+        .u-btn-test-3d(extract(@bw_3d, @n),extract(@hbw_3d, @n),extract(@abw_3d, @n));
+    };
+    .u-btn.u-btn-rd.u-btn-c@{n} {
+        .u-btn-test-rd(extract(@bd_rd, @n), extract(@abd_rd, @n),extract(@abg_rd, @n));
+    };
+    .u-btn-loop((@n - 1));
+}
+.u-btn-loop(length(@bgc));

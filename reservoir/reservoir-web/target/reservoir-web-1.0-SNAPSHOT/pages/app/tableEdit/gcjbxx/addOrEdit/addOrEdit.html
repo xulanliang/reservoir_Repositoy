@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+	</head>
+
+	<body>
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">工程名称</td>
+							<td width="30%">
+								<input id="PROJ_CD_auto" type="hidden">
+								<input id="PID_auto" type="hidden">
+								<input id="PROJ_NM_auto" type="text" valType="2" maxLength="50" readonly>
+								<span class="PROJ_NM_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">工程介绍</td>
+							<td>
+								<input id="PROJ_DESC_auto" type="text" maxLengh="500">
+								<span class="PROJ_DESC_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">竣工年月</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="CPLDT_auto" type="text" valType="2" maxLength="6" data-rule="d">
+								<span class="CPLDT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel require">创建时间</td>
+							<td>
+								<input id="CREATE_TIME_auto" type="text"  class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});">
+								<span class="CREATE_TIME_ori f-dn"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">创建人</td>
+							<td>
+								<input id="CREATE_USER_auto" type="text" valType="200" maxlength="9">
+								<span class="CREATE_USER_ori f-dn"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">是否显示</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="ISDISPLAY_auto" type="text" data-rule="d" valType="1" maxLength="256">
+								<span class="ISDISPLAY_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">所属部门</td>
+							<td>
+								<input id="DEPARTMENTID_auto" type="text" valType="2" maxlength="9">
+								<span class="DEPARTMENTID_ori f-dn"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">是否有渗压测点</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="ISSY_auto" type="text" data-rule="d" valType="1" maxLength="1">
+								<span class="ISSY_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">是否有水位测点</td>
+							<td>
+								<input id="ISSW_auto" type="text" valType="2" maxlength="1">
+								<span class="ISSW_ori f-dn"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">是否有渡槽沉降测点</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="ISDC_auto" type="text" data-rule="d" valType="1" maxLength="1">
+								<span class="ISDC_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">是否有深层位移测点</td>
+							<td>
+								<input id="ISSC_auto" type="text" valType="20" maxlength="1">
+								<span class="ISSC_ori f-dn"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">是否有垂直位移测点</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="ISCZ_auto" type="text" data-rule="d" valType="1" maxLength="1">
+								<span class="ISCZ_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">是否有水平位移测点</td>
+							<td>
+								<input id="ISSP_auto" type="text" valType="2" maxlength="1">
+								<span class="ISSP_ori f-dn"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">备注</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="NT_auto" type="text" valType="2" maxLength="256">
+								<span class="NT_ori"></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

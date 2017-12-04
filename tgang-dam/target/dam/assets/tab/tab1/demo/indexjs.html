@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>选项卡和图片滚动结合jquery代码 - 站长素材</title>
+
+<link href="../css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../../../jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="../js/tab1.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+
+		$tab1.tab({
+			"el" : "#mydiv",
+			data : [ {
+				title : '新闻',
+				content : 'aaaa',
+				type : 1,// 内容元素 1 html,2:frame
+			}, {
+				title : 'IT',
+				content : 'bbbb',
+				type : 1,
+			}, {
+				title : '电影',
+				content : 'ccc',
+				type : 1,
+			} ]
+		});
+
+		$tab1.tab({
+			"el" : "#mydiv2",
+			data : [ {
+				title : '百度',
+				content : 'http://www.baidu.com',
+				type : 2,// 内容元素 1 html,2:frame
+			}, {
+				title : '开源中国',
+				content : 'http://www.oschina.net/',
+				type : 2,
+			}, {
+				title : 'sohu',
+				content : 'http://www.sohu.com/',
+				type : 2,
+			} ]
+		});
+	});
+</script>
+</head>
+
+
+<body>
+	<br>
+		<div id="mydiv" style="width: 500px;height: 100px;"></div>
+
+		<div id="mydiv2" style="margin-top: 10px;height: 500px;"></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警查询</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/environmentFactorMain" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-clock>
+    <!--新增、删除按钮-->
+    <div v-show="operType==''">
+        <!--<div class="top-btns-box" v-show="!batch">
+            &lt;!&ndash;
+            <span class="u-btn u-btn-c1 f-mr10" @click="doOpenWin"><i class="fa fa-plus"></i> 新 增</span>
+            <span class="u-btn u-btn-c2" @click="doBatch"><i class="fa fa-ban"></i> 批量操作</span>
+            &ndash;&gt;
+        </div>
+        <div class="top-btns-box f-dn" v-show="batch">
+            <span class="u-btn u-btn-c5 f-mr10" @click="doBatchDelete"><i class="fa fa-trash-o"></i> 批量删除</span>
+            <span class="u-btn u-btn-c2" @click="doEscBatch"><i class="fa fa-close"></i> 退出批量</span>
+        </div>-->
+        <!--查询-->
+        <form id="search" class="m-search f-cb">
+            <input id="projcd_auto" v-model="projcd"  name="projcd" type="hidden" />
+            <input id="mon_tp_auto" v-model="mon_tp"  name="mon_tp" type="hidden" />
+
+            <span class="f-mr20">
+                <label class="dseLabel type1">预警类型</label>
+                <input id="wa_tp_auto" name="wa_tp" type="text"/>
+            </span>
+            <span class="f-mr20">
+                    <label class="dseLabel">起始时间：</label>
+                    <input id="stm_auto" v-model="minDate" name="stm" class="Wdate"   style="width: 120px" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'etm_auto\')}',el:'stm_auto',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                     <label class="dseLabel">至</label>
+                    <input id="etm_auto" v-model="maxDate" name="etm" class="Wdate"   style="width: 120px" onClick="WdatePicker({minDate:'#F{$dp.$D(\'stm_auto\')}',el:'etm_auto',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+            </span>
+
+            <!--<span id="doSearch" class="submit" @click="doSearch" class="u-btn f-mr10"><i class="fa fa-search"></i> 查 询</span>-->
+            <span id="doExport" class="u-btn u-btn-c1 f-rbtn f-mr20" @click="doExport">导出</span>
+
+            <!--查询、重置按钮-->
+            <!--
+               <span id="doSearch" class="u-btn f-mr10"><i class="fa fa-search"></i> 查 询</span>
+            -->
+            <!--重置按钮-->
+            <a id="doReset" class="f-rbtn" href="javascript:" @click="doReset"><i class="fa fa-refresh"></i> 恢复为默认</a>
+
+        </form>
+        <!--end 查询-->
+
+        <!--表格-->
+        <div class="m-datagrid">
+            <div id="datagrid"></div>
+        </div>
+        <!--end 表格-->
+    </div>
+    <div v-if="operType!=''">
+        <iframe :src="url" width="100%" height="100%" frameborder="0" onload="this.height=document.documentElement.clientHeight;"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

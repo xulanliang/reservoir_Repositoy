@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渗压相关图</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/xgtmain" src="../../../../../../assets/require/require.js"></script>
+
+</head>
+<style type="text/css">
+    .right_content{
+        position: absolute;
+        right: 10px;
+        width: 12%;
+        height: 130px;
+        overflow: auto;
+
+    }
+    .top1{
+        top:80px;
+    }
+    .top2{
+        top:210px;
+    }
+    .top3{
+        top:340px;
+    }
+    .row-item {
+        float: left;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .row-item span {
+        display: block;
+    }
+    .row-item span:first-child {
+        font-weight: bold;
+    }
+    .row-item span:last-child {
+        font-size : 8px;
+        padding-top: 8px;
+    }
+    .clear {
+        clear: both;
+        height: 0;
+        overflow: hidden;
+    }
+</style>
+<body>
+    <div id="app" class="g-wrap" style="position: relative;">
+
+        <!--新增、删除按钮-->
+        <div v-show="operType==''">
+            <!--查询-->
+            <form id="search" class="m-search">
+                <input id="projcd_auto" v-model="projcd"  type="hidden" />
+                <!--查询条件-->
+                <span class="f-mr10">
+                    <label class="dseLabel type1">选择断面</label>
+                    <input id="adcd_auto" type="text">
+                </span>
+                <span class="f-mr20">
+                    <label class="dseLabel type1">选择测点</label>
+                    <input id="stcds_auto" type="text" />
+                </span>
+                <span class="f-mr10">
+                    <label class="dseLabel">开始时间</label>
+                    <input id="stm_auto" v-model="minDate" class="Wdate"   style="width: 110px" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'etm_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                </span>
+                <span class="f-mr10">
+                    <label class="dseLabel" >结束时间</label>
+                    <input id="etm_auto" v-model="maxDate" class="Wdate"   style="width: 110px" onClick="WdatePicker({minDate:'#F{$dp.$D(\'stm_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                </span>
+                <span @click="doMergeSave()" class="mergeSave">保存图片</span>
+                <!--查询、重置按钮
+                <span id="doSearch" class="u-btn f-mr10"><i class="fa fa-search"></i> 查 询</span>
+                <span id="doReset" class="u-btn u-btn-c4"><i class="fa fa-refresh"></i> 重 置</span>
+                -->
+            </form>
+            <!--end 查询-->
+
+            <!--表格-->
+            <!--div class="m-datagrid g-mh200">
+                <div id="datagrid"></div>
+            <--div>
+            <!--end 表格-->
+        </div>
+
+        <div class="right_content top1">
+
+                <div class="row-item">
+                    <span>相关系数</span>
+                    <span id="syCoefficient" ></span>
+                </div>
+                <div class="row-item">
+                    <span>常数项</span>
+                    <span id="ex_0_constant_term"></span>
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="row-item">
+                    <span>标准差</span>
+                    <span id="standardDeviation"></span>
+                </div>
+                <div class="row-item">
+                    <span>一次项</span>
+                    <span id="ex_0_linear_term"></span>
+                </div>
+
+        </div>
+        <div id="ex_0"  class="g-h130">
+            ex_0
+        </div>
+
+        <div class="right_content top2">
+
+            <div class="row-item">
+                <span>相关系数</span>
+                <span id="jyCoefficient" ></span>
+            </div>
+            <div class="row-item">
+                <span>常数项</span>
+                <span id="ex_1_constant_term"></span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="row-item">
+                <span>标准差</span>
+                <span id="jyStandardDeviation"></span>
+            </div>
+            <div class="row-item">
+                <span>一次项</span>
+                <span id="ex_1_linear_term"></span>
+            </div>
+
+        </div>
+        <div id="ex_1"  class="g-h130">
+            ex_1
+        </div>
+
+        <div class="right_content top3">
+
+            <div class="row-item">
+                <span>相关系数</span>
+                <span id="qwCoefficient" ></span>
+            </div>
+            <div class="row-item">
+                <span>常数项</span>
+                <span id="ex_2_constant_term"></span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="row-item">
+                <span>标准差</span>
+                <span id="qwStandardDeviation"></span>
+            </div>
+            <div class="row-item">
+                <span>一次项</span>
+                <span id="ex_2_linear_term"></span>
+            </div>
+
+        </div>
+        <div id="ex_2"  class="g-h130">
+            ex_2
+        </div>
+
+        <div v-if="operType!=''">
+            <iframe :src="url" width="100%" height="100%" scrolling="no" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

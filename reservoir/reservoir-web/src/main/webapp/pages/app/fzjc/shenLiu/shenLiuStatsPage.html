@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渗流统计模型</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/shenLiuStats" src="../../../../assets/require/require.js"></script>
+</head>
+<style type="text/css">
+
+    .m-search {
+        height: 110px !important;
+    }
+    .clear {
+        clear: both;
+        height: 0;
+        overflow: hidden;
+    }
+
+    textarea {
+        width: 49% !important;
+        height: 60px !important;
+        overflow: hidden !important;
+    }
+</style>
+<body>
+    <div id="app" class="g-wrap">
+        <!--新增、删除按钮-->
+        <div v-show="operType==''">
+            <!--查询-->
+            <form id="search" class="m-search f-cb">
+                <input id="projcd_auto" v-model="projcd" type="hidden" />
+                <input id="ppcd_auto" v-model="ppcd" type="hidden" name="ppcd">
+
+                <!--<span class="f-mr10">-->
+                    <!--<label class="dseLabel type1">断面</label>-->
+                    <!--<input id="adcd_auto" type="text"/>-->
+                <!--</span>-->
+
+                <span class="f-mr20">
+                    <label class="dseLabel type1">测点名称</label>
+                    <input id="stcds_auto" type="text">
+                </span>
+
+                <span class="f-mr10">
+                    <label class="dseLabel">开始时间</label>
+                    <input id="stm_auto" v-model="minDate" class="Wdate"   style="width: 110px" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'etm_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                </span>
+                <span class="f-mr10">
+                        <label class="dseLabel" >结束时间</label>
+                        <input id="etm_auto" v-model="maxDate" class="Wdate"   style="width: 110px" onClick="WdatePicker({minDate:'#F{$dp.$D(\'stm_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});" >
+                </span>
+
+                <div class="clear"></div>
+
+              <!--  <span class="">
+                    <label class="dseLabel type1">模型因子:</label>
+                    <textarea id="mode_factor_auto" readonly class="textarea"  maxLength="256">
+                    </textarea>
+                </span>-->
+                <!--重置按钮-->
+                <!--<span class="">-->
+                    <!--<a id="doReset" class="f-rbtn" href="javascript:" @click="doReset"><i class="fa fa-refresh"></i> 恢复为默认</a>-->
+                <!--</span>-->
+            </form>
+            <!--end 查询-->
+
+            <div id="ex_4"  class="g-h120">
+            </div>
+            <div id="ex_1"  class="g-h120">
+            </div>
+            <div id="ex_2"  class="g-h120">
+            </div>
+            <div id="ex_3"  class="g-h120">
+            </div>
+            <!--end 表格-->
+        </div>
+        <div v-if="operType!=''">
+            <iframe :src="url" width="100%" height="100%" scrolling="no" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+        </div>
+    </div>
+</body>
+</html>

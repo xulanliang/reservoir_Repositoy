@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巡查内容管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/xctjMain" src="../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-cloak>
+    <!--新增、删除按钮-->
+    <div v-show="operType==''">
+        <!--查询-->
+        <form id="search" class="m-search f-cb">
+            <!--<input id="CK_ITEM_auto" v-model="ck_item"  type="hidden" />-->
+            <!--<span class="f-ib g-w300 keyword_box">-->
+                <!--<input id="CK_CNT_DESC_auto" type="text" placeholder="请输入巡查内容描述搜索" onkeyup="enter('doSearch')">-->
+                <!--<span id="doSearch" class="submit" @click="doSearch"><i class="fa fa-search"></i> 查 询</span>-->
+            <!--</span>-->
+            <!--&lt;!&ndash;分隔符&ndash;&gt;-->
+            <!--<span class="f-division f-ml20 f-mr20"></span>-->
+            <span class="f-mr20">
+                <label class="dseLabel type1">时间：</label>
+                <input id="sTime_auto" v-model="minDate"  class="Wdate"   style="width: 110px" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'eTime_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});"/>
+                <label> - </label>
+                <input id="eTime_auto" v-model="maxDate" class="Wdate"   style="width: 110px" onClick="WdatePicker({minDate:'#F{$dp.$D(\'sTime_auto\')}',dateFmt:'yyyy-MM-dd',onpicked:DSE.app.changeDateVal});"/>
+            </span>
+            <span class="f-mr20">
+                <label class="dseLabel type1">巡查部门</label>
+                <input id="dep_name_auto" type="text"/>
+            </span>
+            <span class="f-mr20">
+                <label class="dseLabel type1">巡查类型</label>
+                <input id="ck_type_auto" type="text"/>
+            </span>
+
+            <!--重置按钮-->
+            <a id="doReset" class="f-rbtn" href="javascript:" @click="doReset"><i class="fa fa-refresh"></i> 恢复为默认</a>
+        </form>
+        <!--end 查询-->
+
+        <!--&lt;!&ndash;表格&ndash;&gt;-->
+        <!--<div class="g-bd1 f-cb">-->
+            <!--<div class="g-sd1">-->
+                <!--<div class="myztree">-->
+                    <!--<div class="lev1">-->
+                        <!--<ul id="chkobjtree" class="ztree"></ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="g-mn1">-->
+                <!--<div class="g-mn1c">-->
+                    <!--&lt;!&ndash;表格&ndash;&gt;-->
+                    <!--<div class="m-datagrid">-->
+                        <!--<div id="datagrid"></div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;end 表格&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;end 表格&ndash;&gt;-->
+        <!--表格-->
+        <div class="m-datagrid">
+            <div id="datagrid"></div>
+        </div>
+        <!--end 表格-->
+    </div>
+    <div v-if="operType!=''">
+        <iframe :src="url" width="100%" height="100%" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

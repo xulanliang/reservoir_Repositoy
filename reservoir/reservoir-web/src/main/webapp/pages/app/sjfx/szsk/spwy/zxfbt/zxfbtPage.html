@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden">
+<head>
+    <meta charset="UTF-8">
+    <title>纵向分布图</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/zxfbtmain" src="../../../../../../assets/require/require.js"></script>
+<style>
+    html{
+        overflow: hidden;
+    }
+</style>
+</head>
+<body>
+    <div id="app" class="g-wrap">
+
+        <!--新增、删除按钮-->
+        <div v-show="operType==''">
+            <!--查询-->
+            <form id="search" class="m-search">
+
+                <!--查询条件 v-show="(!(projcd.indexOf('3')==0) )" -->
+                <span class="f-mr20" v-if="showDM" >
+                    <label class="dseLabel type1">选择断面</label>
+                    <input id="adcd_auto" type="text" />
+                </span>
+                <!--
+                <span class="f-mr20"  v-show="(projcd=='3' || (projcd.indexOf('3')==0))"  >
+                        <label class="dseLabel type1">工程部位</label>
+                </span>
+                -->
+
+                <span class="f-mr20">
+                    <input id="projcd_auto" v-model="projcd"  type="hidden" />
+                    <label >选择时间：</label>
+                    <input id="stm_auto" v-model="minDate"> 至
+                    <input id="etm_auto" v-model="minDate">
+                    <input id="season_auto" >
+                </span>
+                <!--<span class="f-mr20">-->
+                    <!--<label class="dseLabel" >结束年份</label>-->
+
+                <!--</span>-->
+
+                <!--查询、重置按钮
+                <span id="doSearch" class="u-btn f-mr10"><i class="fa fa-search"></i> 查 询</span>
+                <span id="doReset" class="u-btn u-btn-c4"><i class="fa fa-refresh"></i> 重 置</span>
+                -->
+            </form>
+            <!--end 查询-->
+
+            <!--表格-->
+            <!--div class="m-datagrid g-mh200">
+                <div id="datagrid"></div>
+            <--div>
+            <!--end 表格-->
+        </div>
+
+
+
+        <div id="ex_0"  class="g-h260">
+
+        </div>
+
+
+
+        <div v-if="operType!=''">
+            <iframe :src="url" width="100%" height="100%" scrolling="no" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>button样式  效果展示</title>
+		<link rel="stylesheet" href="../../pages/frame/common/css/base-min.css" />
+		
+		<script>
+		    var value = location.search.match(new RegExp("[?&]sytle=([^&]*)(&?)", "i")),
+		    type = value ? decodeURIComponent(value[1]) : value;
+			document.write('<link rel="stylesheet" href="button'+type+'/button.css" />');			
+		</script>
+		
+		<style>
+			td{
+				text-align: center;
+				width: 200px;
+			}
+			
+			span{
+				display: block;
+				height: 26px;
+    			line-height: 26px;
+				font-weight: bolder;
+				font-size: 14px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<button class="u-btn">确认</button>
+						<span></span>
+						<span>查询|确定|选择</span>
+					</td>
+					<td>
+						<button class="u-btn u-btn-c1">删除</button>
+						<span></span>
+						<span>删除</span>
+					</td>
+					<td>
+						<button class="u-btn u-btn-c2">修改</button>
+						<span></span>
+						<span>编辑 | 修改| 修正</span>
+					</td>
+					<td>
+						<button class="u-btn u-btn-c3">新增</button>
+						<span></span>
+						<span>新增 | 新建 |保存|上报|</span>
+					</td>
+					
+					<td>
+						<button class="u-btn u-btn-c4">取消</button>
+						<span></span>
+						<span>关闭|取消|重置|恢复</span>
+					</td>
+					<td>
+						<button class="u-btn u-btn-c5">扩展</button>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="u-btn u-btn-c1 u-btn-lg">较大</button>
+						<span></span>
+					</td>
+					<td>
+						<button class="u-btn u-btn-c2 u-btn-sm">较小</button>
+						<span></span>
+					</td>
+					<td>
+						<button class="u-btn u-btn-c2 u-btn-xs">很小</button>
+						<span></span>
+					</td>
+					<td>
+						<a class="u-btn-link">a标签</a>
+						<button class="u-btn-link">button标签</button> 
+						<span>u-btn-link</span>
+					</td>
+
+				</tr>
+			</tbody>
+			
+		</table>
+		
+		
+	</body>
+	<script src="../jquery/jquery-1.9.1.min.js"></script>
+	<script>
+		$(".u-btn").each(function(i,item){
+			$(this).next().html(item.className);
+		});
+		
+	</script>
+</html>

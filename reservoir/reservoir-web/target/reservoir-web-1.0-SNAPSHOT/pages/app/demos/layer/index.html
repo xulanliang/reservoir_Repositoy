@@ -1,0 +1,129 @@
+<!-- layer 弹窗技巧 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width">
+
+        <script src="../../../../config/requirejs-config.js"></script>
+        <script data-main="./js/index" src="../../../../assets/require/require.js"></script>
+    </head>
+    <body>
+
+        <dl class="f-mt20 f-mr20 f-mb20 f-ml20 f-lh20">
+            <dt>
+                <h2>1、layer iframe方式弹窗，弹窗里面弹窗不能超出父窗口大小，并且影响界面美观。所以利用重写top对象方式，始终利用top.window来执行layer弹窗解决此问题，首先需要执行改写的topWindow对象。下面是依赖的通用函数<a href="../basejs/index.html#m3" class="link f-ml20" target="_blank">查看topWindow方法</a><a href="../basejs/index.html#m2" class="link f-ml20" target="_blank">查看nullToSpace方法</a></h2>
+            </dt>
+            <dd>
+                <textarea style="height:643px;" readonly="readonly">function layerOpen(o) {
+    topWindow.thisWindow = this;
+    topWindow.layer.open({
+        type: o.type || 2, // iframe层
+        title: o.title || '提示',
+        content: o.content || '',
+        area: o.area || ['100%', '100%'],
+        offset: o.offset || 'auto',
+        closeBtn: nullToSpace(o.closeBtn) != '' ? o.closeBtn : 1,
+        shade: o.shade || 0.03,
+        shadeClose: o.shadeClose || false,
+        time: o.time || 0,
+        shift: o.shift || 0,
+        maxmin: o.maxmin || false,
+        moveOut: nullToSpace(o.moveOut) != '' ? o.moveOut : true,
+        scrollbar: o.scrollbar || false,
+        move: nullToSpace(o.move) != '' ? o.move : '.layui-layer-title',
+        moveType: nullToSpace(o.moveType) != '' ? o.moveType : 1,
+        success: function (layero, index) {
+            if (typeof o.success == 'function') {
+                o.success(layero, index);
+            }
+        },
+        cancel: function (index) {
+            if (typeof o.cancel == 'function') {
+                o.cancel(index);
+            }
+        },
+        end: function () {
+            if (typeof o.end == 'function') {
+                o.end();
+            }
+        }
+    });
+}</textarea>
+            </dd>
+            <dd>
+                例：layerOpen({<br>
+                &nbsp;&nbsp;title: 'layer弹窗',<br>
+                &nbsp;&nbsp;content: DSE.serverPath + 'pages/app/demos/basejs/index.html'<br>
+                });
+                <a id="doLayerOpen" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+            <dt class="f-mt10">
+                <h2>2、弹出页获取parent.window对象</h2>
+            </dt>
+            <dd>
+                <textarea style="height:63px;" readonly="readonly">if (topWindow.thisWindow) {
+    window.$parentWindow = topWindow.thisWindow;
+}</textarea>
+            </dd>
+            <dd>
+                例：alert(typeof $parentWindow.layerOpen);<a data-type="1" id="doParentWindow" href="javascript:" class="link f-ml20">试一试</a><br>
+                例：$(function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (topWindow.thisWindow) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert($($parentWindow.document).find('body').html());<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<a data-type="2" id="doParentContents" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+            <dt class="f-mt10">
+                <h2>3、关闭layer弹窗</h2>
+            </dt>
+            <dd>
+                <textarea style="height:63px;" readonly="readonly">function closeWin(index) {
+    index ? layer.close(index) : parent.layer.close(parent.layer.getFrameIndex(window.name));
+}</textarea>
+            </dd>
+            <dd>
+                直接执行closeWin();可关闭当前layer窗口，传参index索引值关闭指定窗口。
+            </dd>
+            <dt class="f-mt10">
+                <h2>4、layer确认提示框</h2>
+            </dt>
+            <dd>
+                <textarea style="height:463px;" readonly="readonly">window.$tips = {
+    confirm: function (msg, handle, title) {
+        // 询问框
+        layer.confirm(msg, {
+            title: title || '确认提示',
+            shade: 0.3
+        }, function (index) {
+            if (typeof handle == 'function') {
+                handle(index);
+            }
+            closeWin(index);
+        });
+    },
+    msg: function (msg, handle, title) {
+        layer.msg(msg, {
+            icon: 5,
+            title: title || '提示',
+            time: 1500 // 1.5秒后自动关闭
+        }, function () {
+            if (typeof handle == 'function') {
+                handle();
+            }
+        });
+    }
+};</textarea>
+            </dd>
+            <dd>
+                例如：$tips.confirm('你弹出了一个confirm框，要关闭它吗？',function(){<br>
+                &nbsp;&nbsp;$tips.msg('请让我再弹一次吧','','弹弹弹');<br>
+                });
+                <a id="doTipsMsg" href="javascript:" class="link f-ml20">试一试</a>
+            </dd>
+        </dl>
+
+    </body>
+</html>

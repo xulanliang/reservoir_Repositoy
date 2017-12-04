@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../config/requirejs-config.js"></script>
+    <script data-main="./js/bjxxindex" src="../../../assets/require/require.js"></script>
+
+</head>
+<body>
+<div id="app" class="g-wrap" v-clock>
+    <form id="search" class="m-search f-cb" style="display: none;">
+        <input id="projcd_auto" v-model="projcd"  type="hidden" />
+        <input id="mon_tp_auto" v-model="mon_tp"  type="hidden" />
+        <input id="wa_status_auto" v-model="wa_status" value="0"  type="hidden" />
+    </form>
+
+
+    <!--表格-->
+    <div class="m-datagrid">
+        <div id="datagrid"></div>
+    </div>
+</div>
+
+<!--<div>
+    报警信息接口，后续接入报警数据。
+</div>-->
+</body>
+</html>

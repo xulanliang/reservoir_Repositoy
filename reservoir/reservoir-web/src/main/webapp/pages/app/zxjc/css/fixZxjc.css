@@ -1,0 +1,9 @@
+html,body,#app,#app>div{height: 100%}
+#app>div .g-mh200{
+    min-height: 0;
+}
+#ex_0{
+    height:-moz-calc(50% + (5px));
+    height:-webkit-calc(50% + (5px));
+    height: calc(50% + (5px));
+}

@@ -1,0 +1,92 @@
+
+.icon-droplet {
+    font-size: 36px;
+    color: blue;
+}
+.drop-1 {
+    position: absolute;
+    top: 36%;
+    left: 40%;
+}
+.drop-2 {
+    position: absolute;
+    top: 25%;
+    left: 79%;
+}
+.drop-3 {
+    position: absolute;
+    top: 50%;
+    left: 94%;
+}
+.red {
+    color: red;
+    cursor: pointer;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'ds';
+    src:
+            url('../fonts/ds.ttf?kbwk0j') format('truetype'),
+            url('../fonts/ds.woff?kbwk0j') format('woff'),
+            url('../fonts/ds.svg?kbwk0j#ds') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'ds' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-droplet:before {
+    content: "\e900";
+}
+/*a{*/
+    /*!*display: none;*!*/
+    /*!*float: right;*!*/
+    /*height: 10px;*/
+    /*!*width: 80px;*!*/
+/*!*.wechat:hover .wechat_code{display: block;}*!*/
+/*}*/
+/*a:hover*/
+/*{*/
+    /*background-color:yellow;*/
+/*}*/

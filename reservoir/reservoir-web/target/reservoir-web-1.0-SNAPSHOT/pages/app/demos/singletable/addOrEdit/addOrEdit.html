@@ -1,0 +1,99 @@
+<!-- 通用单表详情页 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+</head>
+
+<body>
+    <div id="app" class="g-wrap">
+        <!--表单-->
+        <!--
+                可以使用input,span,a,div,p
+                以 _auto 结尾的id表示保存或提交时会上传的字段
+
+                建议使用span标签
+                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+        <div class="top-title">
+            <div class="tt" v-text="title"></div>
+            <div class="btns" v-cloak>
+                <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+                <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+            </div>
+        </div>
+        <form id="m-form" class="m-form">
+            <input id="ID_auto" type="hidden">
+            <input id="DEPTID_auto" type="hidden">
+            <table class="m-table">
+                <tbody>
+                    <tr>
+                        <td width="20%" align="right" class="dseLabel require">物资名称</td>
+                        <td width="30%">
+                            <input id="WZID_auto" type="text" maxLength="50">
+                            <span class="WZID_ori"></span>
+                        </td>
+                        <td width="20%" align="right" class="dseLabel require">年份</td>
+                        <td>
+                            <input id="YEAR_auto" type="text">
+                            <span class="YEAR_ori f-dn"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" class="dseLabel require">仓库名称</td>
+                        <td>
+                            <input id="CKID_auto" type="text" maxLength="50">
+                            <span class="CKID_ori"></span>
+                        </td>
+                        <td align="right" class="dseLabel">批次</td>
+                        <td>
+                            <input id="PC_auto" type="text" maxLength="10" data-rule="d">
+                            <span class="PC_ori f-dn"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" class="dseLabel">物资数量</td>
+                        <td>
+                            <input id="WZNUM_auto" type="text" maxLength="10" data-rule="d">
+                            <span class="WZNUM_ori f-dn"></span>
+                        </td>
+                        <td align="right" class="dseLabel">可用数量</td>
+                        <td>
+                            <input id="KYNUM_auto" type="text" maxLength="10" data-rule="d">
+                            <span class="KYNUM_ori f-dn"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" class="dseLabel">损耗数量</td>
+                        <td>
+                            <input id="SHNUM_auto" type="text" maxLength="10" data-rule="d">
+                            <span class="SHNUM_ori f-dn"></span>
+                        </td>
+                        <td align="right" class="dseLabel">入库签收人员</td>
+                        <td>
+                            <input id="JSRNAME_auto" type="text" maxLength="15">
+                            <span class="JSRNAME_ori f-dn"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" class="dseLabel">备注</td>
+                        <td colspan="3">
+                            <textarea id="REMARK_auto" maxLength="50"></textarea>
+                            <div class="REMARK_ori f-dn g-mh120"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <!--end 表单-->
+    </div>
+</body>
+
+</html>

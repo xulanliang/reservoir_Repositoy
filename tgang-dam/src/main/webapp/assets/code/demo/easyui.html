@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../util/common.js"></script>
+
+<script type="text/javascript" src="../../easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../easyui/locale/easyui-lang-zh_CN.js"></script>
+<link rel="stylesheet" href="../../easyui/themes/metro/easyui.css">
+
+<script type="text/javascript" src="../CommonCode.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		$("#sex").code({
+			code : 'sex',
+			onChange : function(val) {
+				alert(val);
+			}
+		});
+		$("#sex2").code('sex');
+	});
+</script>
+</head>
+<body>
+	<div>从后台读取数据后通过easyui 实例化标签</div>
+	<span id="sex"></span>
+
+	<span id="sex2"></span>
+</body>
+</html>

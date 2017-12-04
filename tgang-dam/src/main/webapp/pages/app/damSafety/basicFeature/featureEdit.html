@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="stylesheet"  href="../../../../assets/win/layer/skin/layer.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../assets/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="../basicData/css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="../basicData/css/form.css" type="text/css"/>
+    <script type="text/javascript" src="../../../../assets/seajs/dist/sea_dse.js"></script>
+    <script type="text/javascript" src="../../../../config/seajs-config.js"></script>
+    <script type="text/javascript" src="js/featureEdit.js"></script>
+</head>
+<body>
+<div class="divContentCenter"  style="margin-top: 5%;">
+    <form id="dseForm" class="dseForm">
+        <table class="dseTable">
+            <tr>
+                <td class="dseLabel require" style="width: 15%">水库名称代码<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="ennmcd_auto" name="ennmcd"    />
+                    <input id="outm_auto" name="outm"   type="hidden" />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">水库名称<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="ennm_auto" name="ennm"   />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">开始使用时间<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="utm_auto" name="utm"    />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">录用时间<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="ctm_auto" name="ctm"   />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">设计水位<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="dsfllv_auto" name="dsfllv"   />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">汛限水位<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="fldlim_auto" name="fldlim"    />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 15%">供水保障水位<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 35%">
+                    <input id="wsgtlv_auto" name="wsgtlv"   />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="dseButtonCtn" id="btns">
+    <button class="btn btn-success" type="button" id="subBtn">保存</button>
+    <button class="btn btn-primary" type="button" id="closeBtn">关闭</button>
+</div>
+</body>
+</html>

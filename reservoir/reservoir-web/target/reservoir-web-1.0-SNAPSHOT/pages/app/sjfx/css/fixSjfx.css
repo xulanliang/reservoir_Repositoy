@@ -1,0 +1,24 @@
+html,body,#app.g-wrap{
+    height:100%;
+    overflow: hidden;
+}
+#app.g-wrap{
+    overflow: auto;
+}
+
+.mergeSave{
+    float:right;
+    height: 26px;
+    line-height: 26px;
+    width: 80px;
+    text-align: center;
+    background: #1B9AF7;
+    font-size: 14px;
+    margin:5px 5px 0 0;
+    border-radius: 2px;
+    color: #fff;
+    cursor:pointer;
+}
+.mergeSave:hover{
+    background-color: #4cb0f9;
+}

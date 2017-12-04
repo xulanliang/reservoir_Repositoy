@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width"/>
+
+        <link rel="stylesheet" href="css/jquery.easyzoom.css"/>
+        <script src="../../jquery/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.easyzoom.min.js"></script>
+        <script src="../../scroll/nicescroll/jquery.nicescroll.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                var $easyzoom = $('.easyzoom').easyZoom();
+                var api = $easyzoom.data('easyZoom');
+                var $imgs = $('.easyzoom-list .imgs');
+                
+                getListWidth($imgs);
+                doNiceScroll();
+                
+                $imgs.delegate('a','click',function(){
+                    $(this).addClass('on').siblings().removeClass('on');
+                    var $url1 = $(this).attr('data-imgZoom'),//大图链接
+                    $url2 = $(this).attr('data-imgZoom');//小图链接
+                    api.swap($url1, $url2);
+                });
+                $imgs.find('a:eq(0)').trigger('click');
+            });
+            function getListWidth($imgs){
+                var $a = $imgs.find('a'),
+                $len = $a.length,
+                $w = $a.width()+2;
+                $imgs.css('width',$w*$len+'px');
+            }
+        </script>
+    </head>
+    <body>
+        <div class="easyzoom-box">
+            <div class="easyzoom easyzoom--overlay">
+                <a href="img/pic001.jpg">
+                    <img src="img/pic001.jpg" width="1000" height="500"/>
+                </a>
+            </div>
+            <div data-scroll="true" data-cursor-width="2" class="easyzoom-list">
+                <div class="imgs">
+                    <a href="javascript:" data-imgZoom="img/pic001.jpg">
+                        <img src="img/pic001.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic002.jpg">
+                        <img src="img/pic002.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic003.jpg">
+                        <img src="img/pic003.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic004.jpg">
+                        <img src="img/pic004.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic005.jpg">
+                        <img src="img/pic005.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic001.jpg">
+                        <img src="img/pic001.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic002.jpg">
+                        <img src="img/pic002.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic003.jpg">
+                        <img src="img/pic003.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic004.jpg">
+                        <img src="img/pic004.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic005.jpg">
+                        <img src="img/pic005.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic006.jpg">
+                        <img src="img/pic006.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic007.jpg">
+                        <img src="img/pic007.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic008.jpg">
+                        <img src="img/pic008.jpg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/dggcPage" src="../../../../assets/require/require.js"></script>
+</head>
+<body>
+    <div style="width: 100%;height: 100%;">
+        <div id="upper">
+            <h3 align = center>东改工程</h3>
+            <div class="f-pt10 f-pl15 f-pr15 f-pb20">
+                <p>&#12288;&#12288;东改工程(Shēnzhèn Shuǐkù)在深圳市区东北部。因水库建在深圳河上游得名，深圳水库于1965年3月竣工，集水面积60.5平方公里，库容4577万立方米。是深圳市的主要水源。</p>
+            </div>
+            <div style="text-align: center">
+                <img src="./img/dggc1.png" />
+                <img src="./img/dggc2.png" />
+            </div>
+        </div>
+        <div id="app">
+            <template>
+                <el-tabs v-model="activeName" @tab-click="handleClick" style="height: 100%">
+                    <el-tab-pane label="工程信息" name="gcxx" style="height: 100%">
+                        <div id="gcdatagrid"></div>
+                    </el-tab-pane>
+                    <el-tab-pane label="测点信息" name="cdxx" style="height: 100%">
+                        <div id="cddatagrid"></div>
+                    </el-tab-pane>
+                </el-tabs>
+            </template>
+        </div>
+    </div>
+</body>
+</html>

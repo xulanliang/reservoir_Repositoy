@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dse:cas-client:1.3-realease">
+    <CLASSES>
+      <root url="jar://D:/MavenJar/com/dse/cas-client/1.3-realease/cas-client-1.3-realease.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/MavenJar/com/dse/cas-client/1.3-realease/cas-client-1.3-realease-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/MavenJar/com/dse/cas-client/1.3-realease/cas-client-1.3-realease-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

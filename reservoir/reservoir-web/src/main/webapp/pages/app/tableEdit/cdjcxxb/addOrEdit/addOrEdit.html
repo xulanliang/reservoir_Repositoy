@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">测点名称</td>
+							<td width="30%">
+								<input id="STCD_auto" type="hidden">
+								<!--<input id="MDCD_auto" type="hidden">-->
+								<!--<input id="PROJ_CD_auto" type="hidden">-->
+								<input id="STNM_auto" type="text" valType="2" maxLength="100" readonly>
+								<span class="STNM_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">工程名称</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="PROJ_CD_auto" type="text" valType="2">
+								<span class="PROJ_CD_ori"></span>
+							</td>
+
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">模块名称</td>
+							<td>
+								<input id="MDCD_auto" maxlength="50" type="text">
+								<span class="MDCD_ori "></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">经度</td>
+							<td>
+								<input id="LGTD_auto" type="text" data-rule="d{2,9}">
+								<span class="LGTD_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">纬度</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="LTTD_auto" type="text" valType="2" data-rule="d{2,9}">
+								<span class="LTTD_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">管口高度</td>
+							<td>
+								<input id="HEAD_GC_auto" type="text" valType="2" data-rule="d{3,3}">
+								<span class="HEAD_GC_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">管底高程</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="BOTTOM_GC_auto" type="text" valType="2" data-rule="d{3,3}">
+								<span class="BOTTOM_GC_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">测点类型</td>
+							<td>
+								<input id="ST_TP_auto" type="text" valType="2" maxlength="1">
+								<span class="ST_TP_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">堰口宽度</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="WEIR_WIDTH_auto" type="text" valType="2" data-rule="d{12,3}">
+								<span class="WEIR_WIDTH_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">堰口至堰槽底距离</td>
+							<td>
+								<input id="WEIR_LENGTH_auto" type="text" valType="2" data-rule="d{12,3}">
+								<span class="WEIR_LENGTH_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">堰槽尺寸</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="WEIR_SIZE_auto" type="text" valType="2" maxlength="50">
+								<span class="WEIR_SIZE_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">位移类型</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="DISPLACE_TP_auto" type="text" valType="2" maxlength="1">
+								<span class="DISPLACE_TP_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">始测读数</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="INITIAL_VALUE_auto" type="text" valType="2" data-rule="d{5,3}">
+								<span class="INITIAL_VALUE_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">时间戳</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="TS_auto" type="text" valType="2" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" readonly>
+								<span class="TS_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">测点测量状态</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="ONMEA_auto" type="text" valType="2" maxlength="8">
+								<span class="ONMEA_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">监测方式</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="TYPEID_auto" type="text" valType="2">
+								<span class="TYPEID_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">是否基点</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="ISJIDIAN_auto" type="text" valType="2" maxlength="1">
+								<span class="ISJIDIAN_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">备注</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="NT_auto" type="text" valType="2" maxlength="128">
+								<span class="NT_ori"></span>
+							</td>
+						</tr>
+						<!--<tr>-->
+							<!--<td width="20%" align="right" class="dseLabel require">天气状况</td>-->
+							<!--<td width="30%" colspan="3">-->
+								<!--&lt;!&ndash;<input id="STNM_auto" type="hidden">&ndash;&gt;-->
+								<!--<input id="WTH_auto" type="text" valType="2" maxLength="6">-->
+								<!--<span class="WTH_ori"></span>-->
+							<!--</td>-->
+							<!--&lt;!&ndash;<td width="20%" align="right" class="dseLabel">日降水量</td>&ndash;&gt;-->
+							<!--&lt;!&ndash;<td>&ndash;&gt;-->
+								<!--&lt;!&ndash;<input id="DYP_auto" type="text">&ndash;&gt;-->
+								<!--&lt;!&ndash;<span class="DYP_ori f-dn"></span>&ndash;&gt;-->
+							<!--&lt;!&ndash;</td>&ndash;&gt;-->
+						<!--</tr>-->
+					</tbody>
+ 				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

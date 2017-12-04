@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巡查计划管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/quesListMain" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-cloak>
+
+
+    <!--新增、删除按钮-->
+    <div v-show="operType==''">
+        <!--
+        <div class="top-btns-box" v-show="!batch">
+            <span class="u-btn u-btn-c1 f-mr10" @click="doOpenWin"><i class="fa fa-plus"></i> 新 增</span>
+            <span class="u-btn u-btn-c2" @click="doBatch"><i class="fa fa-ban"></i> 批量操作</span>
+        </div>
+        <div class="top-btns-box f-dn" v-show="batch">
+            <span class="u-btn u-btn-c5 f-mr10" @click="doBatchDelete"><i class="fa fa-trash-o"></i> 批量删除</span>
+            <span class="u-btn u-btn-c2" @click="doEscBatch"><i class="fa fa-close"></i> 退出批量</span>
+        </div>
+        -->
+
+        <div class="top-title">
+            <div class="tt" v-text="title"></div>
+            <div class="btns" v-cloak>
+                <!--<span class="u-btn u-btn-c1 f-mr10" @click="doOpenWin"><i class="fa fa-plus"></i> 新 增</span>-->
+                <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doParentCloseWin"><i class="fa fa-close"></i> 关闭</span>
+            </div>
+        </div>
+
+        <!--查询-->
+        <form id="search" class="m-search f-cb">
+            <input id="search_ck_re_id_auto" v-model="ck_re_id"  type="hidden" />
+            <input id="search_ck_obj_id" v-model="ck_obj_id"  type="hidden" />
+            <span class="f-ib g-w200 keyword_box">
+                <input id="search_ck_cnt_desc_auto" type="text" placeholder="请输入描述搜索" onkeyup="enter('doSearch')">
+                <span id="doSearch" class="submit" @click="doSearch"><i class="fa fa-search"></i> 查 询</span>
+            </span>
+            <!--分隔符-->
+            <span class="f-division f-ml10 f-mr10"></span>
+
+            <span class="f-mr10">
+                <label class="dseLabel type1">问题状态</label>
+                <input id="ques_status_auto" type="text"/>
+            </span>
+            <!--<span class="f-mr10">-->
+                <!--<label class="dseLabel type1">是否异常</label>-->
+                <!--<input id="problem_auto" type="text"/>-->
+            <!--</span>-->
+            <!--重置按钮-->
+            <a id="doReset" class="f-rbtn" href="javascript:" @click="doReset"><i class="fa fa-refresh"></i> 恢复为默认</a>
+        </form>
+        <!--end 查询-->
+
+        <!--表格-->
+        <div class="m-datagrid">
+            <div id="datagrid"></div>
+        </div>
+        <!--end 表格-->
+
+    </div>
+    <div v-if="operType!=''">
+        <iframe :src="url" width="100%" height="100%" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

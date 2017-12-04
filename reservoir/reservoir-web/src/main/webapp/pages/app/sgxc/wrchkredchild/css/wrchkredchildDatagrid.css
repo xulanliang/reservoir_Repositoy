@@ -1,0 +1,100 @@
+@charset "utf-8";
+.datagrid-header-inner,
+.datagrid-header-inner table,
+.datagrid-body table,
+.datagrid{
+    width: 100% !important;
+}
+.datagrid-body{
+    overflow-x: hidden;
+}
+.datagrid-view1{
+    width:40px !important;
+}
+.datagrid-view2 td[field="ck"]{
+    display: none;
+}
+.datagrid-view2.showck td[field="ck"]{
+    display: block;
+}
+.datagrid-view2.showck{
+    left:0 !important;
+    width: 100% !important;
+}
+.datagrid-view2.showck > * {
+    width: 100% !important;
+}
+.el-input-group__append{
+    cursor: pointer;
+    color: #333;
+}
+.el-input-group__append,
+.el-input__inner{
+    border-radius: 0;
+}
+.el-date-editor--daterange.el-input{
+    width: 180px;
+}
+.top-btns-box{
+    padding: 0 8px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ededed;
+}
+.m-search{
+    padding: 0 8px;
+    height: 40px;
+    line-height: 40px;
+}
+.m-search .el-date-editor--daterange.el-input{
+    top: 8px\0;
+}
+.f-division{
+    border-right: 1px solid #bbb;
+}
+.f-rbtn{
+    float: right;
+    position: relative;
+}
+.keyword_box{
+    position: relative;
+    padding-right: 70px;;
+}
+.keyword_box input[type="text"]{
+    width: 100%;
+}
+.keyword_box .submit{
+    display: block;
+    position: absolute;
+    top: 7px;
+    top: 6px\0;
+    right: 0;
+    border: 1px solid #d2d2d2;
+    background-color: #f7f7f7;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 8px;
+    cursor: pointer;
+
+}
+.exdent{
+    width: 250px;
+}
+
+.top-title{
+    position: relative;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ededed;
+}
+.top-title .tt{
+    padding: 0 120px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.top-title .btns{
+    position: absolute;
+    /*right: 0;*/
+    top: 0;
+}

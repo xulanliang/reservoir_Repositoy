@@ -1,0 +1,1 @@
+1、对Math.uuid.js 进了扩展，支持seajs

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巡查对象</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-cloak>
+    <!--表单-->
+    <!--
+            可以使用input,span,a,div,p
+            以 _auto 结尾的id表示保存或提交时会上传的字段
+
+            建议使用span标签
+            以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+            以 _ori 结尾的class表示详情时需要显示的字段
+        -->
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+    <form id="m-form" class="m-form">
+        <input id="CK_ITEM_auto" v-model="ck_item"  type="hidden" />
+        <table class="m-table">
+            <tbody>
+            <input id="CK_CNT_ID_auto" type="text"/>
+            <!--<tr>-->
+                <!--<td width="30%" align="right" class="dseLabel require">编码</td>-->
+                <!--<td >-->
+                    <!--<input id="CK_CNT_ID_auto" type="text"  placeholder="编码不填将自动生成" />-->
+                    <!--<span class="CK_CNT_ID_ori"></span>-->
+                <!--</td>-->
+                <!--<td align="right" class="dseLabel">时间</td>-->
+                <!--<td>-->
+                    <!--<input id="TS_auto" type="text"  class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});"/>-->
+                    <!--<span class="TS_ori"></span>-->
+                <!--</td>-->
+
+            <!--</tr>-->
+            <tr>
+                <td align="right" class="dseLabel require">管理部门</td>
+                <td  colspan="3" >
+                    <input id="CK_ORG_auto" type="text" maxlength="32"/>
+                    <span class="CK_ORG_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查对象</td>
+                <td  colspan="3" >
+                    <input id="CK_OBJECT_auto" type="text" maxlength="32"/>
+                    <span class="CK_OBJECT_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查点</td>
+                <td  colspan="3" >
+                    <input id="CK_OBJ_ID_auto" type="text" maxlength="32"/>
+                    <span class="CK_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="right" class="dseLabel">巡查内容描述</td>
+                <td colspan="3">
+                    <input id="CK_CNT_DESC_auto" type="text" maxlength="200">
+                    <span class="CK_CNT_DESC_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="right" class="dseLabel require">巡查标准描述</td>
+                <td colspan="3" >
+                    <input id="CK_TAG_DESC_auto" type="text" maxLength="200"  />
+                    <span class="CK_TAG_DESC_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查时间要求</td>
+                <td  colspan="3">
+                    <input id="CK_TM_REQ_auto" type="text" maxlength="50"/>
+                    <span class="CK_TM_REQ_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">排序</td>
+                <td  colspan="3" >
+                    <input id="SEQ_auto" type="text" />
+                    <span class="SEQ_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">备注</td>
+                <td colspan="3">
+                        <input id="NT_auto" type="text" maxlength="256"/>
+                    <span class="NT_ori"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <!--end 表单-->
+</div>
+
+</body>
+</html>

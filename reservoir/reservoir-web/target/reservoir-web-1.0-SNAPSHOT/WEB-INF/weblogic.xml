@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd">
+<weblogic-web-app>
+    <context-root>/</context-root>
+    <container-descriptor>
+        <prefer-application-packages>
+            <package-name>com.google.collections</package-name>
+            <package-name>com.google.common</package-name>
+        </prefer-application-packages>
+    </container-descriptor>
+    <session-descriptor>
+        <session-param>
+            <param-name>TimeoutSecs</param-name>
+            <param-value>3600</param-value>
+        </session-param>
+        <session-param>
+            <param-name>CookieName</param-name>
+            <param-value>JSESSIONID</param-value>
+        </session-param>
+    </session-descriptor>
+</weblogic-web-app>
+
+

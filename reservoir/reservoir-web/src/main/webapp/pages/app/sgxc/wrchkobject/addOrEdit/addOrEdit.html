@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巡查对象</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-cloak>
+    <!--表单-->
+    <!--
+            可以使用input,span,a,div,p
+            以 _auto 结尾的id表示保存或提交时会上传的字段
+
+            建议使用span标签
+            以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+            以 _ori 结尾的class表示详情时需要显示的字段
+        -->
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+    <form id="m-form" class="m-form">
+        <input id="CK_ITEM_auto" v-model="ck_item"  type="hidden" />  
+        <input id="TS_auto"  type="hidden" />
+        <input id="CK_OBJ_ID_auto" type="hidden" />
+        <table class="m-table">
+            <tbody>
+            <!--
+            <tr>
+                <td width="30%" align="right" class="dseLabel require">编码</td>
+                <td >
+                    <input id="CK_OBJ_ID_auto" type="text"  placeholder="编码不填将自动生成" />
+                    <span class="CK_OBJ_ID_ori"></span>
+                </td>
+                <td align="right" class="dseLabel">排序</td>
+                <td >
+                    <input id="SEQ_auto" value="1000" type="text" />
+                    <span class="SEQ_ori"></span>
+                </td>
+            </tr>
+            -->
+            <tr>
+                <td width="30%" align="right" class="dseLabel require">名称</td>
+                <td colspan="3" >
+                    <input id="CK_NAME_auto" type="text" maxLength="100"  placeholder="名称"/>
+                    <span class="CK_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">管理部门</td>
+                <td  colspan="3" >
+                    <input id="CK_ORG_auto" type="text" />
+                    <span class="CK_ORG_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">巡查类型</td>
+                <td  colspan="3">
+                    <input id="CK_TYPE_auto" type="text" />
+                    <span class="CK_TYPE_NAME_ori"></span>
+                </td>
+            </tr>
+            <tr v-if="ck_item==1">
+                <td align="right" class="dseLabel require" >巡查对象</td>
+                <td  colspan="3" >
+                    <input id="CK_OBJ_PID_auto" type="text" />
+                    <span class="CK_OBJ_PID_ori"></span>
+                </td>
+            </tr>
+            <tr v-if="ck_item==0">
+                <td align="right" class="dseLabel">对象分类</td>
+                <td  colspan="3">
+                    <input id="CK_OBJECT_auto" type="text"/>
+                    <span class="CK_OBJECT_NAME_ori"></span>
+                </td>
+            </tr>
+            <!--<tr>-->
+                <!--<td align="right" class="dseLabel">管理要求</td>-->
+                <!--<td colspan="3">-->
+                    <!--<textarea id="CK_MG_PRO_auto" maxLength="100"></textarea>-->
+                    <!--<div class="CK_MG_PRO_ori f-dn g-mh120"></div>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td align="right" class="dseLabel">经度</td>-->
+                <!--<td>-->
+                    <!--<input id="LGTD_auto" type="text">-->
+                    <!--<span class="LGTD_ori"></span>-->
+                <!--</td>-->
+                <!--<td align="right" class="dseLabel">纬度</td>-->
+                <!--<td>-->
+                    <!--<input id="LTTD_auto" type="text" />-->
+                    <!--<span class="LTTD_ori"></span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td align="right" class="dseLabel">提醒半径</td>-->
+                <!--<td>-->
+                    <!--<input id="CK_WIR_RADIUS_auto" type="text">-->
+                    <!--<span class="CK_WIR_RADIUS_ori"></span>-->
+                <!--</td>-->
+                <!--<td align="right" class="dseLabel">有效半径</td>-->
+                <!--<td>-->
+                    <!--<input id="CK_RADIUS_auto" type="text"/>-->
+                    <!--<span class="CK_RADIUS_ori"></span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <tr>
+                <td align="right" class="dseLabel">巡检时间要求</td>
+                <td colspan="3">
+                    <input id="CK_TM_REQ_auto" type="text" maxlength="25"/>
+                    <span class="CK_TM_REQ_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">所在地点</td>
+                <td colspan="3">
+                    <input id="LOC_auto" type="text" maxlength="50"/>
+                    <span class="LOC_ori"></span>
+                </td>
+            </tr>
+            <!--<tr>-->
+                <!--<td align="right" class="dseLabel">巡检终端</td>-->
+                <!--<td colspan="3">-->
+                    <!--<input id="TERM_CD_auto" type="text">-->
+                    <!--<span class="TERM_CD_ori"></span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--
+            <tr>
+                <td align="right" class="dseLabel">巡查对象分类</td>
+                <td colspan="3">
+                    <input id="CK_ITEM_auto" type="text">
+                    <span class="CK_ITEM_ori"></span>
+                </td>
+            </tr>
+            -->
+            <tr>
+                <td align="right" class="dseLabel">备注</td>
+                <td colspan="3">
+                    <textarea id="NT_auto" maxLength="128"></textarea>
+                    <div class="NT_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            <!--
+            <tr >
+                <td align="right" class="dseLabel">创建时间</td>
+                <td colspan="3">
+                    <input id="TS_auto"  type="hidden" />
+                    <span class="TS_ori"></span>
+                </td>
+            </tr>
+            -->
+            </tbody>
+        </table>
+    </form>
+    <!--end 表单-->
+</div>
+
+</body>
+</html>

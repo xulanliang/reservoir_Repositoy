@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../util/common.js"></script>
+<script type="text/javascript" src="../CommonCode.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#sex').code({
+			code : 'sex',
+			constructor:'html',
+			onChange:function(val){
+				alert(val);
+			}
+		});
+		
+		$("#sex_man").text($.getCodeLabel('sex', 1));
+		$("#sex_woman").text($.getCodeLabel('sex', 2));
+	});
+</script>
+</head>
+<body>
+	1、普通html
+	<select id="sex"></select>
+	
+	<div style="margin-top: 20px;">
+		2、通过$.getCodeLabel()方法可以从字典表获取数据显示到界面，在datagrid中非常适用
+	</div>
+	
+	<div>
+		<label id="sex_man"></label>
+		<label id="sex_woman"></label>
+	</div>
+</body>
+</html>

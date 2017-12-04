@@ -1,0 +1,28 @@
+基础信息管理页面地址：
+
+垂直位移监测信息表：pages/app/tableEdit/czwyjcxxb/czwyjcxxb.html
+多媒体基本信息表：
+多点位移监测信息表：pages/app/tableEdit/ddwyjcxxb/ddwyjcxxb.html
+工程与多媒体信息关联表：
+工程基本信息表：pages/app/tableEdit/gcjbxx/gcjbxx.html
+报警阀值信息表：无数据
+按月度观测记录表特征值：--无表
+模块基本信息表(监测站/MCU/DAU/NDA)：pages/app/tableEdit/mkjbxxb/mkjbxxb.html
+
+
+气温气压表：pages/app/tableEdit/qwqy/qwqy.html
+水位表：pages/app/tableEdit/swb/swb.html
+水平位移监测数据表：pages/app/tableEdit/spwyjcsj/spwyjcsj.html
+水库基本信息表：无数据
+水库水情表：pages/app/tableEdit/sksqb/sksqb.html
+泵站基本信息表：无数据
+测点基础信息表：pages/app/tableEdit/cdjcxxb/cdjcxxb.html
+
+测点工程类型映射表：  pages/app/cdgclx/cdgcList.html
+涵管基本信息表：      pages/app/hgMessage/index.html
+渗压监测数据表：      pages/app/syjcsj/index.html
+渗流监测数据表：      pages/app/sljcsj/index.html
+渡槽基本信息表：      pages/app/dcjbxx/index.html
+渡槽沉降监测信息表：  pages/app/dccjjc/index.html
+监测断面与测点映射表：pages/app/jcdmycd/index.html
+http://127.0.0.1:8080/reservoir/

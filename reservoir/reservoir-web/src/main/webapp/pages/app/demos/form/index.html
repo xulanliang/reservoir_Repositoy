@@ -1,0 +1,95 @@
+<!-- input 输入限制 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width">
+
+        <script src="../../../../config/requirejs-config.js"></script>
+        <script data-main="./js/index" src="../../../../assets/require/require.js"></script>
+    </head>
+    <body>
+
+        <dl class="f-mt20 f-mr20 f-mb20 f-ml20 f-lh20">
+            <dt>
+                <h2 id="m1">1、为了匹配数据库字段，写下了这个函数，先看看效果：</h2>
+            </dt>
+            <dd>
+                例：inputLimit('body');//这里执行函数,开始监听body下面的输入框
+                <div class="f-mt5">例：<input type="text" data-rule="d" maxLength="5"> &lt;input type="text" data-rule="d" maxLength="5"&gt; 只允许5位数字</div>
+                <div class="f-mt5">例：<input type="text" data-rule="d{5,3}"> &lt;input type="text" data-rule="d{5,3}"&gt; 只允许5位整数3位小数</div>
+                <div class="f-mt5">例：<input type="text" data-rule="en" maxLength="8"> &lt;input type="text" data-rule="en" maxLength="8"&gt; 只允许8位字母</div>
+                <div class="f-mt5">例：<input type="text" data-rule2="zh" maxLength="3"> &lt;input type="text" data-rule2="zh" maxLength="3"&gt; 只允许3位中文</div>
+                <div class="f-mt5">例：<input type="text" data-rule="bh" maxLength="16"> &lt;input type="text" data-rule="bh" maxLength="16"&gt; 只允许16位字母或数字</div>
+                <div class="f-mt5">例：<input type="text" data-rule="w" maxLength="16"> &lt;input type="text" data-rule="w" maxLength="16"&gt; 只允许16位字母,下划线或数字</div>
+                <div class="f-mt5">例：<input type="text" maxLength="20"> &lt;input type="text" maxLength="20"&gt; 只允许20个字节</div>
+                <div class="f-mt5">例：<input type="text" data-valType="2" maxLength="20"> &lt;input type="text" data-valType="2" maxLength="20"&gt; 只允许20个字符</div>
+            </dd>
+            <dd class="f-mt5">
+                <textarea style="height:1073px;" readonly="readonly">String.prototype.getBytes = function () {
+    var cArr = this.match(/[^x00-xff]/ig);
+    return this.length + (cArr == null ? 0 : cArr.length);
+};
+function inputLimit(obj) {
+	var rules = {
+		"d": /[^\d]/g, //纯数字
+		"en": /[^a-z|A-Z]/g, //字母
+		"zh": /[^\u4E00-\u9FA5]/g, //中文
+		"bh": /[^a-z|A-Z|\d]/g, //字母或数字
+		"w": /[^\w]/g //字母,下划线,横线,数字
+	};
+	$(obj).on('input propertychange', 'input[type="text"],textarea', function() {
+		var $t = $(this),
+			$mLen = $t.attr('maxLength') || '',
+			$rule = $t.attr('data-rule') || '',
+			_rule;
+		if($rule != '') {
+			var $v = $t.val(),
+				$vLen = String($v).getBytes();
+			if($rule.indexOf('d{') != -1) {
+				var str = $rule.replace('d{', '').replace('}', '').split(',');
+				$t.attr('maxLength', parseInt(str[0]) + parseInt(str[1]) + 1);
+				$v = $v.replace(/[^\d|.]/g, '');
+				if(!evil('/^\\d{1,' + str[0] + '}(\\.\\d{1,' + str[1] + '})?$/').test($v)) {
+					if(/\.{2,}/g.test($v) || $v.substring($v.length - 1) != '.') {
+						$v = $v.substring(0, $v.length - 1);
+					}
+				}
+			} else {
+				_rule = rules[$rule] ? rules[$rule] : $rule;
+				$v = $v.replace(evil(_rule), '');
+			}
+			$t.val($v);
+		}
+	});
+	$(obj).on('change', 'input[type="text"],textarea', function() {
+		var $t = $(this),
+			$v = $t.val(),
+			$vLen = String($v).getBytes(),
+			$mLen = $t.attr('maxLength') || '1000',
+			$valType = $t.attr('data-valType') || 1,
+			$rule = $t.attr('data-rule2') || '',
+			_rule = rules[$rule] ? rules[$rule] : $rule;
+		if(String(_rule).indexOf('u4E00') != -1) {
+			$mLen = $mLen * 2;
+		}
+		if($rule != '') {
+			$v = $v.replace(evil(_rule), '');
+			$t.val($v);
+		}
+		if($valType == 1 && $rule.indexOf('d{') == -1) {
+			while($vLen > $mLen) {
+				$v = $v.substring(0, $v.length - 1);
+				$vLen = String($v).getBytes();
+			}
+			$t.val($v);
+		}
+	});
+}</textarea>
+            </dd>
+        </dl>
+
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!--基础平台-->
+	<dubbo:reference id="accessServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.AccessServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="departmentServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.DepartmentServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="dictionaryServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.DictionaryServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="divisionServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.DivisionServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="fileServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.FileServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="hobbyServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.HobbyServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="jobServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.JobServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="moduleCountServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.ModuleCountServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="organizationServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.OrganizationServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="resourceServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.ResourceServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="roleServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.RoleServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+	<dubbo:reference id="userServiceDubbo"
+					 interface="com.dse.service.api.baseplatform.inf.dubbo.UserServiceDubbo"
+					 timeout="300000"
+					 check="false"
+					 group="${dubbo.group}"/>
+
+
+</beans>

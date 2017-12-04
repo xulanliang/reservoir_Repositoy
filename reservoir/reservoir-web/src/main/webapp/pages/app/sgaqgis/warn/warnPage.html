@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/warnIndex" src="../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+<div id="app" class="g-wrap" v-clock >
+    <input id="projcd_auto" v-model="projcd"  type="hidden" />
+    <input id="projcd_real_auto" v-model="projcd_real"  type="hidden" />
+    <!--表格-->
+    <div class="m-datagrid">
+        <div id="datagrid">
+        </div>
+    </div>
+</div>
+
+<!--<div>
+    报警信息接口，后续接入报警数据。
+</div>-->
+</body>
+</html>

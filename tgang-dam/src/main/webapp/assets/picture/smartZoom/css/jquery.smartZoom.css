@@ -1,0 +1,61 @@
+body {
+    background-color: #010101;
+}
+.smartZoom-box{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+}
+.smartZoom{
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+}
+.smartZoom-btns {
+    background: rgb(58, 56, 63);
+    background: rgba(58, 56, 63, 0.8);
+    border: solid 1px #100000;
+    color: #FFFFFF;
+    padding: 8px;
+    text-align: left;
+    position: absolute;
+    right:35px;
+    top:35px;
+}
+.smartZoom-btns .positionButtonSpan img {
+    float: right;
+    border: 0;
+}
+.positionMapClass area {
+    cursor: pointer;
+}
+.zoomButton {
+    border: 0;
+    cursor: pointer;
+}
+.zoomableContainer {
+    background-image: url("../img/transparent.png");
+}
+.smartZoom-list{
+    margin-top: 1px;
+    height: 103px;
+    line-height: 100px;
+}
+.smartZoom-list a{
+    display: block;
+    float: left;
+    width: 98px;
+    height: 98px;
+    border: 1px solid #010101;
+    cursor: pointer;
+}
+.smartZoom-list a.on{
+    border-color: #eee;
+}
+.smartZoom-list a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仓库信息管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/ckxxglMain" src="../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap">
+    <!--新增、删除按钮-->
+    <div v-show="operType==''">
+        <div class="top-btns-box" v-show="!batch">
+            <span class="u-btn u-btn-c1 f-mr10" @click="doOpenWin"><i class="fa fa-plus"></i> 新 增</span>
+            <span class="u-btn u-btn-c2" @click="doBatch"><i class="fa fa-ban"></i> 批量操作</span>
+        </div>
+        <div class="top-btns-box f-dn" v-show="batch">
+            <span class="u-btn u-btn-c5 f-mr10" @click="doBatchDelete"><i class="fa fa-trash-o"></i> 批量删除</span>
+            <span class="u-btn u-btn-c2" @click="doEscBatch"><i class="fa fa-close"></i> 退出批量</span>
+        </div>
+        <!--查询-->
+        <form id="search" class="m-search f-cb">
+            <!--查询条件-->
+            <span class="f-mr20">
+                <label class="dseLabel type1">管理单位</label>
+                <input id="SSGLDW_auto" class="exdent" type="text" valType="2" >
+            </span>
+             <span class="f-mr20">
+                <label class="dseLabel type1">状态</label>
+                <input id="wh_status_auto" type="text"/>
+            </span>
+            <!--分隔符-->
+            <span class="f-division f-ml20 f-mr20"></span>
+            <span class="f-ib g-w300 keyword_box">
+                <input id="name_auto" type="text" placeholder="请输入仓库名称搜索" onkeyup="enter('doSearch')">
+                <span id="doSearch" class="submit" @click="doSearch"><i class="fa fa-search"></i> 查 询</span>
+            </span>
+            <!--重置按钮-->
+            <a id="doReset" class="f-rbtn" href="javascript:" @click="doReset"><i class="fa fa-refresh"></i> 恢复为默认</a>
+        </form>
+        <!--end 查询-->
+
+        <!--表格-->
+        <div class="m-datagrid">
+            <div id="datagrid"></div>
+        </div>
+        <!--end 表格-->
+    </div>
+    <div v-if="operType!=''">
+        <iframe :src="url" width="100%" height="100%" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

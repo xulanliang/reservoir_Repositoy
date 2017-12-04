@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警设置</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/environmentfactorMain" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-clock>
+    <!--新增、删除按钮-->
+    <div v-show="operType==''">
+        <div class="top-btns-box">
+           <!-- <span class="u-btn u-btn-c1 f-mr10" @click="doOpenWin"><i class="fa fa-plus"></i> 新 增</span>
+            <span class="u-btn u-btn-c2" @click="doBatch"><i class="fa fa-ban"></i> 批量操作</span>-->
+            <span class="u-btn u-btn-c1 f-mr10" @click="doBatchEdit" ><i class="fa fa-plus"></i> 编 辑</span>
+        </div>
+    </div>
+    <div v-show="operType == 'edit'">
+        <div class="top-btns-box f-dn">
+            <span class="u-btn u-btn-c5 f-mr10" @click="doSave"><i class="fa fa-save"></i> 保存</span>
+            <span class="u-btn u-btn-c2" @click="doEscBatchEdit"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+        <!--查询-->
+        <form id="search" class="m-search f-cb" style="display: none">
+            <input id="projcd_auto" v-model="projcd"  type="hidden" />
+            <input id="mon_tp_auto" v-model="mon_tp"  type="hidden" />
+            <!--分隔符-->
+
+            <!--
+            监测类型(1:渗压 2 渗流 3 水平位移4垂直位移5水位6雨量7气温<含气压>8深层位移9渡槽沉降)
+            -->
+
+
+
+            <!--查询、重置按钮-->
+            <!--
+               <span id="doSearch" class="u-btn f-mr10"><i class="fa fa-search"></i> 查 询</span>
+            -->
+            <!--重置按钮-->
+           <!-- <a id="doReset" class="f-rbtn" href="javascript:" @click="doReset"><i class="fa fa-refresh"></i> 恢复为默认</a>-->
+
+        </form>
+        <!--end 查询-->
+
+        <!--表格-->
+        <div class="m-datagrid">
+            <div id="datagrid"></div>
+        </div>
+
+    <!--<div v-if="operType!=''">
+        <iframe :src="url" width="100%" height="100%" frameborder="0" onload="this.height=document.documentElement.clientHeight-16;"></iframe>
+    </div>-->
+</div>
+</body>
+</html>

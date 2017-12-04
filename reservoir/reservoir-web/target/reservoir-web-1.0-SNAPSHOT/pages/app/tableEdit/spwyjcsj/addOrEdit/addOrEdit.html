@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单表详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="../../../../../config/requirejs-config.js"></script>
+		<script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="app" class="g-wrap">
+
+			<!--表单-->
+			<!--
+		                可以使用input,span,a,div,p
+		                以 _auto 结尾的id表示保存或提交时会上传的字段
+		            
+		                建议使用span标签
+		                以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+		                以 _ori 结尾的class表示详情时需要显示的字段
+            -->
+			<div class="top-title">
+				<div class="tt" v-text="title"></div>
+				<div class="btns" v-cloak>
+					<span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+					<span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+				</div>
+			</div>
+			<form id="m-form" class="m-form">
+				<table class="m-table">
+					<tbody>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">测点名称</td>
+							<td width="30%">
+								<input id="STCD_auto" type="hidden">
+								<input id="STNM_auto" type="text" valType="2" maxLength="100" readonly>
+								<span class="STNM_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">采集时间</td>
+							<td>
+								<input id="TM_auto" type="text" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" readonly>
+								<span class="TM_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">期数</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="QS_auto" type="text" valType="2" data-rule="d{4}">
+								<span class="QS_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">暂缓</td>
+							<td>
+								<input id="D_auto" type="text" max="6">
+								<span class="DS_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">度数</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="DS_auto" type="text" valType="2" data-rule="d{5}">
+								<span class="DS_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">度数-校验值</td>
+							<td>
+								<input id="JDS_auto" type="text" valType="2" data-rule="d{5}">
+								<span class="JDS_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">分数</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="FS_auto" type="text" valType="2" data-rule="d{5}">
+								<span class="FS_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">分数-校验值</td>
+							<td>
+								<input id="JFS_auto" type="text" valType="2" data-rule="d{5}">
+								<span class="JFS_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">毫数</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="HS_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="HS_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">毫数-校验值</td>
+							<td>
+								<input id="JHS_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="JHS_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">差值（与上期比较）</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="LDVALUE_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="LDVALUE_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">位移mm（与上期比较）</td>
+							<td>
+								<input id="LSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="LSHIFT_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">差值（与首期比较）</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="FDVALUE_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="FDVALUE_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">位移mm（与首期比较）</td>
+							<td>
+								<input id="FSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="FSHIFT_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">X（m）</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="XSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="XSHIFT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">X（m）(校正)</td>
+							<td>
+								<input id="JXSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="JXSHIFT_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">Y（m）</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="YSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="YSHIFT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">X（m）（校正）</td>
+							<td>
+								<input id="JYSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="JYSHIFT_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">径向偏移值</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="RSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="RSHIFT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">本次位移（mm）</td>
+							<td>
+								<input id="TSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="TSHIFT_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">累计位移（mm）</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="CSHIFT_auto" type="text" valType="2" data-rule="d{2,3}">
+								<span class="CSHIFT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">DX(mm)(与上期比较)</td>
+							<td>
+								<input id="LDXSHIFT_auto" type="text" valType="2" data-rule="d{0,5}">
+								<span class="LDXSHIFT_ori "></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">DY(mm)(与上期比较)</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="LDYSHIFT_auto" type="text" valType="2" data-rule="d{0,5}">
+								<span class="LDYSHIFT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">DS(mm)(与上期比较)</td>
+							<td>
+								<input id="LDSSHIFT_auto" type="text" valType="2" data-rule="d{0,5}">
+								<span class="LDSSHIFT_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">DX(mm)(与首期比较)</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="FDXSHIFT_auto" type="text" valType="2" data-rule="d{0,5}">
+								<span class="FDXSHIFT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">DY(mm)(与首期比较)</td>
+							<td>
+								<input id="FDYSHIFT_auto" type="text" valType="2" data-rule="d{0,5}">
+								<span class="FDYSHIFT_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">DS(mm)(与首期比较)</td>
+							<td width="30%">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="FDSSHIFT_auto" type="text" valType="2" data-rule="d{0,5}">
+								<span class="FDSSHIFT_ori"></span>
+							</td>
+							<td width="20%" align="right" class="dseLabel">类型</td>
+							<td>
+								<input id="TYPE_auto" type="text" valType="2" maxlength="1">
+								<span class="TYPE_ori"></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" align="right" class="dseLabel">备注</td>
+							<td width="30%" colspan="3">
+								<!--<input id="STNM_auto" type="hidden">-->
+								<input id="NT_auto" type="text" valType="2" maxLength="100">
+								<span class="NT_ori"></span>
+							</td>
+						</tr>
+						<!--<tr>-->
+							<!--<td width="20%" align="right" class="dseLabel require">天气状况</td>-->
+							<!--<td width="30%" colspan="3">-->
+								<!--&lt;!&ndash;<input id="STNM_auto" type="hidden">&ndash;&gt;-->
+								<!--<input id="WTH_auto" type="text" valType="2" maxLength="6">-->
+								<!--<span class="WTH_ori"></span>-->
+							<!--</td>-->
+							<!--&lt;!&ndash;<td width="20%" align="right" class="dseLabel">日降水量</td>&ndash;&gt;-->
+							<!--&lt;!&ndash;<td>&ndash;&gt;-->
+								<!--&lt;!&ndash;<input id="DYP_auto" type="text">&ndash;&gt;-->
+								<!--&lt;!&ndash;<span class="DYP_ori f-dn"></span>&ndash;&gt;-->
+							<!--&lt;!&ndash;</td>&ndash;&gt;-->
+						<!--</tr>-->
+					</tbody>
+ 				</table>
+			</form>
+			<!--end 表单-->
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="assets/json/json2.js"></script>
+<script type="text/javascript" src="../json2.js"></script>
+</head>
+<script type="text/javascript">
+function  load(){
+	var jsonStr='{"a":1,"b":2}';
+	var json=JSON.parse(jsonStr);
+	//转换成json对象
+	alert(json.a);
+	//转化成string
+	alert(JSON.stringify(json));
+}
+
+</script>
+<body onload="load()">
+
+</body>
+</html>

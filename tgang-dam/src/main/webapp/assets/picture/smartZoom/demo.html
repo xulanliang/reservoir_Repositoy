@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width"/>
+
+        <link rel="stylesheet" href="css/jquery.smartZoom.css"/>
+        <script src="../../jquery/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.smartZoom.min.js"></script>
+        <script src="../../scroll/nicescroll/jquery.nicescroll.min.js"></script>
+
+        <script>
+            $(function () {
+                var $imgs = $('.smartZoom-list .imgs');
+                
+                getListWidth($imgs);
+                doNiceScroll();
+
+                $('#imageFullScreen').smartZoom({'containerClass': 'zoomableContainer'});
+                $('#topPositionMap,#leftPositionMap,#rightPositionMap,#bottomPositionMap').bind("click", moveButtonClickHandler);
+                $('#zoomInButton,#zoomOutButton').bind("click", zoomButtonClickHandler);
+                
+                $imgs.delegate('a','click',function(){
+                    $(this).addClass('on').siblings().removeClass('on');
+                    var $url1 = $(this).attr('data-imgZoom'),//大图链接
+                    $url2 = $(this).attr('data-imgZoom');//小图链接
+                    $('#imageFullScreen').attr({'src':$url1,style:''});
+                });
+                $imgs.find('a:eq(0)').trigger('click');
+            });
+            function zoomButtonClickHandler(e) {
+                var scaleToAdd = 0.8;
+                if (e.target.id == 'zoomOutButton')
+                    scaleToAdd = -scaleToAdd;
+                $('#imageFullScreen').smartZoom('zoom', scaleToAdd);
+            }
+            function moveButtonClickHandler(e) {
+                var pixelsToMoveOnX = 0;
+                var pixelsToMoveOnY = 0;
+                switch (e.target.id) {
+                    case "leftPositionMap":
+                        pixelsToMoveOnX = 500;
+                        break;
+                    case "rightPositionMap":
+                        pixelsToMoveOnX = -500;
+                        break;
+                    case "topPositionMap":
+                        pixelsToMoveOnY = 500;
+                        break;
+                    case "bottomPositionMap":
+                        pixelsToMoveOnY = -500;
+                        break;
+                }
+                $('#imageFullScreen').smartZoom('pan', pixelsToMoveOnX, pixelsToMoveOnY);
+            }
+            function getListWidth($imgs) {
+                var $a = $imgs.find('a'),
+                        $len = $a.length,
+                        $w = $a.width() + 2;
+                $imgs.css('width', $w * $len + 'px');
+            }
+        </script>
+    </head>
+    <body>
+        <div class="smartZoom-box">
+            <div class="smartZoom">
+                <img id="imageFullScreen" src="img/pic/pic001.jpg" width="1000" height="500"/>
+            </div>
+            <div class="smartZoom-btns">
+                <p>
+                    <span>
+                        <img id="zoomInButton" class="zoomButton" src="img/zoomIn.png" title="zoom in" alt="zoom in" />
+                        <img id="zoomOutButton" class="zoomButton" src="img/zoomOut.png" title="zoom out" alt="zoom out" />
+                    </span>
+                </p>
+                <p>
+                    <span class="positionButtonSpan">
+                        <map name="positionMap" class="positionMapClass">
+                            <area id="topPositionMap" shape="rect" coords="20,0,40,20" title="move up" alt="move up"/>
+                            <area id="leftPositionMap" shape="rect" coords="0,20,20,40" title="move left" alt="move left"/>
+                            <area id="rightPositionMap" shape="rect" coords="40,20,60,40" title="move right" alt="move right"/>
+                            <area id="bottomPositionMap" shape="rect" coords="20,40,40,60" title="move bottom" alt="move bottom"/>
+                        </map>
+                        <img src="img/position.png" usemap="#positionMap" />
+                    </span>
+                </p>
+            </div>
+            <div data-scroll="true" data-cursor-width="2" class="smartZoom-list">
+                <div class="imgs">
+                    <a href="javascript:" data-imgZoom="img/pic/pic001.jpg">
+                        <img src="img/pic/pic001.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic002.jpg">
+                        <img src="img/pic/pic002.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic003.jpg">
+                        <img src="img/pic/pic003.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic004.jpg">
+                        <img src="img/pic/pic004.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic005.jpg">
+                        <img src="img/pic/pic005.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic001.jpg">
+                        <img src="img/pic/pic001.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic002.jpg">
+                        <img src="img/pic/pic002.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic003.jpg">
+                        <img src="img/pic/pic003.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic004.jpg">
+                        <img src="img/pic/pic004.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic005.jpg">
+                        <img src="img/pic/pic005.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic006.jpg">
+                        <img src="img/pic/pic006.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic007.jpg">
+                        <img src="img/pic/pic007.jpg"/>
+                    </a>
+                    <a href="javascript:" data-imgZoom="img/pic/pic008.jpg">
+                        <img src="img/pic/pic008.jpg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!-- fileToUpload 文件上传 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width">
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="../js/upload" src="../../../../../assets/require/require.js"></script>
+</head>
+
+<body>
+
+<div id="app" class="g-wrap">
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+</div>
+
+<div class="topDiv">
+    <div id="fileListTable" v-cloak>
+        <div class="f-pb5 f-pt5">
+            <span data-btype="2" :class="['u-btn u-btn-c1',fbtn]" @click="newfiles($event.currentTarget)" data-accept="word,excel"><i class="fa fa-upload"></i> 上传</span>
+            <span>选择文件后直接上传，限制上传 execl</span>
+        </div>
+        <table class="m-table">
+            <thead>
+                <tr>
+                    <th width="240" align="center">文件名</th>
+                    <th width="50" align="center" v-if="!isIE">文件大小</th>
+                    <th width="100" align="center">上传时间</th>
+                    <th width="50" align="center">操作</th>
+                </tr>
+            </thead>
+            <tbody :class="fql" data-btype="2">
+                <tr :class="ftr">
+                    <td :colspan="isIE ? 3 : 4">
+                        <div :class="fnull">{{fnullText}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+
+</html>

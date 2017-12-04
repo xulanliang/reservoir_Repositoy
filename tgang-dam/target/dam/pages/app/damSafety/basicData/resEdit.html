@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="stylesheet"  href="../../../../assets/win/layer/skin/layer.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../assets/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="css/form.css" type="text/css"/>
+    <script type="text/javascript" src="../../../../assets/seajs/dist/sea_dse.js"></script>
+    <script type="text/javascript" src="../../../../config/seajs-config.js"></script>
+    <script type="text/javascript" src="js/resEdit.js"></script>
+</head>
+<body>
+<div class="divContentCenter">
+    <form id="dseForm" class="dseForm">
+        <table class="dseTable">
+            <tr>
+                <td class="dseLabel require" style="width: 20%">水库名称代码<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="ennmcd_auto" name="ennmcd"    />
+                    <input id="oennmcd_auto" name="oennmcd"   type="hidden" />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">水库名称<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="ennm_auto" name="ennm"   />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel require" style="width: 20%">工程等级<span class="red">*</span>：</td>
+                <td class="dseContent" style="width: 85%" colspan="3">
+                    <input id="encl_auto"  name="encl"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">经度：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="lgtd_auto" name="lgtd"  />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">纬度：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="lttd_auto" name="lttd"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">管理单位代码：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="aduncd_auto" name="aduncd"  />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">管理单位名称：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="adunnm_auto" name="adunnm"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">管理单位地址：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="adunadd_auto" name="adunadd"  />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">管理单位邮政编码：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="adunzip_auto" name="adunzip"   />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">管理单位传真：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="adunfax_auto" name="adunfax"   />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">管理单位联系电话：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="aduntel_auto" name="aduntel"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">主管部门名称：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="depma_auto" name="depma"  />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">主管部门代码：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="depmacd_auto" name="depmacd"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">主管部门地址：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="depmaadd_auto" name="depmaadd"   />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">主管部门邮政编码：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="depmazip_auto"  name="depmazip"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">主管部门传真：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="depmafax_auto"  name="depmafax" />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">主管部门联系电话：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="depmatel_auto" name="depmatel"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">防汛行政责任人名称：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="adminnm_auto" name="adminnm"  />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">防汛行政责任人电话：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="admintel_auto" name="admintel"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">安全生产责任人名称：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="prodnm_auto"  name="prodnm" />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">安全生产责任人电话：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="prodtel_auto"  name="prodtel" />
+                </td>
+            </tr>
+            <tr>
+                <td class="dseLabel" style="width: 20%">防汛技术责任人名称：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="skillnm_auto" name="skillnm"  />
+                </td>
+
+                <td class="dseLabel require" style="width: 20%">防汛技术责任人电话：</td>
+                <td class="dseContent" style="width: 30%">
+                    <input id="skilltel_auto"   name="skilltel"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="dseButtonCtn" id="btns">
+    <button class="btn btn-success" type="button" id="subBtn">保存</button>
+    <button class="btn btn-primary" type="button" id="closeBtn">关闭</button>
+</div>
+</body>
+</html>

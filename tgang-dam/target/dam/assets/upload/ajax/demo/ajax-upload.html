@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>My JSP 'test.jsp' starting page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../../../jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../ajaxfileupload.js"></script>
+<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+<script type="text/javascript">
+	var inter;
+
+	function ajaxFileUpload() {
+		/*
+		 $("#loading")//这里是你要显示加载等待时的图片（默认样式为影藏）
+		 .ajaxStart(function() {
+		 $(this).show();
+		 }).ajaxComplete(function() {
+		 $(this).hide();
+		 });
+		 */
+		$.ajaxFileUpload({
+			url : 'url',
+			secureuri : false,
+			fileElementId : 'fileToUpload',//这里是你文件上传input框的id
+			dataType : 'json',
+			success : function(data, status) {
+				$("#ajaxCtn").append(data.status == 1 ? '成功' : '失败');
+			},
+			error : function(data, status, e) {
+				alert(e);
+			}
+		});
+		getProgress();
+		inter = setInterval(getProgress, 1000);
+
+	}
+
+	function getProgress() {
+		var url = "sys/DseSysUploadFilesCtl/getUploadProgress.ds";
+		$.ajax({
+			url : url,
+			data : {
+				fileUuid : fileUuid
+			},
+			dataType : 'json',
+			success : function(data) {
+
+				if (data) {
+					$("#progress").animate({
+						width : data.percent
+					}, 500);
+					if (data.percent == '100%') {
+						clearInterval(inter);
+					}
+				}
+			},
+			error : function(XMLHttpRequest, textStatus, errorThrown) {
+				alert('error' + textStatus + '   ' + errorThrown);
+				clearInterval(inter);
+			}
+		});
+
+	}
+</script>
+</head>
+<body>
+
+
+
+	<div style="width: 100%; float: left;">
+		<div id="ajaxCtn" style="width: 100%; float: left;">
+			<input id="fileToUpload" type="file" size="25" name="fileToUpload" style="float: left;" />
+			<button class="button" id="buttonUpload" style="float: left;" onClick="ajaxFileUpload();">ajax上传</button>
+		</div>
+		<div style="width: 300px; float: left; background: #ff0099;">
+			<div id="progress" style="width: 0%; background: #093456; float: left;">&nbsp;</div>
+		</div>
+	</div>
+
+	<div style="width: 100%; float: left;">
+		<form action="sys/DseSysUploadFilesCtl/doUpload.ds" method="post" enctype="Multipart/form-data">
+			<input type="file" size="45" style="float: left;" />
+			<button class="button" id="buttonUpload" type="submit" style="float: left;">普通上传</button>
+		</form>
+	</div>
+
+</body>
+</html>

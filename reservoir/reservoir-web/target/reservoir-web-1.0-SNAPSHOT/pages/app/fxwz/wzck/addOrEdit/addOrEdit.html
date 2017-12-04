@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物资分类</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../../../../config/requirejs-config.js"></script>
+    <script data-main="./js/addOrEdit" src="../../../../../assets/require/require.js"></script>
+
+</head>
+<body>
+
+<div id="app" class="g-wrap" v-cloak>
+    <!--表单-->
+    <!--
+            可以使用input,span,a,div,p
+            以 _auto 结尾的id表示保存或提交时会上传的字段
+
+            建议使用span标签
+            以 _auto 结尾的class表示任意时刻需要显示的字段,但是保存或提交时不会上传
+            以 _ori 结尾的class表示详情时需要显示的字段
+        -->
+    <div class="top-title">
+        <div class="tt" v-text="title"></div>
+        <div class="btns" v-cloak>
+            <span id="doOpenWin" class="u-btn u-btn-c1 f-mr10" @click="doSave" v-if="operType!='detail'"><i class="fa fa-save"></i> 保 存</span>
+            <span id="doDelete" class="u-btn u-btn-c2 f-mr10" @click="doCloseWin"><i class="fa fa-close"></i> 关闭</span>
+        </div>
+    </div>
+    <form id="m-form" class="m-form">
+        <table class="m-table">
+            <tbody>
+            <tr>
+                <td width="30%" align="right" class="dseLabel require">管理部门</td>
+                <td>
+                    <input id="IN_OUT_auto" type="text" value="0" hidden>
+                    <input id="STATUS_auto" type="text" hidden>
+                    <input id="ID_auto" type="text" hidden>
+                    <input id="ORG_CD_auto" type="text" >
+                    <span class="NAME_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="right" class="dseLabel require">仓库</td>
+                <td>
+                    <input id="WH_CD_auto" type="text" >
+                    <span class="WH_NM_ori"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" class="dseLabel require">物资名称</td>
+                <td>
+                    <input id="MA_CD_auto" type="text">
+                    <span class="MA_NM_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">规格或型号</td>
+                <td>
+                    <input id="MODEL_auto" type="text" style="width: 50%" readonly>
+                    <span class="MODEL_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">单位</td>
+                <td>
+                    <input id="MU_auto" type="text" style="width: 50%" readonly>
+                    <span class="MU_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="right" class="dseLabel require">货柜</td>
+                <td>
+                    <input id="BINNUM_auto" type="text" style="width: 50%" maxLength="100">
+                    <span class="BINNUM_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">物资批次</td>
+                <td>
+                    <input id="MA_PC_auto" type="text" style="width: 50%;" maxLength="32">
+                    <span class="MA_PC_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">当前库存量</td>
+                <td>
+                    <input id="REAL_QUAN_auto" type="text" style="width: 50%" readonly>
+                    <span class="REAL_QUAN_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">出库数量</td>
+                <td>
+                    <input id="INOUT_QUAN_auto" type="text" style="width: 50%" data-rule="d{6,2}">
+                    <span class="INOUT_QUAN_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel require">登记人</td>
+                <td>
+                    <input id="INPUT_USER_auto" type="text" style="width: 50%" maxLength="32">
+                    <span class="INPUT_USER_ori"></span>
+                </td>
+            </tr>
+            <!--<tr>
+                <td align="right" class="dseLabel">批准时间</td>
+                <td>
+                    <input id="CHECK_TIME_auto" type="text" class="Wdate" style="width: 50%"  onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});">
+                    <span class="CHECK_TIME_ori"></span>
+                </td>
+            </tr>-->
+            <tr>
+                <td align="right" class="dseLabel require">出库时间</td>
+                <td>
+                    <input id="INOUT_DATE_auto" type="text" class="Wdate" style="width: 50%"  onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});">
+                    <span class="INOUT_DATE_ori"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">出库描述</td>
+                <td>
+                    <textarea id="OUT_USEFOR_auto" maxLength="100"></textarea>
+                    <div class="OUT_USEFOR_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="dseLabel">备注</td>
+                <td>
+                    <textarea id="NT_auto" maxLength="256"></textarea>
+                    <div class="nt_ori f-dn g-mh120"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <!--end 表单-->
+</div>
+
+</body>
+</html>
